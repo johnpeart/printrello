@@ -1,0 +1,133 @@
+---
+layout: default
+---
+
+{% include header.html %}
+
+<main id="content" role="main" tabindex="-1">
+
+	<div class="loggedOut">
+
+
+		<div class="jumbotron">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+
+						<h1>Trello dashboard creator</h1>
+				    		<p>This tool will take project boards created on <a href="//trello.com">Trello</a> and turn them into printable dashboards.</p>
+						<p>The tool has been designed to work on a modern desktop browser, such as Apple Safari, Google Chrome or Firefox, and is built using HTML5 components. Whilst the app may work on other devices, it is recommended you use it on a desktop or laptop device.</p>
+						<p><strong>You will need to authorise this web app to access your Trello account to continue.</strong></p>
+				    		<div class="loggedOut"><a id="connectLink" class="btn btn-primary btn-lg" role="button">Connect to Trello <span class="glyphicon glyphicon-menu-right"> </span></a></div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="loggedIn">
+
+		<div id="app-inputs" class="container">
+
+			<div id="instructions" class="row">
+				<div class="col-xs-12 col-sm-8">
+			        <h1>Welcome, <span class="fullName"></span></h1>
+			        <p class="lead">Select a Trello board from the list below to view the data.</p>
+			        <p><strong>This app works best in Google Chrome.</strong></p>
+					<p>To print a dashboard correctly, select <strong>File</strong> &rarr; <strong>Print</strong>, then change the page <strong>margins</strong> to <strong>0cm</strong>, and change the settings to <strong>print background and images</strong>.</p>
+					<a id="disconnect" class="btn btn-primary btn-lg" role="button">Logout <span class="glyphicon glyphicon-menu-right"> </span></a>
+
+				</div>
+			</div>
+
+			<div class="row">
+
+				<div class="col-xs-12 col-sm-4">
+
+					<div id="options">
+
+						<h2>Display options</h2>
+
+						<p>Change these options to change how the dashboard is displayed on screen or printed.</p>
+
+						<h2 class="h3">Layout</h2>
+						<div class="form-check">
+						  <label class="form-check-label">
+						    <input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-list--filter-label" value="list--filter-label" checked>
+						     List view, filtered by unique labels
+						  </label>
+						</div>
+						<div class="form-check">
+						  <label class="form-check-label">
+						    <input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-list--all" value="list--all">
+						     List view showing all cards in the list
+						  </label>
+						</div>
+
+						<h2 class="h3">Number of columns</h2>
+						<div class="form-check">
+						  <label class="form-check-label">
+						    <input type="radio" name="display-mode--option--columns" id="numberOfCols1" value="6">
+						     2 columns
+						  </label>
+						</div>
+						<div class="form-check">
+						  <label class="form-check-label">
+						    <input type="radio" name="display-mode--option--columns" id="numberOfCols2" value="4" checked>
+						     3 columns
+						  </label>
+						</div>
+						<div class="form-check">
+						  <label class="form-check-label">
+						    <input type="radio" name="display-mode--option--columns" id="numberOfCols3" value="3">
+						     4 columns
+						  </label>
+						</div>
+
+						<h2 class="h3">Data points</h2>
+						<div class="form-check">
+						  <label class="form-check-label">
+						    <input id="display-mode--option--check-marks" type="checkbox" value="true" checked>
+						     "Done" check marks
+						  </label>
+						</div>
+						<div class="form-check">
+						  <label class="form-check-label">
+						    <input id="display-mode--option--due-date" type="checkbox" value="true" checked>
+						     Due dates
+						  </label>
+						</div>
+						<div class="form-check">
+						  <label class="form-check-label">
+						    <input id="display-mode--option--labels" type="checkbox" value="true" checked>
+						     Labels
+						  </label>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="col-xs-12 col-sm-8">
+
+					<div id="boardList">
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	    <div id="output">
+
+	    </div>
+
+	</div>
+
+
+
+</main>

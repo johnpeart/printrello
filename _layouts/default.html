@@ -1,0 +1,22 @@
+<!-- Update your html tag to include the itemscope and itemtype attributes. -->
+<html itemscope itemtype="http://schema.org/Article" lang="en">
+
+	<head>
+
+		{% include head.html %}
+
+	</head>
+
+	<body>
+
+		<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+		<!--[if lt IE 9]>
+		    <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+
+		{{ content }}
+
+	</body>
+
+</html>
