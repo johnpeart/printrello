@@ -1,0 +1,69 @@
+main#page {
+
+	min-height: 100vh;
+	min-width: 100vw;
+
+	background: rgba(145,43,136,1);
+	background: -moz-linear-gradient(45deg, rgba(145,43,136,1) 0%, rgba(212,0,114,1) 100%);
+	background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(145,43,136,1)), color-stop(100%, rgba(212,0,114,1)));
+	background: -webkit-linear-gradient(45deg, rgba(145,43,136,1) 0%, rgba(212,0,114,1) 100%);
+	background: -o-linear-gradient(45deg, rgba(145,43,136,1) 0%, rgba(212,0,114,1) 100%);
+	background: -ms-linear-gradient(45deg, rgba(145,43,136,1) 0%, rgba(212,0,114,1) 100%);
+	background: linear-gradient(45deg, rgba(145,43,136,1) 0%, rgba(212,0,114,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#912b88', endColorstr='#d40072', GradientType=1 );
+
+	color: #fff;
+
+	div#page {
+		min-height: 100vh;
+
+		img.home {
+			max-width: 150px;
+			height: auto;
+			margin-bottom: 3rem;
+		}
+
+		a.btn {
+			margin-top: 2rem;
+		}
+
+		a {
+			color: #ffffff;
+			text-decoration: underline;
+		}
+	}
+
+}
+
+div#footer {
+	padding: 2rem 0 1rem 0;
+}
+
+a {
+	&.btn-app {
+		color: $brand-primary !important;
+		background: #ffffff;
+		border: 1px solid #ffffff;
+		text-decoration: none !important;
+
+		&:hover,
+		&:focus {
+			color: #ffffff !important;
+			background: transparent;
+			border: 1px solid #ffffff;
+		}
+	}
+	&.btn-outline-app {
+		color: #ffffff !important;
+		background: transparent;
+		border: 1px solid #ffffff;
+		text-decoration: none !important;
+
+		&:hover,
+		&:focus {
+			color: $brand-primary !important;
+			background: #ffffff;
+			border: 1px solid #ffffff;
+		}
+	}
+}

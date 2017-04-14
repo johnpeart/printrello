@@ -1,3 +1,15 @@
 ---
 layout: default
 ---
+<div class="container">
+	<div id="page" class="row align-items-center">
+	    <div class="col">
+		    <img src="{{ '/home.png' | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}" class="home mx-auto d-block">
+			<h1 class="display-2 text-center">{{ site.title }}</h1>
+			<p class="lead text-center">{{ site.description }}</p>
+
+			<p class="text-center"><a href="{{ '/app/'  | prepend: site.baseurl | prepend: site.url }}" class="btn btn-lg btn-app" title="Start creating a dashboard">Get started</a> <a href="{{ '/about/'  | prepend: site.baseurl | prepend: site.url }}" class="btn btn-lg btn-outline-app" title="Learn more about this app">What is this?</a></p>
+
+	    </div>
+	</div>
+</div>

@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 250 250" width="250pt" height="250pt" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 16 16" width="16pt" height="16pt" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata> Produced by OmniGraffle 7.3 
+    <dc:date>2017-04-13 21:43:36 +0000</dc:date>
+  </metadata>
   <defs/>
   <g stroke="none" stroke-opacity="1" stroke-dasharray="none" fill="none" fill-opacity="1">
-    <title>Trello Dash</title>
-    <rect fill="#d40072" width="250" height="250"/>
+    <title>Canvas 2</title>
     <g>
-      <title>Trello Dash Icon</title>
-      <path d="M 28 65 L 28 185 L 148 185 L 148 65 Z M 40.755736 76.64557 L 81.91332 76.64557 L 81.91332 173.6076 L 40.755736 173.6076 Z M 94.08668 76.64557 L 135.24426 76.64557 L 135.24426 147.78481 L 94.08668 147.78481 Z" fill="white"/>
-      <rect x="157.63303" y="65" width="75.93578" height="8.642615" fill="white"/>
-      <rect x="157.63303" y="83.5562" width="60.38532" height="8.642615" fill="white"/>
-      <rect x="157.63303" y="102.11644" width="47.86238" height="8.642615" fill="white"/>
-      <rect x="157.63303" y="120.67668" width="40.15596" height="8.642615" fill="white"/>
-      <rect x="157.63303" y="139.23691" width="32.587153" height="8.642615" fill="white"/>
-      <rect x="157.63303" y="157.79715" width="22.128437" height="8.642615" fill="white"/>
-      <rect x="157.63303" y="176.35739" width="11.944951" height="8.642615" fill="white"/>
+      <title>Layer 1</title>
+      <path d="M 13.822411 16 L 16 0 L 13.822411 0 L 2.1775885 0 L 0 16 L 2.1775885 16 Z M 12.741053 6.967841 L 12.741053 7.0526316 L 12.729513 7.0526316 L 3.646799 7.0526316 L 3.637895 7.0526316 L 2.9247563 7.0526316 L 3.637895 1.8127897 L 3.637895 1.7473684 L 3.646799 1.7473684 L 12.729513 1.7473684 L 12.741053 1.7473684 L 13.451555 1.7473684 Z M 8.493685 14.252632 L 2.70099 14.252632 L 2.694737 14.252632 L 1.9789477 14.252632 L 2.694737 8.993313 L 2.694737 8.947368 L 2.70099 8.947368 L 8.493685 8.947368 L 9.215726 8.947368 Z" fill="black"/>
     </g>
   </g>
 </svg>
