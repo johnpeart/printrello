@@ -1,0 +1,119 @@
+<div id="loggedIn-Options" class="container-fluid">
+
+	{% include nav.html %}
+
+	<div class="container">
+
+		<div id="page" class="row align-items-center justify-content-center">
+
+			<div id="options">
+
+				<h1 class="text-center">Select display options</h1>
+
+				<div id="options-layout" data-toggle="buttons">
+
+					<h2 class="text-center">Layout</h2>
+
+					<div class="row">
+
+						<label class="btn col-4">
+    					    <p><img src="{{ '/layout--label-ordered-list.png' | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}" class="home mx-auto d-block img-fluid" alt=""></p>
+						    <p><input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-list--filter-label" value="list--filter-label" autocomplete="off"></p>
+						    <p>Display cards in lists, sorted by label</p>
+						</label>
+
+						<label class="btn active col-4">
+					    	<p><img src="{{ '/layout--unordered-list.png' | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}" class="home mx-auto d-block img-fluid" alt=""></p>
+						    <p><input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-list--all" value="list--all" autocomplete="off" checked></p>
+							<p>Display cards in unordered lists</p>
+						</label>
+
+						<label class="btn col-4">
+							<p><img src="{{ '/layout--label-ordered-swimlanes.png' | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}" class="home mx-auto d-block img-fluid" alt=""></p>
+						    <p><input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-swim-lanes" value="list--swim-lanes" autocomplete="off"></p>
+							<p>Display all cards in swim lanes</p>
+						</label>
+
+					</div>
+
+					<p class="text-center"><a href="" onclick="swapDivs('options-columns','options-layout');" class="btn btn-lg btn-app" title="Submit layout options">Next</a></p>
+
+				</div>
+
+				<div id="options-columns" data-toggle="buttons" style="display: none;">
+
+					<h2 class="text-center">Number of columns</h2>
+
+					<div class="row">
+
+						<label class="btn col-4">
+							<p><img src="{{ '/layout--unordered-list-2-col.png' | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}" class="home mx-auto d-block img-fluid" alt=""></p>
+							<p><input type="radio" name="display-mode--option--columns" id="numberOfCols1" value="6"></p>
+							<p>2 columns</p>
+						</label>
+
+						<label class="btn active col-4">
+							<p><img src="{{ '/layout--unordered-list.png' | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}" class="home mx-auto d-block img-fluid" alt=""></p>
+							<p><input type="radio" name="display-mode--option--columns" id="numberOfCols2" value="4" checked></p>
+							<p>3 columns</p>
+						</label>
+
+						<label class="btn col-4">
+							<p><img src="{{ '/layout--unordered-list-4-col.png' | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}" class="home mx-auto d-block img-fluid" alt=""></p>
+							<p><input type="radio" name="display-mode--option--columns" id="numberOfCols3" value="3"></p>
+							<p>4 columns</p>
+						</label>
+
+					</div>
+
+					<p class="text-center"><a href="" onclick="swapDivs('options-data','options-columns');" class="btn btn-lg btn-app" title="Submit number of columns">Next</a></p>
+
+				</div>
+
+				<div id="options-data" data-toggle="buttons" style="display: none;">
+
+					<h2 class="text-center">Toggle features</h2>
+
+					<div class="row">
+
+						<label class="btn active col-4">
+							<p><img src="{{ '/layout--done-mark.png' | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}" class="home mx-auto d-block img-fluid" alt=""></p>
+<p><input id="display-mode--option--check-marks" type="checkbox" value="true" checked></p>
+						    <p>"Done" check marks</p>
+						</label>
+
+						<label class="btn active col-4">
+							<p><img src="{{ '/layout--due-date.png' | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}" class="home mx-auto d-block img-fluid" alt=""></p>
+						    <p><input id="display-mode--option--due-date" type="checkbox" value="true" checked></p>
+						    <p>Due dates</p>
+						</label>
+
+						<label class="btn active col-4">
+							<p><img src="{{ '/layout--label.png' | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}" class="home mx-auto d-block img-fluid" alt=""></p>
+						    <p><input id="display-mode--option--labels" type="checkbox" value="true" checked></p>
+						    <p>Labels</p>
+						</label>
+
+					</div>
+
+					<p class="text-center"><a href="" onclick="swapDivs('boardList','options');" class="btn btn-lg btn-app" title="Submit layout options">Next</a></p>
+
+				</div>
+
+			</div>
+
+			<div id="boardList" style="display: none;"></div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div id="loggedIn-Output" class="container-fluid">
+
+	<div id="output">
+
+	</div>
+
+</div>

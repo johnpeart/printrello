@@ -2,9 +2,9 @@
 layout: page
 ---
 
-# Trello Dash
+# {{ site.title }}
 
-<p class="lead">Trello Dash is a web app that takes Trello Boards and turns them into documents you can print.</p>
+<p class="lead">{{ site.title }} is a web app that takes Trello Boards and turns them into documents you can print.</p>
 
 [Trello](//trello.com "Visit Trello") is a great digital tool that you can use in your projects or private life. 
 
@@ -12,4 +12,6 @@ But if you've ever tried to print a Trello Board, you know it **sucks**. Trello 
 
 This little web app was made to fix that problem for me, so I could print Trello Boards at work. I thought other people might find it useful, so I made it available on the open web: because making things open makes things better.
 
-[You can get the source code on Github](https://github.com/johnpeart/trello-dash "Go to the Github repository"), or [get started printing Trello Boards now]({{ '/app/' | prepend: site.baseurl | prepend: site.url }} "Get started").
+The web app works best with Google Chrome. Whilst the app may work on other devices, it is recommended you use it on a desktop or laptop device.
+
+<p><a href="{{ '/app/'  | prepend: site.baseurl | prepend: site.url }}" class="btn btn-lg btn-app" title="Start creating a dashboard">Get started</a> <a href="{{ site.github-repo }}" class="btn btn-lg btn-outline-app" title="Get the source code for this app from Github">Get the source code</a></p>

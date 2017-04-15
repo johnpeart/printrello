@@ -2,9 +2,9 @@
 layout: default
 ---
 <div class="container">
-	<div id="page" class="row align-items-center">
-	    <div class="col">
-		    <img src="{{ '/home.png' | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}" class="home mx-auto d-block">
+	<div id="page" class="row align-items-center justify-content-center">
+	    <div class="col-sm-12 col-md-8">
+		    <img src="{{ '/home.png' | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}" class="home mx-auto d-block" alt="{{ site.title }} logo - a rhombus with two unequal, horizontally oriented parralellograms cut out of the centre of the shape.">
 			<h1 class="display-2 text-center">{{ site.title }}</h1>
 			<p class="lead text-center">{{ site.description }}</p>
 

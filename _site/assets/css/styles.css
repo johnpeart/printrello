@@ -6641,6 +6641,9 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   .hidden-print {
     display: none !important; } }
 
+div#footer {
+  padding: 2rem 0 1rem 0; }
+
 main#page {
   min-height: 100vh;
   min-width: 100vw;
@@ -6651,7 +6654,7 @@ main#page {
   background: -o-linear-gradient(45deg, #912b88 0%, #d40072 100%);
   background: -ms-linear-gradient(45deg, #912b88 0%, #d40072 100%);
   background: linear-gradient(45deg, #912b88 0%, #d40072 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#912b88', endColorstr='#d40072', GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$first', endColorstr='$second', GradientType=1 );
   color: #fff; }
   main#page div#page {
     min-height: 100vh; }
@@ -6659,30 +6662,277 @@ main#page {
       max-width: 150px;
       height: auto;
       margin-bottom: 3rem; }
-    main#page div#page a.btn {
-      margin-top: 2rem; }
     main#page div#page a {
       color: #ffffff;
       text-decoration: underline; }
+      main#page div#page a.btn {
+        margin-top: 2rem; }
+      main#page div#page a.btn-app {
+        color: #d40072 !important;
+        background: #ffffff;
+        border: 1px solid #ffffff;
+        text-decoration: none !important; }
+        main#page div#page a.btn-app:hover, main#page div#page a.btn-app:focus {
+          color: #ffffff !important;
+          background: transparent;
+          border: 1px solid #ffffff; }
+      main#page div#page a.btn-outline-app {
+        color: #ffffff !important;
+        background: transparent;
+        border: 1px solid #ffffff;
+        text-decoration: none !important; }
+        main#page div#page a.btn-outline-app:hover, main#page div#page a.btn-outline-app:focus {
+          color: #d40072 !important;
+          background: #ffffff;
+          border: 1px solid #ffffff; }
 
-div#footer {
-  padding: 2rem 0 1rem 0; }
+div#loggedOut {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: #28a197;
+  background: -moz-linear-gradient(45deg, #28a197 0%, #2b8cc4 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #28a197), color-stop(100%, #2b8cc4));
+  background: -webkit-linear-gradient(45deg, #28a197 0%, #2b8cc4 100%);
+  background: -o-linear-gradient(45deg, #28a197 0%, #2b8cc4 100%);
+  background: -ms-linear-gradient(45deg, #28a197 0%, #2b8cc4 100%);
+  background: linear-gradient(45deg, #28a197 0%, #2b8cc4 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$first', endColorstr='$second', GradientType=1 );
+  color: #fff; }
+  div#loggedOut div#page {
+    min-height: 100vh;
+    text-align: center; }
+    div#loggedOut div#page h1 {
+      text-align: center; }
+    div#loggedOut div#page img.loggedOut {
+      max-width: 350px;
+      height: auto;
+      margin-bottom: 3rem; }
+    div#loggedOut div#page a {
+      color: #ffffff;
+      text-decoration: underline; }
+      div#loggedOut div#page a.btn {
+        margin-top: 2rem; }
+      div#loggedOut div#page a.btn-app {
+        color: #28a197 !important;
+        background: #ffffff;
+        border: 1px solid #ffffff;
+        text-decoration: none !important; }
+        div#loggedOut div#page a.btn-app:hover, div#loggedOut div#page a.btn-app:focus {
+          color: #ffffff !important;
+          background: transparent;
+          border: 1px solid #ffffff; }
+      div#loggedOut div#page a.btn-outline-app {
+        color: #ffffff !important;
+        background: transparent;
+        border: 1px solid #ffffff;
+        text-decoration: none !important; }
+        div#loggedOut div#page a.btn-outline-app:hover, div#loggedOut div#page a.btn-outline-app:focus {
+          color: #28a197 !important;
+          background: #ffffff;
+          border: 1px solid #ffffff; }
 
-a.btn-app {
-  color: #d40072 !important;
-  background: #ffffff;
-  border: 1px solid #ffffff;
-  text-decoration: none !important; }
-  a.btn-app:hover, a.btn-app:focus {
+a#disconnect {
+  position: absolute;
+  display: block;
+  top: 1rem;
+  bottom: auto;
+  left: auto;
+  right: 1rem;
+  z-index: 1000000;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/logout.png");
+  background-size: contain; }
+
+a#reset {
+  position: absolute;
+  display: block;
+  top: 1rem;
+  bottom: auto;
+  right: auto;
+  left: 1rem;
+  z-index: 1000000;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/reset.png");
+  background-size: contain; }
+
+div#loggedIn-Options {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: #28a197;
+  background: -moz-linear-gradient(45deg, #28a197 0%, #2b8cc4 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #28a197), color-stop(100%, #2b8cc4));
+  background: -webkit-linear-gradient(45deg, #28a197 0%, #2b8cc4 100%);
+  background: -o-linear-gradient(45deg, #28a197 0%, #2b8cc4 100%);
+  background: -ms-linear-gradient(45deg, #28a197 0%, #2b8cc4 100%);
+  background: linear-gradient(45deg, #28a197 0%, #2b8cc4 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$first', endColorstr='$second', GradientType=1 );
+  color: #fff; }
+  div#loggedIn-Options div#page {
+    min-height: 100vh; }
+    div#loggedIn-Options div#page h1 {
+      text-align: center; }
+    div#loggedIn-Options div#page img.loggedOut {
+      max-width: 350px;
+      height: auto;
+      margin-bottom: 3rem; }
+    div#loggedIn-Options div#page a {
+      color: #ffffff;
+      text-decoration: underline; }
+      div#loggedIn-Options div#page a.btn {
+        margin-top: 2rem; }
+      div#loggedIn-Options div#page a.btn-app {
+        color: #28a197 !important;
+        background: #ffffff;
+        border: 1px solid #ffffff;
+        text-decoration: none !important; }
+        div#loggedIn-Options div#page a.btn-app:hover, div#loggedIn-Options div#page a.btn-app:focus {
+          color: #ffffff !important;
+          background: transparent;
+          border: 1px solid #ffffff; }
+      div#loggedIn-Options div#page a.btn-outline-app {
+        color: #ffffff !important;
+        background: transparent;
+        border: 1px solid #ffffff;
+        text-decoration: none !important; }
+        div#loggedIn-Options div#page a.btn-outline-app:hover, div#loggedIn-Options div#page a.btn-outline-app:focus {
+          color: #28a197 !important;
+          background: #ffffff;
+          border: 1px solid #ffffff; }
+    div#loggedIn-Options div#page div#instructions {
+      margin-bottom: 3rem; }
+
+div#loggedIn-Output p, div#loggedIn-Output li {
+  font-size: 0.8rem; }
+div#loggedIn-Output div#meta {
+  background: #d40072;
+  color: #FFFFFF; }
+  div#loggedIn-Output div#meta h1 {
+    margin: 1rem 0; }
+  div#loggedIn-Output div#meta p {
+    margin: 1rem 0; }
+div#loggedIn-Output #output div.list {
+  margin-bottom: 2rem; }
+div#loggedIn-Output #output h1 {
+  font-size: 1.2rem; }
+div#loggedIn-Output #output h2 {
+  font-size: 0.9rem;
+  margin: 0.25rem 0 0.2rem 0;
+  padding: 0;
+  border-bottom: 1px solid; }
+div#loggedIn-Output #output ul.cards {
+  list-style: none;
+  margin: 0px;
+  padding: 0; }
+  div#loggedIn-Output #output ul.cards li p {
+    margin-bottom: 0.5rem; }
+  div#loggedIn-Output #output ul.cards li.ticks-on {
+    margin-left: 1.5rem; }
+  div#loggedIn-Output #output ul.cards li span.tick, div#loggedIn-Output #output ul.cards li span.empty-tick {
+    position: absolute;
+    left: 1rem;
+    margin-top: 2px;
+    width: 1rem;
+    height: 1rem;
+    background: #006435;
     color: #ffffff !important;
-    background: transparent;
-    border: 1px solid #ffffff; }
-a.btn-outline-app {
-  color: #ffffff !important;
-  background: transparent;
-  border: 1px solid #ffffff;
-  text-decoration: none !important; }
-  a.btn-outline-app:hover, a.btn-outline-app:focus {
-    color: #d40072 !important;
-    background: #ffffff;
-    border: 1px solid #ffffff; }
+    border-radius: 50px;
+    text-align: center;
+    font-size: 0.7rem;
+    line-height: 1rem; }
+  div#loggedIn-Output #output ul.cards li span.empty-tick {
+    border: 2px solid #9c9c9c;
+    background: #fff; }
+div#loggedIn-Output #output .badge {
+  margin-right: 0.3rem;
+  border-radius: 0.25rem; }
+div#loggedIn-Output #output .badge-green {
+  background: #006435;
+  border: 1px solid #006435;
+  color: #ffffff; }
+div#loggedIn-Output #output .badge-yellow {
+  background: #FFBF47;
+  color: #ffffff;
+  border: 1px solid #FFBF47; }
+div#loggedIn-Output #output .badge-orange {
+  background: #F47738;
+  color: #ffffff;
+  border: 1px solid #F47738; }
+div#loggedIn-Output #output .badge-purple {
+  background: #2E358B;
+  color: #ffffff;
+  border: 1px solid #2E358B; }
+div#loggedIn-Output #output .badge-red {
+  background: #B10E1E;
+  color: #ffffff;
+  border: 1px solid #B10E1E; }
+div#loggedIn-Output #output .badge-blue {
+  background: #005EA5;
+  color: #ffffff;
+  border: 1px solid #005EA5; }
+div#loggedIn-Output #output .badge-sky {
+  background: #2B8CC4;
+  color: #ffffff;
+  border: 1px solid #2B8CC4; }
+div#loggedIn-Output #output .badge-lime {
+  background: #85994B;
+  color: #ffffff;
+  border: 1px solid #85994B; }
+div#loggedIn-Output #output .badge-pink {
+  background: #D53880;
+  color: #ffffff;
+  border: 1px solid #D53880; }
+div#loggedIn-Output #output .badge-pink--inverse {
+  color: #D53880;
+  border: 1px solid #D53880;
+  background: #ffffff; }
+div#loggedIn-Output #output .badge-black {
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid #000000; }
+div#loggedIn-Output #output .green {
+  color: #006435; }
+div#loggedIn-Output #output .yellow {
+  color: #FFBF47; }
+div#loggedIn-Output #output .orange {
+  color: #F47738; }
+div#loggedIn-Output #output .purple {
+  color: #2E358B; }
+div#loggedIn-Output #output .red {
+  color: #B10E1E; }
+div#loggedIn-Output #output .blue {
+  color: #005EA5; }
+div#loggedIn-Output #output .sky {
+  color: #2B8CC4; }
+div#loggedIn-Output #output .lime {
+  color: #85994B; }
+div#loggedIn-Output #output .pink {
+  color: #D53880; }
+div#loggedIn-Output #output .black {
+  color: #000000; }
+
+@media print {
+  html, body {
+    width: 297mm;
+    height: 210mm; }
+
+  #loggedIn-Output div.list {
+    height: 198mm; }
+
+  footer#no-print {
+    display: none; } }
+@page {
+  margin: 5mm;
+  padding: 0;
+  size: A4 landscape; }

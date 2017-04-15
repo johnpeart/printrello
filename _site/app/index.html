@@ -8,59 +8,59 @@
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 
 			<!-- Base URL to use for all relative URLs contained within the document -->
-			<base href="http://localhost:4000/trello-dash">
-			<meta name="url" content="http://localhost:4000/trello-dash">
+			<base href="http://localhost:4000/dash-for-trello">
+			<meta name="url" content="http://localhost:4000/dash-for-trello">
 
 			<!-- Place this data between the <head> tags of your website -->
-			<title>Trello Dash</title>
-			<meta name="application-name" content="Trello Dash">
+			<title>Dash for Trello</title>
+			<meta name="application-name" content="Dash for Trello">
 			<meta name="description" content="A web app that turns Trello Boards into dashboards you can print." />
 
 			<!-- Schema.org markup for Google+ -->
-			<meta itemprop="name" content="Trello Dash">
+			<meta itemprop="name" content="Dash for Trello">
 			<meta itemprop="description" content="A web app that turns Trello Boards into dashboards you can print.">
-			<meta itemprop="image" content="http://localhost:4000/trello-dash/img/social-media.png">
+			<meta itemprop="image" content="http://localhost:4000/dash-for-trello/img/social-media.png">
 
 			<!-- Twitter Card data -->
 			<meta name="twitter:card" content="summary_large_image">
 			<meta name="twitter:site" content="@johnpeart">
-			<meta name="twitter:title" content="Trello Dash • Trello Dash">
+			<meta name="twitter:title" content="Trello Dash • Dash for Trello">
 			<meta name="twitter:description" content="A web app that turns Trello Boards into dashboards you can print.">
 			<meta name="twitter:creator" content="@johnpeart">
-			<meta name="twitter:image:src" content="http://localhost:4000/trello-dash/assets/img/social-media.png">
+			<meta name="twitter:image:src" content="http://localhost:4000/dash-for-trello/assets/img/social-media.png">
 
 			<!-- Open Graph data -->
-			<meta property="og:title" content="Trello Dash" />
+			<meta property="og:title" content="Dash for Trello" />
 			<meta property="og:type" content="article" />
-			<meta property="og:url" content="http://localhost:4000/trello-dash/app/"  />
-			<meta property="og:image" content="http://localhost:4000/trello-dash/assets/img/social-media.png" />
+			<meta property="og:url" content="http://localhost:4000/dash-for-trello/app/"  />
+			<meta property="og:image" content="http://localhost:4000/dash-for-trello/assets/img/social-media.png" />
 			<meta property="og:description" content="A web app that turns Trello Boards into dashboards you can print." />
-			<meta property="og:site_name" content="Trello Dash" />
+			<meta property="og:site_name" content="Dash for Trello" />
 			<meta property="fb:admins" content="1053585037989505" />
 
 			<!-- Touch Icons -->
-			<link rel="apple-touch-icon" href="http://localhost:4000/trello-dash/assets/img/touch.png">
-			<link rel="icon" sizes="192x192" href="http://localhost:4000/trello-dash/assets/img/touch.png">
+			<link rel="apple-touch-icon" href="http://localhost:4000/dash-for-trello/assets/img/touch.png">
+			<link rel="icon" sizes="192x192" href="http://localhost:4000/dash-for-trello/assets/img/touch.png">
 
 			<!-- Pinned Site -->
-			<link rel="mask-icon" href="http://localhost:4000/trello-dash/assets/img/pinned.svg" color="#d40072">
+			<link rel="mask-icon" href="http://localhost:4000/dash-for-trello/assets/img/pinned.svg" color="#d40072">
 			<meta name="theme-color" content="#d40072">
 
 			<!-- Google site verification -->
 			<meta name="google-site-verification" content="GMEFdAl3i-jN_Jkdb_jrS-LWZPUEQ7Bx4fPcyQ7YSCU">
 
 			<!-- Latest compiled and minified Bootstrap CSS -->
-			<link rel="stylesheet" href="http://localhost:4000/trello-dash/assets/css/styles.css">
+			<link rel="stylesheet" href="http://localhost:4000/dash-for-trello/assets/css/styles.css">
 
-			<script src="http://localhost:4000/trello-dash/assets/js/jquery.js"></script>
+			<script src="http://localhost:4000/dash-for-trello/assets/js/jquery.js"></script>
 
 			<!-- Latest compiled and minified Bootstrap JavaScript -->
-			<script src="http://localhost:4000/trello-dash/assets/js/tether.js"></script>
-			<script src="http://localhost:4000/trello-dash/assets/js/bootstrap.js"></script>
+			<script src="http://localhost:4000/dash-for-trello/assets/js/tether.js"></script>
+			<script src="http://localhost:4000/dash-for-trello/assets/js/bootstrap.js"></script>
 
-			<script src="http://localhost:4000/trello-dash/assets/js/marked.js"></script>
+			<script src="http://localhost:4000/dash-for-trello/assets/js/marked.js"></script>
 			<script src="https://api.trello.com/1/client.js?key=0c85c40d0209877de954697c8b7bcb7e"></script>
-			<script src="http://localhost:4000/trello-dash/assets/js/trello.js"></script>
+			<script src="http://localhost:4000/dash-for-trello/assets/js/trello.js"></script>
 
 	</head>
 
@@ -74,158 +74,159 @@
 
 		<main >
 
-			<header role="banner" id="global-header">
-	<nav class="navbar navbar-inverse navbar-static-top">
-		<div class="container">
-			<div class="navbar-header">
-				<a href="http://localhost:4000/trello-dash/" class="navbar-brand">Dashboard</a>
-			</div>
-			<p id="board-name"></p>
-			<p id="print-date"></p>
-		</div>
-	</nav>
-</header>
+			<div id="loggedOut"><div class="container">
+	<div id="page" class="row align-items-center justify-content-center">
+	    <div class="col-sm-12 col-md-8">
 
-<main id="content" role="main" tabindex="-1">
+	    	<img src="http://localhost:4000/dash-for-trello/assets/img/logged-out.png" class="loggedOut mx-auto d-block" alt="Dash for Trello logo (left) and the Trello logo (right), with an arrow pointing from left to right conencting both logos">
 
-	<div class="loggedOut">
+			<h1>Connect to Trello</h1>
 
+			<p><strong>Before you can use Dash for Trello, you need to connect to Trello.</strong></p>
 
-		<div class="jumbotron">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12">
+			<p>Dash for Trello will redirect you to the Trello website to log in. When you're done, you'll return here.</p>
 
-						<h1>Trello dashboard creator</h1>
-				    		<p>This tool will take project boards created on <a href="//trello.com">Trello</a> and turn them into printable dashboards.</p>
-						<p>The tool has been designed to work on a modern desktop browser, such as Apple Safari, Google Chrome or Firefox, and is built using HTML5 components. Whilst the app may work on other devices, it is recommended you use it on a desktop or laptop device.</p>
-						<p><strong>You will need to authorise this web app to access your Trello account to continue.</strong></p>
-				    		<div class="loggedOut"><a id="connectLink" class="btn btn-primary btn-lg" role="button">Connect to Trello <span class="glyphicon glyphicon-menu-right"> </span></a></div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-
-	</div>
-
-	<div class="loggedIn">
-
-		<div id="app-inputs" class="container">
-
-			<div id="instructions" class="row">
-				<div class="col-xs-12 col-sm-8">
-			        <h1>Welcome, <span class="fullName"></span></h1>
-			        <p class="lead">Select a Trello board from the list below to view the data.</p>
-			        <p><strong>This app works best in Google Chrome.</strong></p>
-					<p>To print a dashboard correctly, select <strong>File</strong> &rarr; <strong>Print</strong>, then change the page <strong>margins</strong> to <strong>0cm</strong>, and change the settings to <strong>print background and images</strong>.</p>
-					<a id="disconnect" class="btn btn-primary btn-lg" role="button">Logout <span class="glyphicon glyphicon-menu-right"> </span></a>
-
-				</div>
-			</div>
-
-			<div class="row">
-
-				<div class="col-xs-12 col-sm-4">
-
-					<div id="options">
-
-						<h2>Display options</h2>
-
-						<p>Change these options to change how the dashboard is displayed on screen or printed.</p>
-
-						<h2 class="h3">Layout</h2>
-						<div class="form-check">
-						  <label class="form-check-label">
-						    <input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-list--filter-label" value="list--filter-label" checked>
-						     List view, filtered by unique labels
-						  </label>
-						</div>
-						<div class="form-check">
-						  <label class="form-check-label">
-						    <input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-list--all" value="list--all">
-						     List view showing all cards in the list
-						  </label>
-						</div>
-
-						<h2 class="h3">Number of columns</h2>
-						<div class="form-check">
-						  <label class="form-check-label">
-						    <input type="radio" name="display-mode--option--columns" id="numberOfCols1" value="6">
-						     2 columns
-						  </label>
-						</div>
-						<div class="form-check">
-						  <label class="form-check-label">
-						    <input type="radio" name="display-mode--option--columns" id="numberOfCols2" value="4" checked>
-						     3 columns
-						  </label>
-						</div>
-						<div class="form-check">
-						  <label class="form-check-label">
-						    <input type="radio" name="display-mode--option--columns" id="numberOfCols3" value="3">
-						     4 columns
-						  </label>
-						</div>
-
-						<h2 class="h3">Data points</h2>
-						<div class="form-check">
-						  <label class="form-check-label">
-						    <input id="display-mode--option--check-marks" type="checkbox" value="true" checked>
-						     "Done" check marks
-						  </label>
-						</div>
-						<div class="form-check">
-						  <label class="form-check-label">
-						    <input id="display-mode--option--due-date" type="checkbox" value="true" checked>
-						     Due dates
-						  </label>
-						</div>
-						<div class="form-check">
-						  <label class="form-check-label">
-						    <input id="display-mode--option--labels" type="checkbox" value="true" checked>
-						     Labels
-						  </label>
-						</div>
-
-					</div>
-
-				</div>
-
-				<div class="col-xs-12 col-sm-8">
-
-					<div id="boardList">
-
-					</div>
-
-				</div>
-
-			</div>
-
-		</div>
-
-	    <div id="output">
+			<a id="connectLink" class="btn btn-lg btn-app" role="button">Connect to Trello</a>
 
 	    </div>
+	</div>
+</div></div>
+
+<div id="loggedIn">
+	<div id="loggedIn-Options" class="container-fluid">
+
+	<a id="reset" role="button" title="Reset the display options">Reset</a>
+<a id="disconnect" role="button" title="Logout of Dash for Trello">Logout</a>
+
+	<div class="container">
+
+		<div id="page" class="row align-items-center justify-content-center">
+
+			<div id="options">
+
+				<h1 class="text-center">Select display options</h1>
+
+				<div id="options-layout" data-toggle="buttons">
+
+					<h2 class="text-center">Layout</h2>
+
+					<div class="row">
+
+						<label class="btn col-4">
+    					    <p><img src="http://localhost:4000/dash-for-trello/assets/img/layout--label-ordered-list.png" class="home mx-auto d-block img-fluid" alt=""></p>
+						    <p><input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-list--filter-label" value="list--filter-label" autocomplete="off"></p>
+						    <p>Display cards in lists, sorted by label</p>
+						</label>
+
+						<label class="btn active col-4">
+					    	<p><img src="http://localhost:4000/dash-for-trello/assets/img/layout--unordered-list.png" class="home mx-auto d-block img-fluid" alt=""></p>
+						    <p><input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-list--all" value="list--all" autocomplete="off" checked></p>
+							<p>Display cards in unordered lists</p>
+						</label>
+
+						<label class="btn col-4">
+							<p><img src="http://localhost:4000/dash-for-trello/assets/img/layout--label-ordered-swimlanes.png" class="home mx-auto d-block img-fluid" alt=""></p>
+						    <p><input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-swim-lanes" value="list--swim-lanes" autocomplete="off"></p>
+							<p>Display all cards in swim lanes</p>
+						</label>
+
+					</div>
+
+					<p class="text-center"><a href="" onclick="swapDivs('options-columns','options-layout');" class="btn btn-lg btn-app" title="Submit layout options">Next</a></p>
+
+				</div>
+
+				<div id="options-columns" data-toggle="buttons" style="display: none;">
+
+					<h2 class="text-center">Number of columns</h2>
+
+					<div class="row">
+
+						<label class="btn col-4">
+							<p><img src="http://localhost:4000/dash-for-trello/assets/img/layout--unordered-list-2-col.png" class="home mx-auto d-block img-fluid" alt=""></p>
+							<p><input type="radio" name="display-mode--option--columns" id="numberOfCols1" value="6"></p>
+							<p>2 columns</p>
+						</label>
+
+						<label class="btn active col-4">
+							<p><img src="http://localhost:4000/dash-for-trello/assets/img/layout--unordered-list.png" class="home mx-auto d-block img-fluid" alt=""></p>
+							<p><input type="radio" name="display-mode--option--columns" id="numberOfCols2" value="4" checked></p>
+							<p>3 columns</p>
+						</label>
+
+						<label class="btn col-4">
+							<p><img src="http://localhost:4000/dash-for-trello/assets/img/layout--unordered-list-4-col.png" class="home mx-auto d-block img-fluid" alt=""></p>
+							<p><input type="radio" name="display-mode--option--columns" id="numberOfCols3" value="3"></p>
+							<p>4 columns</p>
+						</label>
+
+					</div>
+
+					<p class="text-center"><a href="" onclick="swapDivs('options-data','options-columns');" class="btn btn-lg btn-app" title="Submit number of columns">Next</a></p>
+
+				</div>
+
+				<div id="options-data" data-toggle="buttons" style="display: none;">
+
+					<h2 class="text-center">Toggle features</h2>
+
+					<div class="row">
+
+						<label class="btn active col-4">
+							<p><img src="http://localhost:4000/dash-for-trello/assets/img/layout--done-mark.png" class="home mx-auto d-block img-fluid" alt=""></p>
+<p><input id="display-mode--option--check-marks" type="checkbox" value="true" checked></p>
+						    <p>"Done" check marks</p>
+						</label>
+
+						<label class="btn active col-4">
+							<p><img src="http://localhost:4000/dash-for-trello/assets/img/layout--due-date.png" class="home mx-auto d-block img-fluid" alt=""></p>
+						    <p><input id="display-mode--option--due-date" type="checkbox" value="true" checked></p>
+						    <p>Due dates</p>
+						</label>
+
+						<label class="btn active col-4">
+							<p><img src="http://localhost:4000/dash-for-trello/assets/img/layout--label.png" class="home mx-auto d-block img-fluid" alt=""></p>
+						    <p><input id="display-mode--option--labels" type="checkbox" value="true" checked></p>
+						    <p>Labels</p>
+						</label>
+
+					</div>
+
+					<p class="text-center"><a href="" onclick="swapDivs('boardList','options');" class="btn btn-lg btn-app" title="Submit layout options">Next</a></p>
+
+				</div>
+
+			</div>
+
+			<div id="boardList" style="display: none;"></div>
+
+		</div>
 
 	</div>
 
+</div>
 
+<div id="loggedIn-Output" class="container-fluid">
 
-</main>
+	<div id="output">
+
+	</div>
+
+</div>
+</div>
 
 		</main>
 
-		<footer>
+		<footer id="no-print">
 
 	<div class="container">
 		<div id="footer" class="row align-items-start">
 		    <div class="col">
-				<p><strong>Trello Dash</strong> • Created by <a href="http://localhost:4000" title="Go to my website">John Peart</a></p>
+				<p><strong>Dash for Trello</strong> • Created by <a href="http://localhost:4000" title="Go to my website">John Peart</a></p>
 				<p><em>This is <strong>not</strong> an official Trello app, and is not affiliated with Trello.</em></p>
 		    </div>
 		    <div class="col">
-				<p class="text-right"><a href="https://github.com/johnpeart/trello-dash" title="Go to the Github repository">Get the source code on Github</a></p>
+				<p class="text-right"><a href="https://github.com/johnpeart/dash-for-trello" title="Go to the Github repository">Get the source code on Github</a></p>
 		    </div>
 		</div>
 	</div>

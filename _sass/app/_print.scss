@@ -1,0 +1,24 @@
+@media print {
+
+	html, body {
+		width: 297mm;
+		height: 210mm;
+	}
+
+	#loggedIn-Output {
+		div.list {
+			height: 198mm;
+		}
+	}
+
+	footer#no-print {
+		display: none;
+	}
+
+}
+
+@page {
+	margin: 5mm;
+	padding: 0;
+	size: A4 landscape;
+}

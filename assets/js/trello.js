@@ -1,16 +1,14 @@
-/*
-See https://trello.com/docs for a list of available API URLs
-The API development board is at https://trello.com/api
-*/
+---
+---
 
 $( document ).ready(function() {
-$('.loggedIn').hide();
+$('#loggedIn').hide();
 
 var getBoards = function (){
 	updateLoggedIn();
 	$("#boardList").empty();
 	Trello.members.get("me", function(member){
-	    $(".fullName").text(member.fullName);
+//	    $(".fullName").text(member.fullName);
 
 	    var $boardList = $('<div>')
 	        .text("Fetching your Trello Boards. Please wait.")
@@ -19,10 +17,10 @@ var getBoards = function (){
 	    // Output a list of all of the boards that the member
 	    Trello.get("members/me/boards", {filter: "open"}, function(boards) {
 	        $boardList.empty();
-	        var output = '<div id="lists"><h2>Your boards</h2><p>Select a board to view. If you want to come back to this screen, just refresh the page.</p>';
+	        var output = '<div id="lists"><h1>Select a board</h1>';
 	        output += '<div class="row">';
 	        $.each(boards, function(ix, board) {
-	        	output += '<div class="col-xs-12 col-sm-6"><a data-board-id = "'+board.id+'" href="#"><p>'+board.name+'</p></a></div>';
+	        	output += '<div class="col-12 col-sm-4"><a data-board-id = "'+board.id+'" href="#"><p>'+board.name+'</p></a></div>';
 	        });
 	        output += '</div></div>';
 	        $boardList.html(output);
@@ -38,6 +36,10 @@ var getBoards = function (){
 
 var displayBoard = function(board){
 
+	var dateString = new Date();
+	var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+	var printDate = dateString.getDate() + ' ' + monthNames[dateString.getMonth()] + ' ' + dateString.getFullYear();
+
 	var displayColumns = $("input:radio[name=display-mode--option--columns]:checked").val();
 	var displayCheckMarks = document.getElementById("display-mode--option--check-marks").checked;
 	var displayDueDates = document.getElementById("display-mode--option--due-date").checked;
@@ -50,15 +52,21 @@ var displayBoard = function(board){
 
 			Trello.get("boards/" + board.id + "/cards", function(cards) {
 
-			dashboardDate();
+			output = '<div class="row">';
 
-			output = '<div class="container"><div class="row" style="display:flex;">';
+				output += "<div id='meta' class='col-" + displayColumns + "'>"
+
+					output += "<h1>" + board.name; + "</h1>";
+
+					output += "<p>Created on " + printDate + "</p>";
+
+				output += "</div>"
 
 			    $.each(board.lists, function (i){
 
 				    var idList = this.id;
-					output += "<div class='col-xs-" + displayColumns + " list'>";
-					output += "<h2>"+this.name+"</h2>";
+					output += "<div class='col-" + displayColumns + " list'>";
+					output += "<h1>"+this.name+"</h1>";
 
 				    $.each(labels, function(index, label) {
 
@@ -68,22 +76,22 @@ var displayBoard = function(board){
 
 						if (displayLabels == true) {
 
-						    output += "<h3 class='list-title " + this.color + "'>" + this.name + "</h3>";
+						    output += "<h2 class='" + this.color + "'>" + this.name + "</h2>";
 
 						}
 
-						output+= "<ul>";
+						output+= "<ul class='cards'>";
 
 						$.each(board.cards, function(i){
 							var idCard = this.id;
 
 							if (displayCheckMarks == true) {
 
-			       				output += "<li class='ticks-on'>";
+			       				output += "<li class='ticks-on'><p>";
 
 			       			} else {
 
-				       			output += "<li>";
+				       			output += "<li class='ticks-off'><p>";
 
 			       			}
 
@@ -108,7 +116,7 @@ var displayBoard = function(board){
 												var cardDue = new Date(this.due);
 												var monthShortNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
 						  "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
-												output += " <span class='label label-pink--inverse'>" + cardDue.getDate() + ' ' + monthShortNames[cardDue.getMonth()] + "</span>";
+												output += " <span class='badge badge-pink--inverse'>" + cardDue.getDate() + ' ' + monthShortNames[cardDue.getMonth()] + "</span>";
 											}
 
 										}
@@ -120,7 +128,7 @@ var displayBoard = function(board){
 							   	}
 
 
-			       			output += "</li>";
+			       			output += "</p></li>";
 
 						});
 
@@ -131,10 +139,8 @@ var displayBoard = function(board){
 					output += "</div>";
 				});
 
-				output += '</div></div>';
+				output += '</div>';
 				$('#output').html(output);
-
-				document.getElementById('board-name').innerHTML = board.name;
 
 			});
 
@@ -144,16 +150,23 @@ var displayBoard = function(board){
 
 		Trello.get("boards/" + board.id + "/cards", function(cards) {
 
-			dashboardDate();
+			output = '<div id="lists">';
+			output += '<div class="row">';
 
-			output = '<div class="container"><div class="row" style="display:flex;">';
+				output += "<div id='meta' class='col-" + displayColumns + "'>"
+
+					output += "<h1>" + board.name; + "</h1>";
+
+					output += "<p>Created on " + printDate + "</p>";
+
+				output += "</div>"
 
 			    $.each(board.lists, function (i){
 					var idList = this.id;
-					output += "<div class='col-xs-" + displayColumns + " list'>";
-					output += "<h2>"+this.name+"</h2>";
+					output += "<div class='col-" + displayColumns + " list'>";
+					output += "<h1>"+this.name+"</h1>";
 
-					output+= "<ul>";
+					output+= "<ul class='cards'>";
 
 					$.each(cards, function(i){
 						var idCard = this.id;
@@ -164,11 +177,11 @@ var displayBoard = function(board){
 
 							if (displayCheckMarks == true) {
 
-			       				output += "<li class='ticks-on'>";
+			       				output += "<li class='ticks-on'><p>";
 
 			       			} else {
 
-				       			output += "<li>";
+				       			output += "<li class='ticks-off'><p>";
 
 			       			}
 
@@ -188,7 +201,7 @@ var displayBoard = function(board){
 									var cardDue = new Date(this.due);
 									var monthShortNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
 							"Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
-									output += " <span class='label label-pink--inverse'>" + cardDue.getDate() + ' ' + monthShortNames[cardDue.getMonth()] + "</span>";
+									output += " <span class='badge badge-pink--inverse'>" + cardDue.getDate() + ' ' + monthShortNames[cardDue.getMonth()] + "</span>";
 								}
 
 							}
@@ -198,56 +211,44 @@ var displayBoard = function(board){
 				       			var cardLabels = this.labels;
 
 				       			for (i = 0; i < cardLabels.length ; i++) {
-								    output += "<span class='label label-"+cardLabels[i].color+"'>" + cardLabels[i].name + "</span>";
+								    output += "<span class='badge badge-"+cardLabels[i].color+"'>" + cardLabels[i].name + "</span>";
 								}
 							}
 
 			       			output += this.name;
 
-			       			output += "</li>";
+			       			output += "</p></li>";
 						}
 
 					});
+
+					output += "</ul>";
 					output += "</div>";
 				});
 
-				output += '</div></div>';
-				$('#output').html(output);
+			output += "</div>"
+			output += '</div>';
 
-				document.getElementById('board-name').innerHTML = board.name;
-
+			$('#output').html(output);
 
 		});
 
 	}
 
-	$('#boardList').hide();
-	$('#instructions').hide();
-	$('#options').hide();
+	$('#loggedIn-Options').hide();
 
-}
-
-
-
-
-var dashboardDate = function() {
-	var dateString = new Date();
-	var monthNames = ["January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"
-];
-	document.getElementById('print-date').innerHTML = 'Created on: ' + dateString.getDate() + ' ' + monthNames[dateString.getMonth()] + ' ' + dateString.getFullYear();
 }
 
 var updateLoggedIn = function() {
     var isLoggedIn = Trello.authorized();
     if (isLoggedIn){
     	console.log('logged in');
-    	$(".loggedIn").show();
-    	$(".loggedOut").hide();
+    	$("#loggedIn").show();
+    	$("#loggedOut").hide();
     } else {
     	console.log('not logged in');
-    	$(".loggedIn").hide();
-    	$(".loggedOut").show();
+    	$("#loggedIn").hide();
+    	$("#loggedOut").show();
     }
 };
 
@@ -264,6 +265,16 @@ var logout = function() {
     updateLoggedIn();
 };
 
+var reset = function() {
+	$("#options").show();
+	$("#options-layout").show();
+	$("#options-columns").hide();
+	$("#options-data").hide();
+	$("#boardList").hide();
+	$("#loggedIn-Options").show();
+	$("#loggedIn-Output").hide();
+}
+
 Trello.authorize({
     interactive:false,
     success: getBoards
@@ -272,9 +283,9 @@ Trello.authorize({
 $("#connectLink")
 .click(function(){
     Trello.authorize({
-        type: "popup",
+        type: "redirect",
         success: getBoards,
-        name: 'GEO Dashboards'
+        name: '{{ site.title }}'
     })
 });
 
@@ -288,4 +299,21 @@ $("#showLink").click(function(){
 
 $("#disconnect").click(logout);
 
+$("#reset").click(reset);
+
 });
+
+function swapDivs(div1,div2) {
+   d1 = document.getElementById(div1);
+   d2 = document.getElementById(div2);
+   if( d2.style.display == "none" )
+   {
+      d1.style.display = "none";
+      d2.style.display = "inherit";
+   }
+   else
+   {
+      d1.style.display = "block";
+      d2.style.display = "none";
+   }
+}

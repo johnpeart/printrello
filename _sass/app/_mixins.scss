@@ -1,0 +1,10 @@
+@mixin gradient-background($first, $second) {
+	background: $first;
+	background: -moz-linear-gradient(45deg, $first 0%, $second 100%);
+	background: -webkit-gradient(left bottom, right top, color-stop(0%, $first), color-stop(100%, $second));
+	background: -webkit-linear-gradient(45deg, $first 0%, $second 100%);
+	background: -o-linear-gradient(45deg, $first 0%, $second 100%);
+	background: -ms-linear-gradient(45deg, $first 0%, $second 100%);
+	background: linear-gradient(45deg, $first 0%, $second 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$first', endColorstr='$second', GradientType=1 );
+}

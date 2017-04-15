@@ -1,4 +1,4 @@
-<footer>
+<footer {% if page.layout == "app" %}id="no-print"{% endif %}>
 
 	<div class="container">
 		<div id="footer" class="row align-items-start">
@@ -7,7 +7,7 @@
 				<p><em>This is <strong>not</strong> an official Trello app, and is not affiliated with Trello.</em></p>
 		    </div>
 		    <div class="col">
-				<p class="text-right"><a href="https://github.com/johnpeart/trello-dash" title="Go to the Github repository">Get the source code on Github</a></p>
+				<p class="text-right"><a href="{{ site.github-repo }}" title="Go to the Github repository">Get the source code on Github</a></p>
 		    </div>
 		</div>
 	</div>
