@@ -1,18 +1,175 @@
 @media print {
 
-	html, body {
-		width: 297mm;
-		height: 210mm;
-	}
-
 	#loggedIn-Output {
-		div.list {
-			height: 198mm;
-		}
-	}
 
-	footer#no-print {
-		display: none;
+		margin: 0;
+		padding: 0;
+
+		div#lists {
+			width: auto;
+			height: 200mm;
+
+			div.list {
+				&.print-col-2 {
+					width: 143.5mm;
+				}
+				&.print-col-3 {
+					width: 95.6666667mm;
+				}
+				&.print-col-4 {
+					width: 71.75mm;
+				}
+			}
+		}
+
+		div#swim-lanes {
+
+			div#thead {
+				height: 10mm;
+			}
+
+			div.swim-lane-group {
+
+				height: 200mm;
+
+				&:first-of-type {
+					height: 190mm !important;
+				}
+
+				div.columns {
+
+					div {
+						position: relative;
+						display: block;
+						float: left;
+
+						padding: 0 5mm;
+
+						&.first-column {
+							width: 30mm;
+						}
+						&.print-col-2 {
+							width: 128.5mm;
+						}
+						&.print-col-3 {
+							width: 85.666667mm;
+						}
+						&.print-col-4 {
+							width: 64.25mm;
+						}
+						span.blank {
+							content: " ";
+						    display: inline-block;
+						    position: relative;
+						    float: left;
+						    margin: 0;
+						    text-align: center;
+						    width: 1px;
+						    height: 1px;
+						}
+					}
+				}
+
+				div.swim-lane {
+					position: relative;
+					display: inline-block;
+					float: left;
+
+					padding: 5mm 0;
+
+					width: 100%;
+
+					border-top: 1px solid $brand-primary;
+
+					div {
+
+						&.first-column {
+							width: 30mm;
+							h2.label {
+								padding: 0;
+							}
+						}
+						&.print-col-2 {
+							width: 128.5mm;
+						}
+						&.print-col-3 {
+							width: 85.666667mm;
+						}
+						&.print-col-4 {
+							width: 64.25mm;
+						}
+
+					}
+				}
+
+				h1 {
+					font-size: 1rem !important;
+				}
+
+				h2 {
+					font-size: 0.9rem;
+					margin: 0.25rem 0 0.2rem 0;
+					padding: 0;
+				}
+
+				ul.cards {
+					list-style: none;
+
+				    display: block;
+				    position: relative;
+
+				    margin: 0;
+				    padding: 0 1rem;
+
+					li {
+
+						p {
+							margin-bottom: 0rem;
+						}
+
+						&.ticks-on {
+							margin-left: 1.5rem;
+						}
+
+
+						&.ticks-off {
+
+						}
+
+						span.tick {
+							position: absolute;
+							left: 1rem;
+							margin-top: 2px;
+							width: 1rem;
+							height: 1rem;
+							background: #006435;
+							color: #ffffff !important;
+							border-radius: 50px;
+							text-align: center;
+							font-size: 0.7rem;
+							line-height: 1rem;
+						}
+						span.empty-tick {
+							position: absolute;
+							left: 1rem;
+							margin-top: 2px;
+							width: 1rem;
+							height: 1rem;
+							color: #ffffff !important;
+							border-radius: 50px;
+							text-align: center;
+							font-size: 0.7rem;
+							line-height: 1rem;						    								border: 2px solid #9c9c9c;
+						    background: #ffffff !important;
+						}
+
+					}
+
+				}
+
+			}
+		}
+
 	}
 
 }

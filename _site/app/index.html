@@ -66,13 +66,11 @@
 
 	<body>
 
-		<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
-
 		<!--[if lt IE 9]>
 		    <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 
-		<main >
+		<main  tabindex="-1">
 
 			<div id="loggedOut"><div class="container">
 	<div id="page" class="row align-items-center justify-content-center">
@@ -102,103 +100,145 @@
 
 		<div id="page" class="row align-items-center justify-content-center">
 
-			<div id="options">
+			<div id="options"><h1 class="text-center" tabindex="100">Select display options</h1>
 
-				<h1 class="text-center">Select display options</h1>
+	<div id="options-layout">
 
-				<div id="options-layout" data-toggle="buttons">
+		<fieldset tabindex="101">
 
-					<h2 class="text-center">Layout</h2>
+			<legend><h2 class="text-center">Choose a layout</h2></legend>
 
-					<div class="row">
+			<div class="row">
 
-						<label class="btn col-4">
-    					    <p><img src="http://localhost:4000/dash-for-trello/assets/img/layout--label-ordered-list.png" class="home mx-auto d-block img-fluid" alt=""></p>
-						    <p><input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-list--filter-label" value="list--filter-label" autocomplete="off"></p>
-						    <p>Display cards in lists, sorted by label</p>
-						</label>
-
-						<label class="btn active col-4">
-					    	<p><img src="http://localhost:4000/dash-for-trello/assets/img/layout--unordered-list.png" class="home mx-auto d-block img-fluid" alt=""></p>
-						    <p><input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-list--all" value="list--all" autocomplete="off" checked></p>
-							<p>Display cards in unordered lists</p>
-						</label>
-
-						<label class="btn col-4">
-							<p><img src="http://localhost:4000/dash-for-trello/assets/img/layout--label-ordered-swimlanes.png" class="home mx-auto d-block img-fluid" alt=""></p>
-						    <p><input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-swim-lanes" value="list--swim-lanes" autocomplete="off"></p>
-							<p>Display all cards in swim lanes<br><strong>Coming soon</strong></p></p>
-						</label>
-
-					</div>
-
-					<p class="text-center"><a href="" onclick="swapDivs('options-columns','options-layout');" class="btn btn-lg btn-app" title="Submit layout options">Next</a></p>
-
+				<div class="col-4 option">
+				    <label for="display-mode--option--layout-list--filter-label">
+				    	<img src="http://localhost:4000/dash-for-trello/assets/img/layout--label-ordered-list.png" class="home mx-auto d-block img-fluid" alt="">
+				    	<input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-list--filter-label" value="list--filter-label" checked tabindex="102">
+				    	<span>Display cards in lists, sorted by label</span>
+				    </label>
 				</div>
 
-				<div id="options-columns" data-toggle="buttons" style="display: none;">
-
-					<h2 class="text-center">Number of columns</h2>
-
-					<div class="row">
-
-						<label class="btn col-4">
-							<p><img src="http://localhost:4000/dash-for-trello/assets/img/layout--unordered-list-2-col.png" class="home mx-auto d-block img-fluid" alt=""></p>
-							<p><input type="radio" name="display-mode--option--columns" id="numberOfCols1" value="6"></p>
-							<p>2 columns</p>
-						</label>
-
-						<label class="btn active col-4">
-							<p><img src="http://localhost:4000/dash-for-trello/assets/img/layout--unordered-list.png" class="home mx-auto d-block img-fluid" alt=""></p>
-							<p><input type="radio" name="display-mode--option--columns" id="numberOfCols2" value="4" checked></p>
-							<p>3 columns</p>
-						</label>
-
-						<label class="btn col-4">
-							<p><img src="http://localhost:4000/dash-for-trello/assets/img/layout--unordered-list-4-col.png" class="home mx-auto d-block img-fluid" alt=""></p>
-							<p><input type="radio" name="display-mode--option--columns" id="numberOfCols3" value="3"></p>
-							<p>4 columns</p>
-						</label>
-
-					</div>
-
-					<p class="text-center"><a href="" onclick="swapDivs('options-data','options-columns');" class="btn btn-lg btn-app" title="Submit number of columns">Next</a></p>
-
+				<div class="col-4 option">
+					<label for="display-mode--option--layout-list--all">
+						<img src="http://localhost:4000/dash-for-trello/assets/img/layout--unordered-list.png" class="home mx-auto d-block img-fluid" alt="">
+						<input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-list--all" value="list--unordered-list">
+				    	<span>Display cards in unordered lists</span>
+					</label>
 				</div>
 
-				<div id="options-data" data-toggle="buttons" style="display: none;">
-
-					<h2 class="text-center">Toggle features</h2>
-
-					<div class="row">
-
-						<label class="btn active col-4">
-							<p><img src="http://localhost:4000/dash-for-trello/assets/img/layout--done-mark.png" class="home mx-auto d-block img-fluid" alt=""></p>
-<p><input id="display-mode--option--check-marks" type="checkbox" value="true" checked></p>
-						    <p>"Done" check marks</p>
-						</label>
-
-						<label class="btn active col-4">
-							<p><img src="http://localhost:4000/dash-for-trello/assets/img/layout--due-date.png" class="home mx-auto d-block img-fluid" alt=""></p>
-						    <p><input id="display-mode--option--due-date" type="checkbox" value="true" checked></p>
-						    <p>Due dates</p>
-						</label>
-
-						<label class="btn active col-4">
-							<p><img src="http://localhost:4000/dash-for-trello/assets/img/layout--label.png" class="home mx-auto d-block img-fluid" alt=""></p>
-						    <p><input id="display-mode--option--labels" type="checkbox" value="true" checked></p>
-						    <p>Labels</p>
-						</label>
-
-					</div>
-
-					<p class="text-center"><a href="" onclick="swapDivs('boardList','options');" class="btn btn-lg btn-app" title="Submit layout options">Next</a></p>
-
+				<div class="col-4 option">
+					<label for="display-mode--option--layout-swim-lanes">
+					    <img src="http://localhost:4000/dash-for-trello/assets/img/layout--label-ordered-swimlanes.png" class="home mx-auto d-block img-fluid" alt="">
+						<input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-swim-lanes" value="list--swim-lanes">
+						<span>Display all cards in swim lanes</span>
+					</label>
 				</div>
 
 			</div>
 
+			<button onclick="swapDivs('options-columns','options-layout');" class="btn btn-lg btn-app" title="Submit layout options" role="button" tabindex="103">Next</button>
+
+		</fieldset>
+
+	</div>
+
+	<div id="options-columns" style="display: none;">
+
+		<fieldset tabindex="201">
+
+			<legend><h2 class="text-center">Choose how many columns to show</h2></legend>
+
+			<div class="row">
+
+				<div class="col-4 option">
+					<label for="numberOfCols1">
+						<img src="http://localhost:4000/dash-for-trello/assets/img/layout--unordered-list-2-col.png" class="home mx-auto d-block img-fluid" alt="">
+						<input type="radio" name="display-mode--option--columns" id="numberOfCols1" value="2" tabindex="202">
+						<span>2 columns</span>
+					</label>
+				</div>
+
+				<div class="col-4 option" role="button">
+					<label for="numberOfCols2">
+						<img src="http://localhost:4000/dash-for-trello/assets/img/layout--unordered-list.png" class="home mx-auto d-block img-fluid" alt="">
+						<input type="radio" name="display-mode--option--columns" id="numberOfCols2" value="3" checked>
+						<span>3 columns</span>
+					</label>
+				</div>
+
+				<div class="col-4 option">
+					<label for="numberOfCols3">
+						<img src="http://localhost:4000/dash-for-trello/assets/img/layout--unordered-list-4-col.png" class="home mx-auto d-block img-fluid" alt="">
+						<input type="radio" name="display-mode--option--columns" id="numberOfCols3" value="4">
+						<span>4 columns</span>
+					</label>
+				</div>
+
+			</div>
+
+			<button onclick="swapDivs('options-data','options-columns');" class="btn btn-lg btn-app" title="Submit number of columns" role="button" tabindex="203">Next</button>
+
+		</fieldset>
+
+	</div>
+
+	<div id="options-data" style="display: none;">
+
+		<fieldset tabindex="301">
+
+			<legend><h2 class="text-center">Toggle features to display</h2></legend>
+
+			<div class="row">
+
+				<div class="col-4 option">
+					<label for="display-mode--option--check-marks">
+						<img src="http://localhost:4000/dash-for-trello/assets/img/layout--done-mark.png" class="home mx-auto d-block img-fluid" alt="">
+						<input id="display-mode--option--check-marks" type="checkbox" value="true" checked tabindex="302">
+					    <span><span class="tick"></span>"Done" check marks</span>
+					</label>
+				</div>
+
+				<div class="col-4 option">
+					<label for="display-mode--option--due-date">
+						<img src="http://localhost:4000/dash-for-trello/assets/img/layout--due-date.png" class="home mx-auto d-block img-fluid" alt="">
+					    <input id="display-mode--option--due-date" type="checkbox" value="true" checked tabindex="303">
+					    <span><span class="tick"></span>Due dates</span>
+					</label>
+				</div>
+
+				<div class="col-4 option">
+					<label for="display-mode--option--labels">
+						<img src="http://localhost:4000/dash-for-trello/assets/img/layout--label.png" class="home mx-auto d-block img-fluid" alt="">
+					    <input id="display-mode--option--labels" type="checkbox" value="true" checked tabindex="304">
+					    <span><span class="tick"></span>Labels</span>
+					</label>
+				</div>
+
+			</div>
+
+			<button onclick="swapDivs('boardList','options');" class="btn btn-lg btn-app" title="Submit layout options" role="button" tabindex="305">Next</button>
+
+
+		</fieldset>
+
+	</div>
+</div>
+
 			<div id="boardList" style="display: none;"></div>
+
+			<div id="loggedIn-PrintScreen" class="col-sm-12 col-md-8" style="display: none;"><img src="http://localhost:4000/dash-for-trello/assets/img/print.png" class="print mx-auto d-block" alt="Dash for Trello logo (left), an arrow pointing rightward (middle) towards a representation of an A4 landscape piece of paper">
+
+<h1 class="text-center">Time to print</h1>
+
+<p><strong>You might need to change your printer's settings in order for the Board to print correctly.</strong></p>
+
+<p>Set <strong>margins</strong> to <strong>0mm</strong> and change the <strong>print backgrounds and images</strong> setting to <strong>on</strong>.</p>
+
+<p><strong>Something still not right?</strong><p>
+
+<p>This web app was tested in Google Chrome. If you're not using Chrome and things don't look right, change your browser to Chrome. If you're already using Chrome, and something's still not right, <a href="https://github.com/johnpeart/dash-for-trello/issues/new" title="Submit an issue report on Github">file a bug report</a>.</p>
+
+<p class="text-center"><a id="print" class="btn btn-lg btn-app" role="button" title="Select to print the Trello Board (triggers system print dialog)">Print my board</a></p></div>
 
 		</div>
 
@@ -206,7 +246,7 @@
 
 </div>
 
-<div id="loggedIn-Output" class="container-fluid">
+<div id="loggedIn-Output" style="display: none;">
 
 	<div id="output">
 
@@ -217,21 +257,7 @@
 
 		</main>
 
-		<footer id="no-print">
-
-	<div class="container">
-		<div id="footer" class="row align-items-start">
-		    <div class="col">
-				<p><strong>Dash for Trello</strong> • Created by <a href="http://localhost:4000" title="Go to my website">John Peart</a></p>
-				<p><em>This is <strong>not</strong> an official Trello app, and is not affiliated with Trello.</em></p>
-		    </div>
-		    <div class="col">
-				<p class="text-right"><a href="https://github.com/johnpeart/dash-for-trello" title="Go to the Github repository">Get the source code on Github</a></p>
-		    </div>
-		</div>
-	</div>
-
-</footer>
+		
 
 	</body>
 

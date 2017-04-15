@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
@@ -6768,170 +6769,477 @@ a#reset {
   background-size: contain; }
 
 div#loggedIn-Options {
-  min-height: 100vh;
-  min-width: 100vw;
-  background: #28a197;
-  background: -moz-linear-gradient(45deg, #28a197 0%, #2b8cc4 100%);
-  background: -webkit-gradient(left bottom, right top, color-stop(0%, #28a197), color-stop(100%, #2b8cc4));
-  background: -webkit-linear-gradient(45deg, #28a197 0%, #2b8cc4 100%);
-  background: -o-linear-gradient(45deg, #28a197 0%, #2b8cc4 100%);
-  background: -ms-linear-gradient(45deg, #28a197 0%, #2b8cc4 100%);
-  background: linear-gradient(45deg, #28a197 0%, #2b8cc4 100%);
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: block;
+  background: #912b88;
+  background: -moz-linear-gradient(45deg, #912b88 0%, #d40072 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #912b88), color-stop(100%, #d40072));
+  background: -webkit-linear-gradient(45deg, #912b88 0%, #d40072 100%);
+  background: -o-linear-gradient(45deg, #912b88 0%, #d40072 100%);
+  background: -ms-linear-gradient(45deg, #912b88 0%, #d40072 100%);
+  background: linear-gradient(45deg, #912b88 0%, #d40072 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$first', endColorstr='$second', GradientType=1 );
   color: #fff; }
   div#loggedIn-Options div#page {
     min-height: 100vh; }
     div#loggedIn-Options div#page h1 {
-      text-align: center; }
-    div#loggedIn-Options div#page img.loggedOut {
+      text-align: center;
+      margin-bottom: 1rem; }
+    div#loggedIn-Options div#page h2 {
+      text-align: center;
+      margin-bottom: 2rem; }
+    div#loggedIn-Options div#page img.loggedOut, div#loggedIn-Options div#page img.print {
       max-width: 350px;
       height: auto;
       margin-bottom: 3rem; }
-    div#loggedIn-Options div#page a {
+    div#loggedIn-Options div#page a, div#loggedIn-Options div#page button {
       color: #ffffff;
       text-decoration: underline; }
-      div#loggedIn-Options div#page a.btn {
+      div#loggedIn-Options div#page a.btn, div#loggedIn-Options div#page button.btn {
         margin-top: 2rem; }
-      div#loggedIn-Options div#page a.btn-app {
-        color: #28a197 !important;
+      div#loggedIn-Options div#page a.btn-app, div#loggedIn-Options div#page button.btn-app {
+        color: #d40072 !important;
         background: #ffffff;
         border: 1px solid #ffffff;
         text-decoration: none !important; }
-        div#loggedIn-Options div#page a.btn-app:hover, div#loggedIn-Options div#page a.btn-app:focus {
+        div#loggedIn-Options div#page a.btn-app:hover, div#loggedIn-Options div#page a.btn-app:focus, div#loggedIn-Options div#page button.btn-app:hover, div#loggedIn-Options div#page button.btn-app:focus {
           color: #ffffff !important;
           background: transparent;
           border: 1px solid #ffffff; }
-      div#loggedIn-Options div#page a.btn-outline-app {
+      div#loggedIn-Options div#page a.btn-outline-app, div#loggedIn-Options div#page button.btn-outline-app {
         color: #ffffff !important;
         background: transparent;
         border: 1px solid #ffffff;
         text-decoration: none !important; }
-        div#loggedIn-Options div#page a.btn-outline-app:hover, div#loggedIn-Options div#page a.btn-outline-app:focus {
-          color: #28a197 !important;
+        div#loggedIn-Options div#page a.btn-outline-app:hover, div#loggedIn-Options div#page a.btn-outline-app:focus, div#loggedIn-Options div#page button.btn-outline-app:hover, div#loggedIn-Options div#page button.btn-outline-app:focus {
+          color: #d40072 !important;
           background: #ffffff;
           border: 1px solid #ffffff; }
-    div#loggedIn-Options div#page div#instructions {
-      margin-bottom: 3rem; }
+    div#loggedIn-Options div#page fieldset {
+      text-align: center; }
+      div#loggedIn-Options div#page fieldset div.option {
+        padding: 1rem 1rem;
+        border-radius: 0px; }
+        div#loggedIn-Options div#page fieldset div.option img {
+          margin: 2rem 0; }
+        div#loggedIn-Options div#page fieldset div.option [type="radio"] {
+          border: 0;
+          clip: rect(0 0 0 0);
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          width: 1px; }
+        div#loggedIn-Options div#page fieldset div.option [type="checkbox"] {
+          border: 0;
+          clip: rect(0 0 0 0);
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          width: 1px; }
+        div#loggedIn-Options div#page fieldset div.option span {
+          padding: 0.5rem 0.75rem; }
+        div#loggedIn-Options div#page fieldset div.option [type="radio"]:checked + span {
+          padding: 0.5rem 0.75rem;
+          background: #ffffff;
+          color: #d40072;
+          border-radius: 50px; }
+        div#loggedIn-Options div#page fieldset div.option [type="checkbox"] ~ span {
+          padding: 0.5rem 0.75rem;
+          background: transparent;
+          color: #ffffff;
+          border-radius: 100px;
+          border: 1px solid #ffffff; }
+          div#loggedIn-Options div#page fieldset div.option [type="checkbox"] ~ span span.tick, div#loggedIn-Options div#page fieldset div.option [type="checkbox"] ~ span div#loggedIn-Output #output div#lists ul.cards li span.empty-tick, div#loggedIn-Output #output div#lists ul.cards li div#loggedIn-Options div#page fieldset div.option [type="checkbox"] ~ span span.empty-tick, div#loggedIn-Options div#page fieldset div.option [type="checkbox"] ~ span div#loggedIn-Output #output div#swim-lanes div.swim-lane-group ul.cards li span.empty-tick, div#loggedIn-Output #output div#swim-lanes div.swim-lane-group ul.cards li div#loggedIn-Options div#page fieldset div.option [type="checkbox"] ~ span span.empty-tick {
+            position: relative;
+            display: inline-block;
+            left: -6px;
+            top: 6px;
+            height: 25px;
+            width: 25px;
+            border-radius: 150px;
+            background: transparent;
+            border: 1px solid #ffffff; }
+        div#loggedIn-Options div#page fieldset div.option [type="checkbox"]:checked ~ span {
+          padding: 0.5rem 0.75rem;
+          background: #ffffff;
+          color: #d40072;
+          border-radius: 150px; }
+          div#loggedIn-Options div#page fieldset div.option [type="checkbox"]:checked ~ span span.tick, div#loggedIn-Options div#page fieldset div.option [type="checkbox"]:checked ~ span div#loggedIn-Output #output div#lists ul.cards li span.empty-tick, div#loggedIn-Output #output div#lists ul.cards li div#loggedIn-Options div#page fieldset div.option [type="checkbox"]:checked ~ span span.empty-tick, div#loggedIn-Options div#page fieldset div.option [type="checkbox"]:checked ~ span div#loggedIn-Output #output div#swim-lanes div.swim-lane-group ul.cards li span.empty-tick, div#loggedIn-Output #output div#swim-lanes div.swim-lane-group ul.cards li div#loggedIn-Options div#page fieldset div.option [type="checkbox"]:checked ~ span span.empty-tick {
+            position: relative;
+            display: inline-block;
+            left: -6px;
+            top: 6px;
+            height: 25px;
+            width: 25px;
+            border-radius: 100px;
+            background: #d40072;
+            color: #ffffff; }
+            div#loggedIn-Options div#page fieldset div.option [type="checkbox"]:checked ~ span span.tick:after, div#loggedIn-Options div#page fieldset div.option [type="checkbox"]:checked ~ span div#loggedIn-Output #output div#lists ul.cards li span.empty-tick:after, div#loggedIn-Output #output div#lists ul.cards li div#loggedIn-Options div#page fieldset div.option [type="checkbox"]:checked ~ span span.empty-tick:after, div#loggedIn-Options div#page fieldset div.option [type="checkbox"]:checked ~ span div#loggedIn-Output #output div#swim-lanes div.swim-lane-group ul.cards li span.empty-tick:after, div#loggedIn-Output #output div#swim-lanes div.swim-lane-group ul.cards li div#loggedIn-Options div#page fieldset div.option [type="checkbox"]:checked ~ span span.empty-tick:after {
+              content: "✓";
+              color: #ffffff;
+              position: absolute;
+              display: inline-block;
+              left: 6px;
+              top: 0; }
 
 div#loggedIn-Output p, div#loggedIn-Output li {
   font-size: 0.8rem; }
-div#loggedIn-Output div#meta {
-  background: #d40072;
-  color: #FFFFFF; }
-  div#loggedIn-Output div#meta h1 {
-    margin: 1rem 0; }
-  div#loggedIn-Output div#meta p {
-    margin: 1rem 0; }
-div#loggedIn-Output #output div.list {
-  margin-bottom: 2rem; }
-div#loggedIn-Output #output h1 {
-  font-size: 1.2rem; }
-div#loggedIn-Output #output h2 {
-  font-size: 0.9rem;
-  margin: 0.25rem 0 0.2rem 0;
-  padding: 0;
-  border-bottom: 1px solid; }
-div#loggedIn-Output #output ul.cards {
-  list-style: none;
-  margin: 0px;
-  padding: 0; }
-  div#loggedIn-Output #output ul.cards li p {
-    margin-bottom: 0.5rem; }
-  div#loggedIn-Output #output ul.cards li.ticks-on {
-    margin-left: 1.5rem; }
-  div#loggedIn-Output #output ul.cards li span.tick, div#loggedIn-Output #output ul.cards li span.empty-tick {
+div#loggedIn-Output #output {
+  position: relative;
+  display: block; }
+  div#loggedIn-Output #output div#meta {
+    background: #912b88;
+    background: -moz-linear-gradient(45deg, #912b88 0%, #d40072 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, #912b88), color-stop(100%, #d40072));
+    background: -webkit-linear-gradient(45deg, #912b88 0%, #d40072 100%);
+    background: -o-linear-gradient(45deg, #912b88 0%, #d40072 100%);
+    background: -ms-linear-gradient(45deg, #912b88 0%, #d40072 100%);
+    background: linear-gradient(45deg, #912b88 0%, #d40072 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$first', endColorstr='$second', GradientType=1 );
+    color: #FFFFFF;
+    margin: 0;
+    padding: 2rem;
+    float: left; }
+    div#loggedIn-Output #output div#meta h1 {
+      margin: 1rem 0; }
+    div#loggedIn-Output #output div#meta p {
+      margin: 1rem 0; }
+    div#loggedIn-Output #output div#meta p.foot {
+      position: absolute;
+      top: 90vh; }
+  div#loggedIn-Output #output div#lists {
     position: absolute;
-    left: 1rem;
-    margin-top: 2px;
-    width: 1rem;
-    height: 1rem;
+    display: block;
+    width: auto;
+    height: auto;
+    top: 0;
+    bottom: auto;
+    overflow-x: scroll;
+    overflow-y: visible; }
+    div#loggedIn-Output #output div#lists div.list {
+      position: relative;
+      display: block;
+      float: left;
+      height: 100vh;
+      padding: 0 1rem;
+      overflow-x: hidden;
+      overflow-y: scroll; }
+      div#loggedIn-Output #output div#lists div.list.print-col-2 {
+        width: 50vw; }
+      div#loggedIn-Output #output div#lists div.list.print-col-3 {
+        width: 33.3vw; }
+      div#loggedIn-Output #output div#lists div.list.print-col-4 {
+        width: 25vw; }
+    div#loggedIn-Output #output div#lists h1 {
+      font-size: 1.2rem; }
+    div#loggedIn-Output #output div#lists h2 {
+      font-size: 0.9rem;
+      margin: 0.25rem 0 0.2rem 0;
+      padding: 0;
+      border-bottom: 1px solid; }
+    div#loggedIn-Output #output div#lists ul.cards {
+      list-style: none;
+      margin: 0px;
+      padding: 0; }
+      div#loggedIn-Output #output div#lists ul.cards li p {
+        margin-bottom: 0.5rem; }
+      div#loggedIn-Output #output div#lists ul.cards li.ticks-on {
+        margin-left: 1.5rem; }
+      div#loggedIn-Output #output div#lists ul.cards li span.tick, div#loggedIn-Output #output div#lists ul.cards li span.empty-tick, div#loggedIn-Output #output div#lists div#swim-lanes div.swim-lane-group ul.cards li span.empty-tick, div#loggedIn-Output #output div#swim-lanes div.swim-lane-group div#lists ul.cards li span.empty-tick {
+        position: absolute;
+        left: 1rem;
+        margin-top: 2px;
+        width: 1rem;
+        height: 1rem;
+        background: #006435;
+        color: #ffffff !important;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 0.7rem;
+        line-height: 1rem; }
+      div#loggedIn-Output #output div#lists ul.cards li span.empty-tick {
+        border: 2px solid #9c9c9c;
+        background: #fff; }
+  div#loggedIn-Output #output div#swim-lanes {
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 0;
+    bottom: auto;
+    overflow-x: visible;
+    overflow-y: visible; }
+    div#loggedIn-Output #output div#swim-lanes span.blank {
+      content: " ";
+      display: inline-block;
+      position: relative;
+      float: left;
+      margin: 0;
+      text-align: center;
+      width: 1px;
+      height: 1px; }
+    div#loggedIn-Output #output div#swim-lanes div#thead {
+      height: 100vh;
+      background: #912b88;
+      background: -moz-linear-gradient(45deg, #912b88 0%, #d40072 100%);
+      background: -webkit-gradient(left bottom, right top, color-stop(0%, #912b88), color-stop(100%, #d40072));
+      background: -webkit-linear-gradient(45deg, #912b88 0%, #d40072 100%);
+      background: -o-linear-gradient(45deg, #912b88 0%, #d40072 100%);
+      background: -ms-linear-gradient(45deg, #912b88 0%, #d40072 100%);
+      background: linear-gradient(45deg, #912b88 0%, #d40072 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$first', endColorstr='$second', GradientType=1 );
+      color: #ffffff;
+      padding: 2rem; }
+      div#loggedIn-Output #output div#swim-lanes div#thead p.foot {
+        position: absolute;
+        top: 95vh; }
+    div#loggedIn-Output #output div#swim-lanes div.swim-lane-group {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100vh; }
+      div#loggedIn-Output #output div#swim-lanes div.swim-lane-group div.columns {
+        position: relative;
+        display: inline-block;
+        float: left;
+        width: 100%; }
+        div#loggedIn-Output #output div#swim-lanes div.swim-lane-group div.columns div {
+          position: relative;
+          display: block;
+          float: left;
+          padding: 0 1rem; }
+          div#loggedIn-Output #output div#swim-lanes div.swim-lane-group div.columns div.first-column {
+            width: 10vw; }
+          div#loggedIn-Output #output div#swim-lanes div.swim-lane-group div.columns div.print-col-2 {
+            width: 45vw; }
+          div#loggedIn-Output #output div#swim-lanes div.swim-lane-group div.columns div.print-col-3 {
+            width: 30vw; }
+          div#loggedIn-Output #output div#swim-lanes div.swim-lane-group div.columns div.print-col-4 {
+            width: 22.5vw; }
+      div#loggedIn-Output #output div#swim-lanes div.swim-lane-group div.swim-lane {
+        position: relative;
+        display: inline-block;
+        float: left;
+        padding: 0.5rem 0;
+        width: 100%;
+        border-top: 1px solid #d40072; }
+        div#loggedIn-Output #output div#swim-lanes div.swim-lane-group div.swim-lane div {
+          position: relative;
+          display: block;
+          float: left; }
+          div#loggedIn-Output #output div#swim-lanes div.swim-lane-group div.swim-lane div.first-column {
+            width: 10vw; }
+            div#loggedIn-Output #output div#swim-lanes div.swim-lane-group div.swim-lane div.first-column h2.label {
+              padding: 0; }
+          div#loggedIn-Output #output div#swim-lanes div.swim-lane-group div.swim-lane div.print-col-2 {
+            width: 45vw; }
+          div#loggedIn-Output #output div#swim-lanes div.swim-lane-group div.swim-lane div.print-col-3 {
+            width: 30vw; }
+          div#loggedIn-Output #output div#swim-lanes div.swim-lane-group div.swim-lane div.print-col-4 {
+            width: 22.5vw; }
+      div#loggedIn-Output #output div#swim-lanes div.swim-lane-group h1 {
+        font-size: 1rem !important; }
+      div#loggedIn-Output #output div#swim-lanes div.swim-lane-group h2 {
+        font-size: 0.9rem;
+        margin: 0.25rem 0 0.2rem 0;
+        padding: 0; }
+      div#loggedIn-Output #output div#swim-lanes div.swim-lane-group ul.cards {
+        list-style: none;
+        display: block;
+        position: relative;
+        margin: 0;
+        padding: 0 1rem; }
+        div#loggedIn-Output #output div#swim-lanes div.swim-lane-group ul.cards li p {
+          margin-bottom: 0rem; }
+        div#loggedIn-Output #output div#swim-lanes div.swim-lane-group ul.cards li.ticks-on {
+          margin-left: 1.5rem; }
+        div#loggedIn-Output #output div#swim-lanes div.swim-lane-group ul.cards li span.tick, div#loggedIn-Output #output div#swim-lanes div.swim-lane-group ul.cards li span.empty-tick {
+          position: absolute;
+          left: 1rem;
+          margin-top: 2px;
+          width: 1rem;
+          height: 1rem;
+          background: #006435;
+          color: #ffffff !important;
+          border-radius: 50px;
+          text-align: center;
+          font-size: 0.7rem;
+          line-height: 1rem; }
+        div#loggedIn-Output #output div#swim-lanes div.swim-lane-group ul.cards li span.empty-tick {
+          border: 2px solid #9c9c9c;
+          background: #fff; }
+  div#loggedIn-Output #output .badge {
+    margin-right: 0.3rem;
+    border-radius: 0.25rem; }
+  div#loggedIn-Output #output .badge-green {
     background: #006435;
-    color: #ffffff !important;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 0.7rem;
-    line-height: 1rem; }
-  div#loggedIn-Output #output ul.cards li span.empty-tick {
-    border: 2px solid #9c9c9c;
-    background: #fff; }
-div#loggedIn-Output #output .badge {
-  margin-right: 0.3rem;
-  border-radius: 0.25rem; }
-div#loggedIn-Output #output .badge-green {
-  background: #006435;
-  border: 1px solid #006435;
-  color: #ffffff; }
-div#loggedIn-Output #output .badge-yellow {
-  background: #FFBF47;
-  color: #ffffff;
-  border: 1px solid #FFBF47; }
-div#loggedIn-Output #output .badge-orange {
-  background: #F47738;
-  color: #ffffff;
-  border: 1px solid #F47738; }
-div#loggedIn-Output #output .badge-purple {
-  background: #2E358B;
-  color: #ffffff;
-  border: 1px solid #2E358B; }
-div#loggedIn-Output #output .badge-red {
-  background: #B10E1E;
-  color: #ffffff;
-  border: 1px solid #B10E1E; }
-div#loggedIn-Output #output .badge-blue {
-  background: #005EA5;
-  color: #ffffff;
-  border: 1px solid #005EA5; }
-div#loggedIn-Output #output .badge-sky {
-  background: #2B8CC4;
-  color: #ffffff;
-  border: 1px solid #2B8CC4; }
-div#loggedIn-Output #output .badge-lime {
-  background: #85994B;
-  color: #ffffff;
-  border: 1px solid #85994B; }
-div#loggedIn-Output #output .badge-pink {
-  background: #D53880;
-  color: #ffffff;
-  border: 1px solid #D53880; }
-div#loggedIn-Output #output .badge-pink--inverse {
-  color: #D53880;
-  border: 1px solid #D53880;
-  background: #ffffff; }
-div#loggedIn-Output #output .badge-black {
-  background: #000000;
-  color: #ffffff;
-  border: 1px solid #000000; }
-div#loggedIn-Output #output .green {
-  color: #006435; }
-div#loggedIn-Output #output .yellow {
-  color: #FFBF47; }
-div#loggedIn-Output #output .orange {
-  color: #F47738; }
-div#loggedIn-Output #output .purple {
-  color: #2E358B; }
-div#loggedIn-Output #output .red {
-  color: #B10E1E; }
-div#loggedIn-Output #output .blue {
-  color: #005EA5; }
-div#loggedIn-Output #output .sky {
-  color: #2B8CC4; }
-div#loggedIn-Output #output .lime {
-  color: #85994B; }
-div#loggedIn-Output #output .pink {
-  color: #D53880; }
-div#loggedIn-Output #output .black {
-  color: #000000; }
+    border: 1px solid #006435;
+    color: #ffffff; }
+  div#loggedIn-Output #output .badge-yellow {
+    background: #FFBF47;
+    color: #ffffff;
+    border: 1px solid #FFBF47; }
+  div#loggedIn-Output #output .badge-orange {
+    background: #F47738;
+    color: #ffffff;
+    border: 1px solid #F47738; }
+  div#loggedIn-Output #output .badge-purple {
+    background: #2E358B;
+    color: #ffffff;
+    border: 1px solid #2E358B; }
+  div#loggedIn-Output #output .badge-red {
+    background: #B10E1E;
+    color: #ffffff;
+    border: 1px solid #B10E1E; }
+  div#loggedIn-Output #output .badge-blue {
+    background: #005EA5;
+    color: #ffffff;
+    border: 1px solid #005EA5; }
+  div#loggedIn-Output #output .badge-sky {
+    background: #2B8CC4;
+    color: #ffffff;
+    border: 1px solid #2B8CC4; }
+  div#loggedIn-Output #output .badge-lime {
+    background: #85994B;
+    color: #ffffff;
+    border: 1px solid #85994B; }
+  div#loggedIn-Output #output .badge-pink {
+    background: #D53880;
+    color: #ffffff;
+    border: 1px solid #D53880; }
+  div#loggedIn-Output #output .badge-pink--inverse {
+    color: #D53880;
+    border: 1px solid #D53880;
+    background: #ffffff; }
+  div#loggedIn-Output #output .badge-black {
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid #000000; }
+  div#loggedIn-Output #output .green {
+    color: #006435; }
+  div#loggedIn-Output #output .yellow {
+    color: #FFBF47; }
+  div#loggedIn-Output #output .orange {
+    color: #F47738; }
+  div#loggedIn-Output #output .purple {
+    color: #2E358B; }
+  div#loggedIn-Output #output .red {
+    color: #B10E1E; }
+  div#loggedIn-Output #output .blue {
+    color: #005EA5; }
+  div#loggedIn-Output #output .sky {
+    color: #2B8CC4; }
+  div#loggedIn-Output #output .lime {
+    color: #85994B; }
+  div#loggedIn-Output #output .pink {
+    color: #D53880; }
+  div#loggedIn-Output #output .black {
+    color: #000000; }
 
 @media print {
-  html, body {
-    width: 297mm;
-    height: 210mm; }
-
-  #loggedIn-Output div.list {
-    height: 198mm; }
-
-  footer#no-print {
-    display: none; } }
+  #loggedIn-Output {
+    margin: 0;
+    padding: 0; }
+    #loggedIn-Output div#lists {
+      width: auto;
+      height: 200mm; }
+      #loggedIn-Output div#lists div.list.print-col-2 {
+        width: 143.5mm; }
+      #loggedIn-Output div#lists div.list.print-col-3 {
+        width: 95.6666667mm; }
+      #loggedIn-Output div#lists div.list.print-col-4 {
+        width: 71.75mm; }
+    #loggedIn-Output div#swim-lanes div#thead {
+      height: 10mm; }
+    #loggedIn-Output div#swim-lanes div.swim-lane-group {
+      height: 200mm; }
+      #loggedIn-Output div#swim-lanes div.swim-lane-group:first-of-type {
+        height: 190mm !important; }
+      #loggedIn-Output div#swim-lanes div.swim-lane-group div.columns div {
+        position: relative;
+        display: block;
+        float: left;
+        padding: 0 5mm; }
+        #loggedIn-Output div#swim-lanes div.swim-lane-group div.columns div.first-column {
+          width: 30mm; }
+        #loggedIn-Output div#swim-lanes div.swim-lane-group div.columns div.print-col-2 {
+          width: 128.5mm; }
+        #loggedIn-Output div#swim-lanes div.swim-lane-group div.columns div.print-col-3 {
+          width: 85.666667mm; }
+        #loggedIn-Output div#swim-lanes div.swim-lane-group div.columns div.print-col-4 {
+          width: 64.25mm; }
+        #loggedIn-Output div#swim-lanes div.swim-lane-group div.columns div span.blank {
+          content: " ";
+          display: inline-block;
+          position: relative;
+          float: left;
+          margin: 0;
+          text-align: center;
+          width: 1px;
+          height: 1px; }
+      #loggedIn-Output div#swim-lanes div.swim-lane-group div.swim-lane {
+        position: relative;
+        display: inline-block;
+        float: left;
+        padding: 5mm 0;
+        width: 100%;
+        border-top: 1px solid #d40072; }
+        #loggedIn-Output div#swim-lanes div.swim-lane-group div.swim-lane div.first-column {
+          width: 30mm; }
+          #loggedIn-Output div#swim-lanes div.swim-lane-group div.swim-lane div.first-column h2.label {
+            padding: 0; }
+        #loggedIn-Output div#swim-lanes div.swim-lane-group div.swim-lane div.print-col-2 {
+          width: 128.5mm; }
+        #loggedIn-Output div#swim-lanes div.swim-lane-group div.swim-lane div.print-col-3 {
+          width: 85.666667mm; }
+        #loggedIn-Output div#swim-lanes div.swim-lane-group div.swim-lane div.print-col-4 {
+          width: 64.25mm; }
+      #loggedIn-Output div#swim-lanes div.swim-lane-group h1 {
+        font-size: 1rem !important; }
+      #loggedIn-Output div#swim-lanes div.swim-lane-group h2 {
+        font-size: 0.9rem;
+        margin: 0.25rem 0 0.2rem 0;
+        padding: 0; }
+      #loggedIn-Output div#swim-lanes div.swim-lane-group ul.cards {
+        list-style: none;
+        display: block;
+        position: relative;
+        margin: 0;
+        padding: 0 1rem; }
+        #loggedIn-Output div#swim-lanes div.swim-lane-group ul.cards li p {
+          margin-bottom: 0rem; }
+        #loggedIn-Output div#swim-lanes div.swim-lane-group ul.cards li.ticks-on {
+          margin-left: 1.5rem; }
+        #loggedIn-Output div#swim-lanes div.swim-lane-group ul.cards li span.tick, div#loggedIn-Output div#swim-lanes div.swim-lane-group #output div#lists ul.cards li span.empty-tick, div#loggedIn-Output #output div#swim-lanes div.swim-lane-group ul.cards li span.empty-tick {
+          position: absolute;
+          left: 1rem;
+          margin-top: 2px;
+          width: 1rem;
+          height: 1rem;
+          background: #006435;
+          color: #ffffff !important;
+          border-radius: 50px;
+          text-align: center;
+          font-size: 0.7rem;
+          line-height: 1rem; }
+        #loggedIn-Output div#swim-lanes div.swim-lane-group ul.cards li span.empty-tick {
+          position: absolute;
+          left: 1rem;
+          margin-top: 2px;
+          width: 1rem;
+          height: 1rem;
+          color: #ffffff !important;
+          border-radius: 50px;
+          text-align: center;
+          font-size: 0.7rem;
+          line-height: 1rem;
+          border: 2px solid #9c9c9c;
+          background: #ffffff !important; } }
 @page {
   margin: 5mm;
   padding: 0;

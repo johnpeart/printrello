@@ -48,195 +48,22 @@ var displayBoard = function(board){
 
 	if (displayLayout == "list--filter-label") {
 
-		Trello.get("boards/" + board.id + "/labels", function(labels) {
+		{% include list--filter-label.js %}
 
-			Trello.get("boards/" + board.id + "/cards", function(cards) {
+	} else if (displayLayout == "list--unordered-list") {
 
-			output = '<div class="row">';
+		{% include list--unordered-list.js %}
 
-				output += "<div id='meta' class='col-" + displayColumns + "'>"
+	} else if (displayLayout == "list--swim-lanes") {
 
-					output += "<h1>" + board.name; + "</h1>";
-
-					output += "<p>Created on " + printDate + "</p>";
-
-				output += "</div>"
-
-			    $.each(board.lists, function (i){
-
-				    var idList = this.id;
-					output += "<div class='col-" + displayColumns + " list'>";
-					output += "<h1>"+this.name+"</h1>";
-
-				    $.each(labels, function(index, label) {
-
-						var idLabels = this.id;
-
-						if (idLabels )
-
-						if (displayLabels == true) {
-
-						    output += "<h2 class='" + this.color + "'>" + this.name + "</h2>";
-
-						}
-
-						output+= "<ul class='cards'>";
-
-						$.each(board.cards, function(i){
-							var idCard = this.id;
-
-							if (displayCheckMarks == true) {
-
-			       				output += "<li class='ticks-on'><p>";
-
-			       			} else {
-
-				       			output += "<li class='ticks-off'><p>";
-
-			       			}
-
-
-								if (this.idList == idList){
-
-									if (this.idLabels == idLabels){
-
-										if (displayCheckMarks == true) {
-
-											if (this.dueComplete == true) {
-											    output += "<span class='tick'>✓</span>";
-											} else {
-											    output += "<span class='empty-tick'></span>";
-											}
-
-										}
-
-										if (displayDueDates == true) {
-
-											if (this.due != null) {
-												var cardDue = new Date(this.due);
-												var monthShortNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-						  "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
-												output += " <span class='badge badge-pink--inverse'>" + cardDue.getDate() + ' ' + monthShortNames[cardDue.getMonth()] + "</span>";
-											}
-
-										}
-
-							       			output += this.name;
-
-							       	}
-
-							   	}
-
-
-			       			output += "</p></li>";
-
-						});
-
-						output+= "</ul>";
-
-					});
-
-					output += "</div>";
-				});
-
-				output += '</div>';
-				$('#output').html(output);
-
-			});
-
-		});
+		{% include list--swim-lanes.js %}
 
 	} else {
 
-		Trello.get("boards/" + board.id + "/cards", function(cards) {
-
-			output = '<div id="lists">';
-			output += '<div class="row">';
-
-				output += "<div id='meta' class='col-" + displayColumns + "'>"
-
-					output += "<h1>" + board.name; + "</h1>";
-
-					output += "<p>Created on " + printDate + "</p>";
-
-				output += "</div>"
-
-			    $.each(board.lists, function (i){
-					var idList = this.id;
-					output += "<div class='col-" + displayColumns + " list'>";
-					output += "<h1>"+this.name+"</h1>";
-
-					output+= "<ul class='cards'>";
-
-					$.each(cards, function(i){
-						var idCard = this.id;
-
-						var cardStickers = idCard.stickers;
-
-						if (this.idList == idList){
-
-							if (displayCheckMarks == true) {
-
-			       				output += "<li class='ticks-on'><p>";
-
-			       			} else {
-
-				       			output += "<li class='ticks-off'><p>";
-
-			       			}
-
-							if (displayCheckMarks == true) {
-
-								if (this.dueComplete == true) {
-								    output += "<span class='tick'>✓</span>";
-								} else {
-								    output += "<span class='empty-tick'></span>";
-								}
-
-							}
-
-							if (displayDueDates == true) {
-
-								if (this.due != null) {
-									var cardDue = new Date(this.due);
-									var monthShortNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-							"Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
-									output += " <span class='badge badge-pink--inverse'>" + cardDue.getDate() + ' ' + monthShortNames[cardDue.getMonth()] + "</span>";
-								}
-
-							}
-
-							if (displayLabels == true) {
-
-				       			var cardLabels = this.labels;
-
-				       			for (i = 0; i < cardLabels.length ; i++) {
-								    output += "<span class='badge badge-"+cardLabels[i].color+"'>" + cardLabels[i].name + "</span>";
-								}
-							}
-
-			       			output += this.name;
-
-			       			output += "</p></li>";
-						}
-
-					});
-
-					output += "</ul>";
-					output += "</div>";
-				});
-
-			output += "</div>"
-			output += '</div>';
-
-			$('#output').html(output);
-
-		});
-
 	}
 
-	$('#loggedIn-Options').hide();
-
+	$('#boardList').hide();
+	$('#loggedIn-PrintScreen').show();
 }
 
 var updateLoggedIn = function() {
@@ -272,6 +99,14 @@ var reset = function() {
 	$("#options-data").hide();
 	$("#boardList").hide();
 	$("#loggedIn-Options").show();
+	$("#loggedIn-PrintScreen").hide();
+}
+
+var print = function() {
+	$("#loggedIn-Options").hide();
+	$("#loggedIn-Output").show();
+	window.print();
+	$("#loggedIn-Options").show();
 	$("#loggedIn-Output").hide();
 }
 
@@ -298,8 +133,8 @@ $("#showLink").click(function(){
 });
 
 $("#disconnect").click(logout);
-
 $("#reset").click(reset);
+$("#print").click(print);
 
 });
 

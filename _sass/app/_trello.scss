@@ -99,10 +99,13 @@ a#reset {
 
 div#loggedIn-Options {
 
-	min-height: 100vh;
-	min-width: 100vw;
+	height: 100vh;
+	width: 100vw;
 
-	@include gradient-background($brand-turquoise,$brand-blue);
+	position: relative;
+	display: block;
+
+	@include gradient-background($brand-purple, $brand-pink);
 
 	color: #fff;
 
@@ -112,15 +115,21 @@ div#loggedIn-Options {
 
 		h1 {
 			text-align: center;
+			margin-bottom: 1rem;
 		}
 
-		img.loggedOut {
+		h2 {
+			text-align: center;
+			margin-bottom: 2rem;
+		}
+
+		img.loggedOut, img.print {
 			max-width: 350px;
 			height: auto;
 			margin-bottom: 3rem;
 		}
 
-		a {
+		a, button {
 			color: #ffffff;
 			text-decoration: underline;
 
@@ -129,7 +138,7 @@ div#loggedIn-Options {
 			}
 
 			&.btn-app {
-				color: $brand-turquoise !important;
+				color: $brand-pink !important;
 				background: #ffffff;
 				border: 1px solid #ffffff;
 				text-decoration: none !important;
@@ -149,15 +158,123 @@ div#loggedIn-Options {
 
 				&:hover,
 				&:focus {
-					color: $brand-turquoise !important;
+					color: $brand-pink !important;
 					background: #ffffff;
 					border: 1px solid #ffffff;
 				}
 			}
 		}
 
-		div#instructions {
-			margin-bottom: 3rem;
+		fieldset {
+
+			text-align: center;
+
+			div.option {
+				padding: 1rem 1rem;
+
+				border-radius: 0px;
+
+				img {
+					margin: 2rem 0;
+				}
+
+				[type="radio"] {
+					border: 0;
+					clip: rect(0 0 0 0);
+					height: 1px;
+					margin: -1px;
+					overflow: hidden;
+					padding: 0;
+					position: absolute;
+					width: 1px;
+				}
+
+				[type="checkbox"] {
+					border: 0;
+					clip: rect(0 0 0 0);
+					height: 1px;
+					margin: -1px;
+					overflow: hidden;
+					padding: 0;
+					position: absolute;
+					width: 1px;
+				}
+
+				span {
+					padding: 0.5rem 0.75rem;
+				}
+
+				[type="radio"]:checked + span {
+					padding: 0.5rem 0.75rem;
+
+					background: #ffffff;
+					color: $brand-primary;
+
+					border-radius: 50px;
+				}
+
+				[type="checkbox"] ~ span {
+					padding: 0.5rem 0.75rem;
+
+					background: transparent;
+					color: #ffffff;
+
+					border-radius: 100px;
+					border: 1px solid #ffffff;
+
+					span.tick {
+						position: relative;
+					    display: inline-block;
+					    left: -6px;
+					    top: 6px;
+
+					    height: 25px;
+					    width: 25px;
+
+					    border-radius: 150px;
+
+					    background: transparent;
+					    border: 1px solid #ffffff;
+
+					}
+
+				}
+
+				[type="checkbox"]:checked ~ span {
+					padding: 0.5rem 0.75rem;
+
+					background: #ffffff;
+					color: $brand-primary;
+
+					border-radius: 150px;
+
+					span.tick {
+						position: relative;
+					    display: inline-block;
+					    left: -6px;
+					    top: 6px;
+
+					    height: 25px;
+					    width: 25px;
+
+					    border-radius: 100px;
+
+					    background: #d40072;
+					    color: #ffffff;
+
+					    &:after {
+						    content:"✓";
+							color: #ffffff;
+						    position: absolute;
+						    display: inline-block;
+						    left: 6px;
+						    top: 0;
+					    }
+
+					}
+
+				}
+			}
 		}
 	}
 
@@ -169,77 +286,293 @@ div#loggedIn-Output {
 		font-size: 0.8rem;
 	}
 
-	div#meta {
-		background: $brand-pink;
-		color: #FFFFFF;
-
-		h1 {
-			margin: 1rem 0;
-		}
-
-		p {
-			margin: 1rem 0;
-		}
-	}
-
 	#output {
 
-		div.list {
-			margin-bottom: 2rem;
+		position: relative;
+		display: block;
+
+		div#meta {
+			@include gradient-background($brand-purple, $brand-pink);
+			color: #FFFFFF;
+
+			margin: 0;
+			padding: 2rem;
+			float: left;
+
+			h1 {
+				margin: 1rem 0;
+			}
+
+			p {
+				margin: 1rem 0;
+			}
+
+			p.foot {
+				position: absolute;
+				top:90vh;
+			}
 		}
 
-		h1 {
-			font-size: 1.2rem;
-		}
+		div#lists {
+			position: absolute;
+			display: block;
 
-		h2 {
-			font-size: 0.9rem;
-			margin: 0.25rem 0 0.2rem 0;
-			padding: 0;
-			border-bottom: 1px solid;
-		}
+			width: auto;
+			height: auto;
 
-		ul.cards {
-			list-style: none;
-			margin: 0px;
-			padding: 0;
+			top: 0;
+			bottom: auto;
 
-			li {
+			overflow-x: scroll;
+			overflow-y: visible;
 
-				p {
-					margin-bottom: 0.5rem;
+			div.list {
+				position: relative;
+				display: block;
+				float: left;
+
+				height: 100vh;
+
+				padding: 0 1rem;
+
+				overflow-x: hidden;
+				overflow-y: scroll;
+
+				&.print-col-2 {
+					width: 50vw;
 				}
-
-				&.ticks-on {
-					margin-left: 1.5rem;
+				&.print-col-3 {
+					width: 33.3vw;
 				}
-
-
-				&.ticks-off {
-
+				&.print-col-4 {
+					width: 25vw;
 				}
+			}
 
-				span.tick {
-					position: absolute;
-					left: 1rem;
-					margin-top: 2px;
-					width: 1rem;
-					height: 1rem;
-					background: #006435;
-					color: #ffffff !important;
-					border-radius: 50px;
-					text-align: center;
-					font-size: 0.7rem;
-					line-height: 1rem;
-				}
-				span.empty-tick {
-					@extend .tick;
-				    border: 2px solid #9c9c9c;
-				    background: #fff;
+			h1 {
+				font-size: 1.2rem;
+			}
+
+			h2 {
+				font-size: 0.9rem;
+				margin: 0.25rem 0 0.2rem 0;
+				padding: 0;
+				border-bottom: 1px solid;
+			}
+
+			ul.cards {
+				list-style: none;
+				margin: 0px;
+				padding: 0;
+
+				li {
+
+					p {
+						margin-bottom: 0.5rem;
+					}
+
+					&.ticks-on {
+						margin-left: 1.5rem;
+					}
+
+
+					&.ticks-off {
+
+					}
+
+					span.tick {
+						position: absolute;
+						left: 1rem;
+						margin-top: 2px;
+						width: 1rem;
+						height: 1rem;
+						background: #006435;
+						color: #ffffff !important;
+						border-radius: 50px;
+						text-align: center;
+						font-size: 0.7rem;
+						line-height: 1rem;
+					}
+					span.empty-tick {
+						@extend .tick;
+					    border: 2px solid #9c9c9c;
+					    background: #fff;
+					}
+
 				}
 
 			}
 
+		}
+
+		div#swim-lanes {
+
+			span.blank {
+				content: " ";
+			    display: inline-block;
+			    position: relative;
+			    float: left;
+			    margin: 0;
+			    text-align: center;
+			    width: 1px;
+			    height: 1px;
+			}
+
+			position: absolute;
+			display: block;
+
+			width: 100%;
+
+			top: 0;
+			bottom: auto;
+
+			overflow-x: visible;
+			overflow-y: visible;
+
+			div#thead {
+				height: 100vh;
+				@include gradient-background($brand-purple, $brand-pink);
+				color: #ffffff;
+
+				padding: 2rem;
+
+				p.foot {
+					position: absolute;
+					top:95vh;
+				}
+			}
+
+			div.swim-lane-group {
+				position: relative;
+				display: block;
+
+				width: 100%;
+
+				height: 100vh;
+
+				div.columns {
+					position: relative;
+					display: inline-block;
+					float: left;
+
+					width: 100%;
+
+					div {
+						position: relative;
+						display: block;
+						float: left;
+
+						padding: 0 1rem;
+
+						&.first-column {
+							width: 10vw;
+						}
+						&.print-col-2 {
+							width: 45vw;
+						}
+						&.print-col-3 {
+							width: 30vw;
+						}
+						&.print-col-4 {
+							width: 22.5vw;
+						}
+					}
+				}
+
+				div.swim-lane {
+
+					position: relative;
+					display: inline-block;
+					float: left;
+
+					padding: 0.5rem 0;
+
+					width: 100%;
+
+					border-top: 1px solid $brand-primary;
+
+					div {
+
+						position: relative;
+						display: block;
+						float: left;
+
+						&.first-column {
+							width: 10vw;
+							h2.label {
+								padding: 0;
+							}
+						}
+						&.print-col-2 {
+							width: 45vw;
+						}
+						&.print-col-3 {
+							width: 30vw;
+						}
+						&.print-col-4 {
+							width: 22.5vw;
+						}
+					}
+				}
+
+				h1 {
+					font-size: 1rem !important;
+				}
+
+				h2 {
+					font-size: 0.9rem;
+					margin: 0.25rem 0 0.2rem 0;
+					padding: 0;
+				}
+
+				ul.cards {
+					list-style: none;
+
+				    display: block;
+				    position: relative;
+
+				    margin: 0;
+				    padding: 0 1rem;
+
+					li {
+
+						p {
+							margin-bottom: 0rem;
+						}
+
+						&.ticks-on {
+							margin-left: 1.5rem;
+						}
+
+
+						&.ticks-off {
+
+						}
+
+						span.tick {
+							position: absolute;
+							left: 1rem;
+							margin-top: 2px;
+							width: 1rem;
+							height: 1rem;
+							background: #006435;
+							color: #ffffff !important;
+							border-radius: 50px;
+							text-align: center;
+							font-size: 0.7rem;
+							line-height: 1rem;
+						}
+						span.empty-tick {
+							@extend .tick;
+						    border: 2px solid #9c9c9c;
+						    background: #fff;
+						}
+
+					}
+
+				}
+
+			}
 		}
 
 		.badge {
