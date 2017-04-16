@@ -21,6 +21,10 @@
 
 		{% if page.layout != "app" %}{% include footer.html %}{%endif%}
 
+		{% if page.layout == "home" %}
+			<script src="{{ '/js/browser-check.js' | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}"></script>
+		{%endif%}
+
 	</body>
 
 </html>

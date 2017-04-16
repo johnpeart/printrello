@@ -6686,6 +6686,8 @@ main#page {
           color: #d40072 !important;
           background: #ffffff;
           border: 1px solid #ffffff; }
+    main#page div#page .alert-primary {
+      border: 1px solid #ffffff; }
 
 div#loggedOut {
   min-height: 100vh;
