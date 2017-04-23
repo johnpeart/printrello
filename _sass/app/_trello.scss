@@ -335,8 +335,8 @@ div#loggedIn-Output {
 
 				padding: 0 1rem;
 
-				overflow-x: hidden;
-				overflow-y: scroll;
+				overflow-x: visible;
+				overflow-y: visible;
 
 				&.print-col-2 {
 					width: 50vw;
