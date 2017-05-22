@@ -14,10 +14,10 @@ var getBoards = function (){
 	    // Output a list of all of the boards that the member
 	    Trello.get("members/me/boards", {filter: "open"}, function(boards) {
 	        $boardList.empty();
-	        var output = '<div id="lists"><h1>Select a board</h1>';
-	        output += '<div class="row">';
+	        var output = '<div id="lists"><h1 class="app-heading--app">Select a board</h1>';
+	        output += '<div id="boards-list" class="row">';
 	        $.each(boards, function(ix, board) {
-	        	output += '<div class="col-12 col-sm-4"><a data-board-id = "'+board.id+'" href="#"><p>'+board.name+'</p></a></div>';
+	        	output += '<div class="col-12 col-sm-4 board-card"><a data-board-id = "'+board.id+'" href="#">'+board.name+'</a></div>';
 	        });
 	        output += '</div></div>';
 	        $boardList.html(output);
@@ -376,6 +376,7 @@ var displayBoard = function(board){
 
 	}
 
+	$('#options').hide();
 	$('#boardList').hide();
 	$('#loggedIn-PrintScreen').show();
 }
@@ -406,21 +407,17 @@ var logout = function() {
     updateLoggedIn();
 };
 
-var reset = function() {
-	$("#options").show();
-	$("#options-layout").show();
-	$("#options-columns").hide();
-	$("#options-data").hide();
-	$("#boardList").hide();
-	$("#loggedIn-Options").show();
-	$("#loggedIn-PrintScreen").hide();
+var restart = function() {
+	$('#boardList').show();
+	$('#options').show();
+	$('#loggedIn-PrintScreen').hide();
 }
 
 var print = function() {
-	$("#loggedIn-Options").hide();
+	$("#loggedIn-Input").hide();
 	$("#loggedIn-Output").show();
 	window.print();
-	$("#loggedIn-Options").show();
+	$("#loggedIn-Input").show();
 	$("#loggedIn-Output").hide();
 }
 
@@ -447,22 +444,7 @@ $("#showLink").click(function(){
 });
 
 $("#disconnect").click(logout);
-$("#reset").click(reset);
 $("#print").click(print);
+$("#restart").click(restart);
 
 });
-
-function swapDivs(div1,div2) {
-   d1 = document.getElementById(div1);
-   d2 = document.getElementById(div2);
-   if( d2.style.display == "none" )
-   {
-      d1.style.display = "none";
-      d2.style.display = "inherit";
-   }
-   else
-   {
-      d1.style.display = "block";
-      d2.style.display = "none";
-   }
-}

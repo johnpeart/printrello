@@ -14,4 +14,4 @@ This little web app was made to fix that problem for me, so I could print Trello
 
 The web app works best with Google Chrome on the desktop. Whilst it might work on other browsers and devices, there are no guarantees.
 
-<p><a href="{{ '/app/'  | prepend: site.baseurl | prepend: site.url }}" class="btn btn-lg btn-app" title="Start creating a dashboard">Get started</a> <a href="{{ site.github-repo }}" class="btn btn-lg btn-outline-app" title="Get the source code for this app from Github">Get the source code</a></p>
+<p><a href="{{ '/app/'  | prepend: site.baseurl | prepend: site.url }}" class="btn btn-primary" title="Start creating a dashboard">Get started</a> <a href="{{ site.github-repo }}" class="btn btn-primary" title="Get the source code for this app from Github">Get the source code</a></p>

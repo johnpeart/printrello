@@ -1,22 +1,20 @@
 ---
 layout: default
 ---
-<div class="container">
-	<div id="page" class="row align-items-center justify-content-center">
-	    <div class="col-sm-12 col-md-8">
 
-		    <img src="{{ '/home.png' | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}" class="home mx-auto d-block" alt="{{ site.title }} logo - a rhombus with two unequal, horizontally oriented parralellograms cut out of the centre of the shape.">
+<main>
+	<div class="container">
+		<div class="row">
+		    <div class="col-12">
 
-			<h1 class="display-2 text-center">{{ site.title }}</h1>
+			    <img class="app-logo--home" src="{{ site.logo-svg | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}">
 
-			<p class="lead text-center">{{ site.description }}</p>
+				<h1 class="app-name--home">{{ site.title }}</h1>
+				<p class="app-description--home">{{ site.description }}</p>
 
-			<div id="browser-warning" class="alert alert-primary text-center" style="display: none;" role="alert">
-			  <strong>Heads up!</strong> This web app was designed to work in <a href="https://www.google.co.uk/chrome/" title="Download Chrome">Google Chrome</a>.<br>You're not using Chrome, so this might not work as intended.
-			</div>
+				<p class="app-button--home"><a href="{{ '/app/'  | prepend: site.baseurl | prepend: site.url }}" class="btn btn-primary" title="Start creating a dashboard">Get started</a> <a href="{{ '/about/'  | prepend: site.baseurl | prepend: site.url }}" class="btn btn-primary" title="Learn more about this app">What is this?</a></p>
 
-			<p class="text-center"><a href="{{ '/app/'  | prepend: site.baseurl | prepend: site.url }}" class="btn btn-lg btn-app" title="Start creating a dashboard">Get started</a> <a href="{{ '/about/'  | prepend: site.baseurl | prepend: site.url }}" class="btn btn-lg btn-outline-app" title="Learn more about this app">What is this?</a></p>
-
-	    </div>
+		    </div>
+		</div>
 	</div>
-</div>
+</main>
