@@ -2,19 +2,48 @@
 layout: default
 ---
 
-<main>
+
+<main id="home">
+	
+	<header>
+
+		<div class="container">
+				
+			<h1>Print your boards</h1>
+			<p class="lead">Turn Trello boards into easily printable dashboards in a few clicks.</p>
+
+			<nav><a href="{{ '/app/'  | prepend: site.baseurl | prepend: site.url }}" class="button" title="Start creating a dashboard">Get started</a></nav>
+
+		</div>	
+	
+	</header>
+	
 	<div class="container">
-		<div class="row">
-		    <div class="col-12">
+		
+		<section class="content">
+			
+			<h2>About this tool</h2>
+			
+			<p>{{ site.title }} is a web app that takes Trello Boards and turns them into documents you can print.</p>
+			
+			<h2>Before you begin</h2>
+			
+			<p>Before you can use {{ site.title }}, you will need to authorise the app to access your Trello account.</p>
+			
+			<p>Your data is entirely safe - access to your boards will only work on computers you directly authorise.</p>
+			
+			<h2>Compatability</h2>
 
-			    <img class="app-logo--home" src="{{ site.logo-svg | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}">
-
-				<h1 class="app-name--home">{{ site.title }}</h1>
-				<p class="app-description--home">{{ site.description }}</p>
-
-				<p class="app-button--home"><a href="{{ '/app/'  | prepend: site.baseurl | prepend: site.url }}" class="btn btn-primary" title="Start creating a dashboard">Get started</a> <a href="{{ '/about/'  | prepend: site.baseurl | prepend: site.url }}" class="btn btn-primary" title="Learn more about this app">What is this?</a></p>
-
-		    </div>
-		</div>
+			<p>The tool has been designed to work on a modern desktop browser. It works best with Google Chrome, but other HTML5-compatible browsers might work too.</p>
+			
+			<p>Whilst the app may work on other devices, it is recommended you use it on a desktop or laptop device.</p>
+			
+			<h2>Source code</h2>
+			
+			<p>If you want to contribute to the source code from this project, you can do so on <a href="{{ site.github-repo }}" class="btn btn-primary" title="Get the source code for this app from Github">Github</a>.</p>
+	
+		</section>
+	
 	</div>
+
 </main>

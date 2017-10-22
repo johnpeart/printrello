@@ -3,9 +3,9 @@
 	{% include head.html %}
 
 	<body id="{{ page.layout }}">
-
-		{% include global/browser-check.html %}
-
+		
+		{% include global/header.html %}
+		
 		{{ content }}
 
 		{% if page.layout != "app" %}{% include footer.html %}{%endif%}

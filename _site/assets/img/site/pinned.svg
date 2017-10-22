@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 16 16" width="16pt" height="16pt" xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <metadata> Produced by OmniGraffle 7.3
-    <dc:date>2017-05-09 16:32:40 +0000</dc:date>
+  <metadata> Produced by OmniGraffle 7.5 
+    <dc:date>2017-10-18 21:10:21 +0000</dc:date>
   </metadata>
   <defs/>
   <g stroke="none" stroke-opacity="1" stroke-dasharray="none" fill="none" fill-opacity="1">
     <title>svg</title>
     <g>
       <title>Layer 1</title>
-      <rect x="0" y="0" width="10" height="10" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-      <rect x="3" y="3" width="10" height="10" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-      <rect x="6" y="6" width="10" height="10" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path d="M 9.236791 .0022898336 L 17763568e-22 8.97533 L 6.763209 15.99771 L 16 7.0246695 Z M 10.593042 2.2256222 L 14.936892 6.735931 L 12.413162 9.117958 L 8.069312 4.607649 Z M 7.70004 4.987537 L 8.953809 6.3442775 L 6.430079 8.726304 L 5.17631 7.369564 Z M 9.412133 1.055647 L 10.100928 1.7601052 L 1.8285207 9.812053 L 1.1397262 9.107595 Z M 4.77377 7.815996 L 6.027539 9.172736 L 3.5038093 11.554763 L 2.25004 10.198022 Z" fill="black"/>
     </g>
   </g>
 </svg>

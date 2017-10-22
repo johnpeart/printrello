@@ -1,11 +1,11 @@
 # Site settings
 
-title: "Dash for Trello"
+title: "Printello"
 
 description: "A web app that turns Trello Boards into dashboards you can print"
 keywords: "trello, dashboards, print"
 
-baseurl: "/dash-for-trello" # the subpath of your site, e.g. /blog
+baseurl: "/printello" # the subpath of your site, e.g. /blog
 url: "http://jrpeart.com"
 author: "John Peart"
 
@@ -43,7 +43,7 @@ sass:
     sass_dir: _sass
     sourcemap: true
 
-gems:
+plugins:
 - jekyll-sitemap
 - jekyll-feed
 - jekyll-redirect-from

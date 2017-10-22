@@ -1,76 +1,67 @@
-<h1 class="app-heading--app" tabindex="100">Display options</h1>
+<h1>Display options</h1>
 
-<div id="options-layout">
+<p>Change these options to change how the dashboard is displayed on screen or printed.</p>
 
-	<fieldset>
+<fieldset id="options-layout">
 
-		<legend><h2 class="app-heading--app">Layout</h2></legend>
+	<legend><h2>Layout</h2></legend>
 
-		<label for="display-mode--option--layout-swim-lanes">
-			<input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-swim-lanes" value="list--swim-lanes" checked>
-			<span class="label"><span class="tick"></span>Swim lanes</span>
-		</label>
+	<label for="display-mode--option--layout-swim-lanes">
+		<input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-swim-lanes" value="list--swim-lanes" checked>
+		<span class="label"><span class="tick"></span>Swim lanes</span>
+	</label>
 
-		<label for="display-mode--option--layout-list--filter-label">
-			<input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-list--filter-label" value="list--filter-label">
-			<span class="label"><span class="tick"></span>Label sorted lists</span>
-		</label>
+	<label for="display-mode--option--layout-list--filter-label">
+		<input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-list--filter-label" value="list--filter-label">
+		<span class="label"><span class="tick"></span>Label sorted lists</span>
+	</label>
 
-		<label for="display-mode--option--layout-list--all">
-			<input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-list--all" value="list--unordered-list">
-			<span class="label"><span class="tick"></span>Unordered lists</span>
-		</label>
+	<label for="display-mode--option--layout-list--all">
+		<input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-list--all" value="list--unordered-list">
+		<span class="label"><span class="tick"></span>Unordered lists</span>
+	</label>
 
-	</fieldset>
+</fieldset>
 
-</div>
+<fieldset id="options-columns">
 
-<div id="options-columns">
+	<legend><h2>Columns</h2></legend>
 
-	<fieldset>
+	<label for="numberOfCols1">
+		<input type="radio" name="display-mode--option--columns" id="numberOfCols1" value="2">
+		<span class="label"><span class="tick"></span>2 columns</span>
+	</label>
 
-		<legend><h2 class="app-heading--app">Columns</h2></legend>
+	<label for="numberOfCols2">
+		<input type="radio" name="display-mode--option--columns" id="numberOfCols2" value="3" checked>
+		<span class="label"><span class="tick"></span>3 columns</span>
+	</label>
 
-		<label for="numberOfCols1">
-			<input type="radio" name="display-mode--option--columns" id="numberOfCols1" value="2" tabindex="202">
-			<span class="label"><span class="tick"></span>2 columns</span>
-		</label>
+	<label for="numberOfCols3">
+		<input type="radio" name="display-mode--option--columns" id="numberOfCols3" value="4">
+		<span class="label"><span class="tick"></span>4 columns</span>
+	</label>
 
-		<label for="numberOfCols2">
-			<input type="radio" name="display-mode--option--columns" id="numberOfCols2" value="3" checked>
-			<span class="label"><span class="tick"></span>3 columns</span>
-		</label>
+</fieldset>
 
-		<label for="numberOfCols3">
-			<input type="radio" name="display-mode--option--columns" id="numberOfCols3" value="4">
-			<span class="label"><span class="tick"></span>4 columns</span>
-		</label>
 
-	</fieldset>
+<fieldset id="options-data">
 
-</div>
+	<legend><h2>Other</h2></legend>
 
-<div id="options-data">
+	<label for="display-mode--option--check-marks">
+		<input id="display-mode--option--check-marks" type="checkbox" value="true" checked>
+	    <span class="label"><span class="tick"></span>"Done" check marks</span>
+	</label>
 
-	<fieldset tabindex="301">
+	<label for="display-mode--option--due-date">
+	    <input id="display-mode--option--due-date" type="checkbox" value="true" checked>
+	    <span class="label"><span class="tick"></span>Due dates</span>
+	</label>
 
-		<legend><h2 class="app-heading--app">Other</h2></legend>
+	<label for="display-mode--option--labels">
+	    <input id="display-mode--option--labels" type="checkbox" value="true" checked>
+	    <span class="label"><span class="tick"></span>Labels</span>
+	</label>
 
-		<label for="display-mode--option--check-marks">
-			<input id="display-mode--option--check-marks" type="checkbox" value="true" checked tabindex="302">
-		    <span class="label"><span class="tick"></span>"Done" check marks</span>
-		</label>
-
-		<label for="display-mode--option--due-date">
-		    <input id="display-mode--option--due-date" type="checkbox" value="true" checked tabindex="303">
-		    <span class="label"><span class="tick"></span>Due dates</span>
-		</label>
-
-		<label for="display-mode--option--labels">
-		    <input id="display-mode--option--labels" type="checkbox" value="true" checked tabindex="304">
-		    <span class="label"><span class="tick"></span>Labels</span>
-		</label>
-
-	</fieldset>
-
-</div>
+</fieldset>

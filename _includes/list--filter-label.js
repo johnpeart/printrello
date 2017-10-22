@@ -2,21 +2,21 @@ Trello.get("boards/" + board.id + "/labels", function(labels) {
 
 	Trello.get("boards/" + board.id + "/cards", function(cards) {
 
-	output = "<div id='lists'>";
-
-		output += "<div id='meta' class='print-col-" + displayColumns + " list'>"
-
-			output += "<h1>" + board.name; + "</h1>";
+		output = "<div id='cover-page'>"
+	
+			output += "<h1>" + board.name + "</h1>";
 			output += "<p>Created on " + printDate + "</p>";
 			output += "<p class='foot'>Made with {{ site.title }}:<br>{{ site.url | append: site.baseurl }}</p>"
-
+	
 		output += "</div>"
+	
+		output += "<div id='lists' class='columns-" + displayColumns + "'>";
 
 	    $.each(board.lists, function (i){
 
 		    var idList = this.id;
-			output += "<div class='print-col-" + displayColumns + " list'>";
-			output += "<h1>"+this.name+"</h1>";
+			output += "<div class='list'>";
+			output += "<h2>"+this.name+"</h2>";
 
 		    $.each(labels, function(index, label) {
 
@@ -24,7 +24,7 @@ Trello.get("boards/" + board.id + "/labels", function(labels) {
 
 				if (displayLabels == true) {
 
-				    output += "<h2 class='" + this.color + "'>" + this.name + "</h2>";
+				    output += "<h3 class='" + this.color + "'>" + this.name + "</h3>";
 
 				}
 
@@ -35,11 +35,11 @@ Trello.get("boards/" + board.id + "/labels", function(labels) {
 
 						if (displayCheckMarks == true) {
 
-		       				output += "<li class='ticks-on'><p>";
+		       				output += "<li class='ticks-on'>";
 
 		       			} else {
 
-			       			output += "<li class='ticks-off'><p>";
+			       			output += "<li class='ticks-off'>";
 
 		       			}
 
@@ -51,12 +51,14 @@ Trello.get("boards/" + board.id + "/labels", function(labels) {
 									if (displayCheckMarks == true) {
 
 										if (this.dueComplete == true) {
-										    output += "<span class='tick'>✓</span>";
+										    output += "<span class='tick'></span>";
 										} else {
-										    output += "<span class='empty-tick'></span>";
+										    output += "<span class='no-tick'></span>";
 										}
 
 									}
+
+									output += "<span class='content'>";
 
 									if (displayDueDates == true) {
 
@@ -64,19 +66,19 @@ Trello.get("boards/" + board.id + "/labels", function(labels) {
 											var cardDue = new Date(this.due);
 											var monthShortNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
 					  "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
-											output += " <span class='badge badge-pink--inverse'>" + cardDue.getDate() + ' ' + monthShortNames[cardDue.getMonth()] + "</span>";
+											output += " <span class='date'>" + cardDue.getDate() + ' ' + monthShortNames[cardDue.getMonth()] + "</span>";
 										}
 
 									}
 
-						       			output += this.name;
+						       		output += this.name + "</span>";
 
 						       	}
 
 						   	}
 
 
-		       			output += "</p></li>";
+		       			output += "</li>";
 
 					});
 
@@ -89,6 +91,8 @@ Trello.get("boards/" + board.id + "/labels", function(labels) {
 
 		output += '</div>';
 		$('#output').html(output);
+
+		document.getElementById('board-name').innerHTML = board.name;
 
 	});
 

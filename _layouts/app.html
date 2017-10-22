@@ -3,12 +3,28 @@ layout: default
 ---
 <main>
 
-	<div id="loggedOut">
-		{% include app/loggedout.html %}
-	</div>
+	<div class="container">
+	
+		<div id="loggedOut">
+			{% include app/loggedout.html %}
+		</div>
+	
+		<div id="boardSelect">
 
-	<div id="loggedIn">
-		{% include app/loggedin.html %}
+			{% include app/board-select.html %}
+		
+		</div>
+
+		<div id="printScreen">
+		
+			{% include app/print-screen.html %}
+			
+		</div>
+		
+		<div id="output" style="display: none;">
+		
+		</div>
+		
 	</div>
 
 </main>

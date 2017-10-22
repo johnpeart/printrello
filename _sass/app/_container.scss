@@ -1,0 +1,52 @@
+div.container {
+	
+	display: grid;
+	position: relative;
+	
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@include sm {
+
+	div.container { 
+		
+		max-width: 	540px;
+		width: 		540px;
+		
+	}
+	
+}
+
+@include md {
+
+	div.container { 
+		
+		max-width: 	720px;
+		width: 		720px;
+		
+	}
+	
+}
+
+@include lg {
+
+	div.container { 
+		
+		max-width: 	960px;
+		width: 		960px;
+		
+	}
+	
+}
+
+@include xl {
+
+	div.container { 
+		
+		max-width: 	960px;
+		width: 		960px;
+		
+	}
+	
+}

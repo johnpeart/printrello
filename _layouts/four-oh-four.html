@@ -2,25 +2,30 @@
 layout: default
 ---
 
-<main id="{{ page.layout }}">
+<main id="four-oh-four">
+	
+	<div class="container">
+		
+		<div id="error-message">
+			
+			<picture class="error-image">
+				<source srcset="{{ '/app/Trello-logo-icon-white.svg' | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}" type="image/svg+xml">
+	<img src="{{ '/app/Trello-logo-icon-white.png' | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}">
+			</picture>
+			
+			<div class="error-message">
+					
+				<h1>Page not found</h1>
+			<p class="lead">You've arrived somewhere that isn't anywhere at all.<br>Frightfully sorry about that.</p>
 
-		<div class="container">
-
-			<div class="row">
-
-				<div id="landing" class="col-12">
-
-					<img class="app-logo--four-oh-four" src="{{ site.logo-four-oh-four | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}">
-
-					<h1 class="app-name--four-oh-four">Page not found</h1>
-					<p class="app-description--four-oh-four">You've arrived somewhere that isn't anywhere at all.<br>Frightfully sorry about that.</p>
-
-					<p class="app-button--four-oh-four"><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}" class="btn btn-primary">Go home</a></p>
-
-				</div>
-
+				<nav><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}" class="button">Go home</a></nav>
+			
 			</div>
 
+			
+
 		</div>
+
+	</div>
 
 </main>

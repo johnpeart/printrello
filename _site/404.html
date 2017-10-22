@@ -8,171 +8,131 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Base URL to use for all relative URLs contained within the document -->
-	<base href="http://localhost:4000/dash-for-trello">
-	<meta name="url" content="http://localhost:4000/dash-for-trello">
+	<base href="http://localhost:4000/dashello">
+	<meta name="url" content="http://localhost:4000/dashello">
 
 	<!-- Place this data between the <head> tags of your website -->
 	<title>
-		Dash for Trello
+		Printello
 	</title>
 
-	<meta name="application-name" content="Dash for Trello">
+	<meta name="application-name" content="Printello">
 	<meta name="description" content="A web app that turns Trello Boards into dashboards you can print" />
 
 	<!-- Schema.org markup for Google+ -->
-	<meta itemprop="name" content="Dash for Trello">
+	<meta itemprop="name" content="Printello">
 	<meta itemprop="description" content="A web app that turns Trello Boards into dashboards you can print">
-	<meta itemprop="image" content="http://localhost:4000/dash-for-trello/img/site/social-media.png">
+	<meta itemprop="image" content="http://localhost:4000/dashello/img/site/social-media.png">
 
 	<!-- Twitter Card data -->
 	<meta name="twitter:card" 			content="summary_large_image">
 	<meta name="twitter:site" 			content="@johnpeart">
 	<meta name="twitter:creator" 		content="@johnpeart">
-	<meta name="twitter:title" 			content="Dash for Trello">
+	<meta name="twitter:title" 			content="Printello">
 	<meta name="twitter:description" 	content="A web app that turns Trello Boards into dashboards you can print">
-	<meta name="twitter:image" 			content="http://localhost:4000/dash-for-trello/assets/img/site/social-media.png">
+	<meta name="twitter:image" 			content="http://localhost:4000/dashello/assets/img/site/social-media.png">
 	<meta name="twitter:image:alt" 		content="">
 
 	<!-- Open Graph data -->
 	<meta property="fb:app_id" 			content="" />
 	<meta property="fb:profile_id" 		content="" />
 	<meta property="fb:admins" 			content="" />
-	<meta property="og:url" 			content="http://localhost:4000/dash-for-trello/404.html"  />
+	<meta property="og:url" 			content="http://localhost:4000/dashello/404.html"  />
 	<meta property="og:type" 			content="article" />
 	<meta property="og:rich_attachment" content="true" />
-	<meta property="og:title" 			content="Dash for Trello" />
+	<meta property="og:title" 			content="Printello" />
 	<meta property="og:description" 	content="A web app that turns Trello Boards into dashboards you can print" />
-	<meta property="og:image" 			content="http://localhost:4000/dash-for-trello/assets/img/site/social-media.png" />
+	<meta property="og:image" 			content="http://localhost:4000/dashello/assets/img/site/social-media.png" />
 	<meta property="article:author" content="https://www.facebook.com/john.robert.peart" />
 	<meta property="article:publisher" content="https://www.facebook.com/john.robert.peart" />
-	<meta property="og:site_name" content="Dash for Trello" />
+	<meta property="og:site_name" content="Printello" />
 
 	<!-- Touch Icons -->
-	<link rel="icon" href="http://localhost:4000/dash-for-trello/assets/img/site/touch.png">
-	<link rel="apple-touch-icon" href="http://localhost:4000/dash-for-trello/assets/img/site/touch.png">
+	<link rel="icon" href="http://localhost:4000/dashello/assets/img/site/touch.png">
+	<link rel="apple-touch-icon" href="http://localhost:4000/dashello/assets/img/site/touch.png">
 
 	<!-- Pinned Site -->
-	<link rel="mask-icon" href="http://localhost:4000/dash-for-trello/assets/img/site/pinned.svg" color="#d53880">
+	<link rel="mask-icon" href="http://localhost:4000/dashello/assets/img/site/pinned.svg" color="#d53880">
 	<meta name="theme-color" content="#d53880">
 
 	<!-- Google site verification -->
 	<meta name="google-site-verification" content="GMEFdAl3i-jN_Jkdb_jrS-LWZPUEQ7Bx4fPcyQ7YSCU">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="http://localhost:4000/dash-for-trello/assets/css/styles.css">
+	<link rel="stylesheet" media="screen" 	href="http://localhost:4000/dashello/assets/css/styles.css">
+	<link rel="stylesheet" media="print" 	href="http://localhost:4000/dashello/assets/css/print.css">
 
 	<!-- URLs and feeds -->
-	<link rel="canonical" href="http://localhost:4000/dash-for-trello/404.html">
-	<link rel="alternate" type="application/rss+xml" title="Dash for Trello" href="http://localhost:4000/dash-for-trello/feed.xml">
+	<link rel="canonical" href="http://localhost:4000/dashello/404.html">
+	<link rel="alternate" type="application/rss+xml" title="Printello" href="http://localhost:4000/dashello/feed.xml">
 
 </head>
 
 	<body id="four-oh-four">
-
-		<div id="browser-warning" style="display: none;" role="alert">
-
+		
+		<header role="banner" id="global-header" class="four-oh-four">
+	
 	<div class="container">
+	
+		<div  class="header-logo">
+	        <a href="http://localhost:4000/dashello" title="Go to home page" id="logo" class="content">
+	            <picture>
+					<source srcset="http://localhost:4000/dashello/assets/img/site/logo.svg" type="image/svg+xml">
+					<img class="header-logo" src="http://localhost:4000/dashello/assets/img">
+				</picture>
+				<h1>Printello</h1>
+	        </a>
+	    </div>
+	    
+	    <div class="header-meta">
+		    <h1 id="board-name"> </h1>
+	    </div>
+    
+	</div>
+	
+</header>
+		
+		<main id="four-oh-four">
+	
+	<div class="container">
+		
+		<div id="error-message">
+			
+			<picture class="error-image">
+				<source srcset="http://localhost:4000/dashello/assets/img/app/Trello-logo-icon-white.svg" type="image/svg+xml">
+	<img src="http://localhost:4000/dashello/assets/img/app/Trello-logo-icon-white.png">
+			</picture>
+			
+			<div class="error-message">
+					
+				<h1>Page not found</h1>
+			<p class="lead">You've arrived somewhere that isn't anywhere at all.<br>Frightfully sorry about that.</p>
 
-		<div class="row">
-
-			<div class="col">
-
-			<strong>Heads up!</strong>
-			This web app was designed to work in <a href="https://www.google.co.uk/chrome/" title="Download Chrome">Google Chrome</a>.
-			You're not using Chrome, so this might not work as intended.
-
+				<nav><a href="http://localhost:4000/dashello/" class="button">Go home</a></nav>
+			
 			</div>
+
+			
 
 		</div>
 
 	</div>
-
-</div>
-
-		<main id="four-oh-four">
-
-		<div class="container">
-
-			<div class="row">
-
-				<div id="landing" class="col-12">
-
-					<img class="app-logo--four-oh-four" src="http://localhost:4000/dash-for-trello/assets/img/site/404.svg">
-
-					<h1 class="app-name--four-oh-four">Page not found</h1>
-					<p class="app-description--four-oh-four">You've arrived somewhere that isn't anywhere at all.<br>Frightfully sorry about that.</p>
-
-					<p class="app-button--four-oh-four"><a href="http://localhost:4000/dash-for-trello/" class="btn btn-primary">Go home</a></p>
-
-				</div>
-
-			</div>
-
-		</div>
 
 </main>
 
 		<footer>
-
-	<div class="container">
-
-		<div class="row text-center">
-
-			<div class="col-xs-12 col-sm">
-
-				<p><strong>Twitter</strong><br>
-				<a href="http://twitter.com/johnpeart">@johnpeart</a></p>
-
-			</div>
-			<div class="col-xs-12 col-sm">
-
-				<p><strong>Instagram</strong></strong><br>
-				<a href="http://instagram.com/johnpeart">johnpeart</a></p>
-
-			</div>
-			<div class="col-xs-12 col-sm">
-
-				<p><strong>LinkedIn</strong><br>
-				<a href="http://uk.linkedin.com/in/jrpeart">jrpeart</a></p>
-
-			</div>
-			<div class="col-xs-12 col-sm">
-
-				<p><strong>Github</strong><br>
-				<a href="http://github.com/johnpeart">johnpeart</a></p>
-
-			</div>
-
-		</div>
-
-		<div class="row text-center">
-
-			<div class="col">
-
-				<p>
-					<a href="http://localhost:4000" title="Site created by John Peart. Visit home page.">
-						<img  class="footer-brand" src="http://localhost:4000/dash-for-trello/assets/img/site/footer.svg" alt="John Peart">
-					</a>
-				</p>
-
-			</div>
-
-		</div>
-
-	</div>
-
+	
 </footer>
 
-		<script src="http://localhost:4000/dash-for-trello/assets/js/jquery.js"></script>
-<script src="http://localhost:4000/dash-for-trello/assets/js/browser-check.js"></script>
+		<script src="http://localhost:4000/dashello/assets/js/jquery.js"></script>
 
 <!-- Latest compiled and minified Bootstrap JavaScript -->
-<script src="http://localhost:4000/dash-for-trello/assets/js/tether.js"></script>
-<script src="http://localhost:4000/dash-for-trello/assets/js/bootstrap.js"></script>
+<script src="http://localhost:4000/dashello/assets/js/tether.js"></script>
+<script src="http://localhost:4000/dashello/assets/js/bootstrap.js"></script>
 
-<script src="http://localhost:4000/dash-for-trello/assets/js/marked.js"></script>
+<script src="http://localhost:4000/dashello/assets/js/marked.js"></script>
 <script src="https://api.trello.com/1/client.js?key=0c85c40d0209877de954697c8b7bcb7e"></script>
-<script src="http://localhost:4000/dash-for-trello/assets/js/trello.js"></script>
+<script src="http://localhost:4000/dashello/assets/js/trello.js"></script>
 
 	</body>
 

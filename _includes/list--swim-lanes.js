@@ -2,13 +2,15 @@ Trello.get("boards/" + board.id + "/labels", function(labels) {
 
 	Trello.get("boards/" + board.id + "/cards", function(cards) {
 
-		output = "<div id='swim-lanes'>";
-
-		output += "<div id='thead' class='swim-lane'>";
-		output += "<h1 class='display-4'>"+board.name+"</h1>";
-		output += "<p>Created on " + printDate + "</p>";
-		output += "<p class='foot'>Made with {{ site.title }} - {{ site.url | append: site.baseurl }}</p>"
-		output += "</div>";
+		output = "<div id='cover-page'>"
+	
+			output += "<h1>" + board.name + "</h1>";
+			output += "<p>Created on " + printDate + "</p>";
+			output += "<p class='foot'>Made with {{ site.title }}:<br>{{ site.url | append: site.baseurl }}</p>"
+	
+		output += "</div>"
+		
+		output += "<div id='swim-lanes'>";
 
 		var listCount = 0;
 
@@ -25,9 +27,9 @@ Trello.get("boards/" + board.id + "/labels", function(labels) {
 		for (i = 0; i < pagesCount; i++) {
 			var page = (i+1);
 		    console.log('Create page ' + page);
-    		output += "<div class='swim-lane-group'>";
-    		output += "<div class='columns'>";
-			output += "<div class='first-column'><span class='blank'></span></div>";
+    		output += "<div class='swim-lane-page columns-" + displayColumns + "'>";
+    		output += "<div class='headings'>";
+			output += "<div class='blank-space'></div>";
 
 			var lists = board.lists;
 			var listsSlice = lists.slice(
@@ -41,9 +43,7 @@ Trello.get("boards/" + board.id + "/labels", function(labels) {
 
 			    console.log('Create list ' + this.name);
 
-				output += "<div class='print-col-" + displayColumns + " column'>";
 				output += "<h2 class='label'>"+this.name+"</h2>";
-				output += "</div>";
 
 		    });
 
@@ -65,8 +65,7 @@ Trello.get("boards/" + board.id + "/labels", function(labels) {
 
 				    console.log('Create cards for the list ' + this.name);
 
-					output += "<div class='print-col-" + displayColumns + " column'>";
-					output += "<span class='blank'></span>"
+					output += "<div class='column'>";
 					output += "<ul class='cards'>";
 
 						$.each(board.cards, function(i){
@@ -74,11 +73,11 @@ Trello.get("boards/" + board.id + "/labels", function(labels) {
 
 							if (displayCheckMarks == true) {
 
-			       				output += "<li class='ticks-on'><p>";
+			       				output += "<li class='ticks-on'>";
 
 			       			} else {
 
-				       			output += "<li class='ticks-off'><p>";
+				       			output += "<li class='ticks-off'>";
 
 			       			}
 
@@ -90,12 +89,14 @@ Trello.get("boards/" + board.id + "/labels", function(labels) {
 										if (displayCheckMarks == true) {
 
 											if (this.dueComplete == true) {
-											    output += "<span class='tick'>✓</span>";
+											    output += "<span class='tick'></span>";
 											} else {
-											    output += "<span class='empty-tick'></span>";
+											    output += "<span class='no-tick'></span>";
 											}
 
 										}
+										
+										output += "<span class='content'>";
 
 										if (displayDueDates == true) {
 
@@ -103,19 +104,19 @@ Trello.get("boards/" + board.id + "/labels", function(labels) {
 												var cardDue = new Date(this.due);
 												var monthShortNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
 						  "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
-												output += " <span class='badge badge-pink--inverse'>" + cardDue.getDate() + ' ' + monthShortNames[cardDue.getMonth()] + "</span>";
+												output += " <span class='date'>" + cardDue.getDate() + ' ' + monthShortNames[cardDue.getMonth()] + "</span>";
 											}
 
 										}
 
-							       			output += this.name;
+							       		output += "<span class='content'>" + this.name + "</span>";
 
 							       	}
 
 							   	}
 
 
-			       			output += "</p></li>";
+			       			output += "</li>";
 
 						});
 
@@ -135,6 +136,8 @@ Trello.get("boards/" + board.id + "/labels", function(labels) {
 		output += "</div>";
 
 		$('#output').html(output);
+
+		document.getElementById('board-name').innerHTML = board.name;
 
 	});
 

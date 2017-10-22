@@ -1,0 +1,17 @@
+<picture class="loggedIn-PrintScreen-logo">
+	<source srcset="{{ '/app/print.svg' | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}" type="image/svg+xml">
+	<img src="{{ '/app/print.png' | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}">
+</picture>
+
+<div class="loggedIn-PrintScreen-message">
+		
+	<h1>Ready to print</h1>
+
+	<p><strong>You might need to change your printer's settings in order for the Board to print correctly.</strong></p>
+
+	<nav id="connect">
+		<a id="print" class="button" role="button" title="Select to print the Trello Board (triggers system print dialog)">Print my board</a><br>
+		<a id="restart" class="button" role="button" title="Pick another board">Pick a different board</a>
+	</nav>
+
+</div>

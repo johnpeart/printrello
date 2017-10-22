@@ -1,0 +1,276 @@
+div#loggedOut,
+div#boardSelect,
+div#printScreen {
+	
+	display: none;
+}
+
+div#output {
+		
+	div#cover-page {
+		
+		display: grid;
+		page-break-after: always;
+		
+		background: 		$blue;
+		color: 				$white;
+		
+		width: 				287mm;
+		height: 			200mm;
+		
+		padding: 3cm;
+		overflow: hidden;
+		
+		h1 {
+			font-size: 		20mm;
+			line-height: 	22mm;
+		}
+		
+		p {
+			font-size: 		5mm;
+			line-height: 	7mm;
+		}
+		
+	}
+	
+	div#lists {
+		display: grid;
+		
+		grid-template-rows: auto;
+		
+		max-width: 	100%;
+		width: 		100%;
+		
+		&.columns-2 {
+			grid-template-columns: 		1fr 1fr;
+			grid-template-areas: 		"list-1 list-2";
+			grid-column-gap: 			10mm;
+		}
+		
+		&.columns-3 {
+			grid-template-columns: 		1fr 1fr 1fr;
+			grid-template-areas: 		"list-1 list-2 list-3";
+			grid-column-gap: 			10mm;
+		}
+		
+		&.columns-4 {
+			grid-template-columns: 		1fr 1fr 1fr 1fr;
+			grid-template-areas: 		"list-1 list-2 list-3 list-4";
+			grid-column-gap: 			10mm;
+		}	
+		
+	}
+	
+	div.list {
+		
+		display: block;
+		
+	}
+	
+	div#swim-lanes {
+		
+		div.swim-lane-page {
+						
+			page-break-after: always;
+		
+			grid-template-rows: auto;
+		
+			max-width: 	100%;
+			width: 		100%;
+			
+			div.headings,
+			div.swim-lane {
+				display: grid;
+				padding: 4px 0;
+				
+				h2 {
+					display: block;
+					position: relative;
+					
+					font-size: 4mm;
+					line-height: 6mm;
+					
+					word-break: hyphenate;
+					word-wrap: break-word;
+				}
+				
+			}
+			
+			div.swim-lane {
+				border-top: 1px solid $gray-100;
+			}
+			
+			&.columns-2 {
+				div.headings,
+				div.swim-lane {
+					grid-template-columns: 		50mm 1fr 1fr;
+					grid-template-areas: 		"lane 	list-1 	list-2";
+					grid-column-gap: 			30px;
+				}
+			}
+			
+			&.columns-3 {
+				div.headings,
+				div.swim-lane {
+					grid-template-columns: 		40mm 1fr 1fr 1fr;
+					grid-template-areas: 		"lane 	list-1 	list-2 list-3";
+					grid-column-gap: 			20px;
+				}
+			}
+			
+			&.columns-4 {
+				div.headings,
+				div.swim-lane {
+					grid-template-columns: 		30mm 1fr 1fr 1fr 1fr;
+					grid-template-areas: 		"heading 	list-1 	list-2 	list-3 	list-4";
+					grid-column-gap: 			10px;
+				}
+			}
+			
+		}
+		
+	}
+	
+	ul.cards {
+		list-style: none;
+		
+		margin: 0;
+		padding: 0;
+		
+		li {
+			
+			font-size: 		4mm;
+			line-height: 	6mm;
+						
+			&.ticks-on {
+				display: grid;
+				
+				grid-template-rows: 		auto;
+				grid-template-columns: 		30px auto;
+				grid-template-areas: 		"tick content";
+				
+				span.no-tick {
+					grid-area:	tick;
+
+					display: inline-block;
+					
+					font-size: 15px;
+					line-height: 28px;
+
+					margin-top: 4px;
+					width: 20px;
+					height: 20px;
+					
+					background: $white;
+					color: transparent;
+					border-radius: 50px;
+					border: 3px solid $gray-300;
+					text-align: center;
+				}
+				span.tick {
+					grid-area:	tick;
+
+					display: inline-block;
+					
+					font-size: 15px;
+					line-height: 28px;
+
+					margin-top: 4px;
+					width: 20px;
+					height: 20px;
+					
+					background: $green;
+					color: #fff;
+					border-radius: 50px;
+					text-align: center;
+					
+					&:after {
+						position: relative;
+						font-size: 18px;
+						line-height: 22px;
+						margin-top: 0px;
+						content: "✓";
+					}
+				}
+
+			}
+			
+			span.content {
+				grid-area: content;
+				
+				span.date {
+					font-size: 14px;
+					line-height: 28px;
+					
+					padding: 2px 4px;
+					margin-right: 5px;
+					
+					color:		$white;
+					background: $blue;
+					border-radius: 5px;
+				}
+				
+				span.label {
+					display: inline;
+					
+					font-size: 14px;
+					line-height: 28px;
+					
+					padding: 2px 4px;
+					margin-right: 5px;
+					
+					color:		$white;
+					background: $blue;
+					border-radius: 5px;
+					
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					
+					&.green {
+						background: $green;
+					}
+	
+					&.yellow {
+						background: $yellow;
+					}
+	
+					&.orange {
+						background: $orange;
+					}
+	
+					&.purple {
+						background: $purple;
+					}
+	
+					&.red {
+						background: $red;
+					}
+	
+					&.blue {
+						background: $blue;
+					}
+	
+					&.sky {
+						background: $sky;
+					}
+	
+					&.lime {
+						background: $lime;
+					}
+	
+					&.pink {
+						background: $pink;
+					}
+	
+					&.black {
+						background: $black;
+					}
+					
+				}
+			}
+
+		}
+	}
+	
+}

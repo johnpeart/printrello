@@ -1,0 +1,94 @@
+header#global-header {
+
+	display: grid;
+	position: relative;
+		
+	background: 		$black;
+	color: 				$white;
+	border-bottom: 		10px solid $blue;
+
+	div.container { 
+		
+		display: 			grid;
+		position: 			relative;
+		
+		grid-template-columns: 		25% auto;
+		grid-template-rows:			auto;
+		grid-template-areas: 		"logo meta";
+		
+		padding: 8px 0;
+		height: 53px;
+		
+		justify-self: center;
+		
+		a {
+			color: white;
+			text-decoration: none;
+		}
+		
+		div.header-logo {
+			grid-area: 		logo;
+			
+			width: 100%;
+			
+			a {
+			
+				display: 		grid;
+				position: 		relative;
+				float: left;
+					
+				grid-template-columns: 		auto auto;
+				grid-template-rows:			auto;
+				grid-template-areas: 		"logo wordmark";
+				
+				justify-content: flex-start;
+				
+				picture {
+					grid-area:		logo;
+					margin-right: 10px;
+					source,
+					img {
+						max-height: 37px;
+					}
+				}
+				h1 {
+					grid-area:		wordmark;
+					
+					margin: 0;
+					padding: 0;
+					
+					font-size: 24px;
+					line-height: 37px;
+				}
+				
+				&:hover,
+				&:focus {
+					border-bottom: 1px solid #ffffff;
+				}
+			
+			}
+		}
+		
+		div.header-meta {
+			h1 {
+				margin: 0;
+				padding: 0;
+				
+				font-size: 24px;
+				line-height: 37px;
+			}
+		}
+		
+	}
+	
+}
+
+header#global-header.home {
+	background: $blue;
+	border-bottom: none;
+}
+
+header#global-header.four-oh-four {
+	border-color: $red;
+}
+

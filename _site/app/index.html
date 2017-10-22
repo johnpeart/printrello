@@ -8,241 +8,229 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Base URL to use for all relative URLs contained within the document -->
-	<base href="http://localhost:4000/dash-for-trello">
-	<meta name="url" content="http://localhost:4000/dash-for-trello">
+	<base href="http://localhost:4000/dashello">
+	<meta name="url" content="http://localhost:4000/dashello">
 
 	<!-- Place this data between the <head> tags of your website -->
 	<title>
-		Dash for Trello
+		Printello
 	</title>
 
-	<meta name="application-name" content="Dash for Trello">
+	<meta name="application-name" content="Printello">
 	<meta name="description" content="A web app that turns Trello Boards into dashboards you can print" />
 
 	<!-- Schema.org markup for Google+ -->
-	<meta itemprop="name" content="Dash for Trello">
+	<meta itemprop="name" content="Printello">
 	<meta itemprop="description" content="A web app that turns Trello Boards into dashboards you can print">
-	<meta itemprop="image" content="http://localhost:4000/dash-for-trello/img/site/social-media.png">
+	<meta itemprop="image" content="http://localhost:4000/dashello/img/site/social-media.png">
 
 	<!-- Twitter Card data -->
 	<meta name="twitter:card" 			content="summary_large_image">
 	<meta name="twitter:site" 			content="@johnpeart">
 	<meta name="twitter:creator" 		content="@johnpeart">
-	<meta name="twitter:title" 			content="Dash for Trello">
+	<meta name="twitter:title" 			content="Printello">
 	<meta name="twitter:description" 	content="A web app that turns Trello Boards into dashboards you can print">
-	<meta name="twitter:image" 			content="http://localhost:4000/dash-for-trello/assets/img/site/social-media.png">
+	<meta name="twitter:image" 			content="http://localhost:4000/dashello/assets/img/site/social-media.png">
 	<meta name="twitter:image:alt" 		content="">
 
 	<!-- Open Graph data -->
 	<meta property="fb:app_id" 			content="" />
 	<meta property="fb:profile_id" 		content="" />
 	<meta property="fb:admins" 			content="" />
-	<meta property="og:url" 			content="http://localhost:4000/dash-for-trello/app/"  />
+	<meta property="og:url" 			content="http://localhost:4000/dashello/app/"  />
 	<meta property="og:type" 			content="article" />
 	<meta property="og:rich_attachment" content="true" />
-	<meta property="og:title" 			content="Dash for Trello" />
+	<meta property="og:title" 			content="Printello" />
 	<meta property="og:description" 	content="A web app that turns Trello Boards into dashboards you can print" />
-	<meta property="og:image" 			content="http://localhost:4000/dash-for-trello/assets/img/site/social-media.png" />
+	<meta property="og:image" 			content="http://localhost:4000/dashello/assets/img/site/social-media.png" />
 	<meta property="article:author" content="https://www.facebook.com/john.robert.peart" />
 	<meta property="article:publisher" content="https://www.facebook.com/john.robert.peart" />
-	<meta property="og:site_name" content="Dash for Trello" />
+	<meta property="og:site_name" content="Printello" />
 
 	<!-- Touch Icons -->
-	<link rel="icon" href="http://localhost:4000/dash-for-trello/assets/img/site/touch.png">
-	<link rel="apple-touch-icon" href="http://localhost:4000/dash-for-trello/assets/img/site/touch.png">
+	<link rel="icon" href="http://localhost:4000/dashello/assets/img/site/touch.png">
+	<link rel="apple-touch-icon" href="http://localhost:4000/dashello/assets/img/site/touch.png">
 
 	<!-- Pinned Site -->
-	<link rel="mask-icon" href="http://localhost:4000/dash-for-trello/assets/img/site/pinned.svg" color="#d53880">
+	<link rel="mask-icon" href="http://localhost:4000/dashello/assets/img/site/pinned.svg" color="#d53880">
 	<meta name="theme-color" content="#d53880">
 
 	<!-- Google site verification -->
 	<meta name="google-site-verification" content="GMEFdAl3i-jN_Jkdb_jrS-LWZPUEQ7Bx4fPcyQ7YSCU">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="http://localhost:4000/dash-for-trello/assets/css/styles.css">
+	<link rel="stylesheet" media="screen" 	href="http://localhost:4000/dashello/assets/css/styles.css">
+	<link rel="stylesheet" media="print" 	href="http://localhost:4000/dashello/assets/css/print.css">
 
 	<!-- URLs and feeds -->
-	<link rel="canonical" href="http://localhost:4000/dash-for-trello/app/">
-	<link rel="alternate" type="application/rss+xml" title="Dash for Trello" href="http://localhost:4000/dash-for-trello/feed.xml">
+	<link rel="canonical" href="http://localhost:4000/dashello/app/">
+	<link rel="alternate" type="application/rss+xml" title="Printello" href="http://localhost:4000/dashello/feed.xml">
 
 </head>
 
 	<body id="app">
-
-		<div id="browser-warning" style="display: none;" role="alert">
-
+		
+		<header role="banner" id="global-header" class="app">
+	
 	<div class="container">
-
-		<div class="row">
-
-			<div class="col">
-
-			<strong>Heads up!</strong>
-			This web app was designed to work in <a href="https://www.google.co.uk/chrome/" title="Download Chrome">Google Chrome</a>.
-			You're not using Chrome, so this might not work as intended.
-
-			</div>
-
-		</div>
-
+	
+		<div id="disconnect" class="header-logo">
+	        <a href="http://localhost:4000/dashello" title="Go to home page" id="logo" class="content">
+	            <picture>
+					<source srcset="http://localhost:4000/dashello/assets/img/site/logo.svg" type="image/svg+xml">
+					<img class="header-logo" src="http://localhost:4000/dashello/assets/img">
+				</picture>
+				<h1>Printello</h1>
+	        </a>
+	    </div>
+	    
+	    <div class="header-meta">
+		    <h1 id="board-name"> </h1>
+	    </div>
+    
 	</div>
-
-</div>
-
+	
+</header>
+		
 		<main>
 
-	<div id="loggedOut">
-		<div class="container">
-	<div class="row">
-	    <div class="col-12">
+	<div class="container">
+	
+		<div id="loggedOut">
+			<picture class="loggedout-logo">
+	<source srcset="http://localhost:4000/dashello/assets/img/app/Trello-logo-icon-white.svg" type="image/svg+xml">
+	<img src="http://localhost:4000/dashello/assets/img/app/Trello-logo-icon-white.png">
+</picture>
 
-	    	<img class="app-logo--connect" src="http://localhost:4000/dash-for-trello/assets/img/app/logged-out.png" alt="Dash for Trello logo (left) and the Trello logo (right), with an arrow pointing from left to right conencting both logos">
+<div class="loggedout-message">
+		
+	<h1>Connect to Trello</h1>
 
-			<h1 class="app-heading--app">Connect to Trello</h1>
+	<p><strong>Before you can use this application, you need to connect to Trello.</strong></p>
 
-			<p><strong>Before you can use Dash for Trello, you need to connect to Trello.</strong></p>
+	<p>Printello will redirect you to the Trello website to log in.</p>
+	<p>When you're done, you'll return here.</p>
 
-			<p>Dash for Trello will redirect you to the Trello website to log in.<br>When you're done, you'll return here.</p>
-
-			<p class="app-button--app"><a id="connectLink" class="btn btn-primary" role="button">Connect to Trello</a></p>
-
-	    </div>
-	</div>
-</div>
-	</div>
-
-	<div id="loggedIn">
-		<div id="loggedIn-Input" class="container">
-	<div class="row">
-
-	    <div id="options" class="col-xs-12 col-md-3"><h1 class="app-heading--app" tabindex="100">Display options</h1>
-
-<div id="options-layout">
-
-	<fieldset>
-
-		<legend><h2 class="app-heading--app">Layout</h2></legend>
-
-		<label for="display-mode--option--layout-swim-lanes">
-			<input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-swim-lanes" value="list--swim-lanes" checked>
-			<span class="label"><span class="tick"></span>Swim lanes</span>
-		</label>
-
-		<label for="display-mode--option--layout-list--filter-label">
-			<input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-list--filter-label" value="list--filter-label">
-			<span class="label"><span class="tick"></span>Label sorted lists</span>
-		</label>
-
-		<label for="display-mode--option--layout-list--all">
-			<input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-list--all" value="list--unordered-list">
-			<span class="label"><span class="tick"></span>Unordered lists</span>
-		</label>
-
-	</fieldset>
+	<nav id="connect"><a href="javascript:void(0)" id="connectLink" class="button" role="button">Connect to Trello</a></nav>
 
 </div>
+		</div>
+	
+		<div id="boardSelect">
 
-<div id="options-columns">
+			<div id="options"><h1>Display options</h1>
 
-	<fieldset>
+<p>Change these options to change how the dashboard is displayed on screen or printed.</p>
 
-		<legend><h2 class="app-heading--app">Columns</h2></legend>
+<fieldset id="options-layout">
 
-		<label for="numberOfCols1">
-			<input type="radio" name="display-mode--option--columns" id="numberOfCols1" value="2" tabindex="202">
-			<span class="label"><span class="tick"></span>2 columns</span>
-		</label>
+	<legend><h2>Layout</h2></legend>
 
-		<label for="numberOfCols2">
-			<input type="radio" name="display-mode--option--columns" id="numberOfCols2" value="3" checked>
-			<span class="label"><span class="tick"></span>3 columns</span>
-		</label>
+	<label for="display-mode--option--layout-swim-lanes">
+		<input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-swim-lanes" value="list--swim-lanes" checked>
+		<span class="label"><span class="tick"></span>Swim lanes</span>
+	</label>
 
-		<label for="numberOfCols3">
-			<input type="radio" name="display-mode--option--columns" id="numberOfCols3" value="4">
-			<span class="label"><span class="tick"></span>4 columns</span>
-		</label>
+	<label for="display-mode--option--layout-list--filter-label">
+		<input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-list--filter-label" value="list--filter-label">
+		<span class="label"><span class="tick"></span>Label sorted lists</span>
+	</label>
 
-	</fieldset>
+	<label for="display-mode--option--layout-list--all">
+		<input type="radio" name="display-mode--option--layout" id="display-mode--option--layout-list--all" value="list--unordered-list">
+		<span class="label"><span class="tick"></span>Unordered lists</span>
+	</label>
 
-</div>
+</fieldset>
 
-<div id="options-data">
+<fieldset id="options-columns">
 
-	<fieldset tabindex="301">
+	<legend><h2>Columns</h2></legend>
 
-		<legend><h2 class="app-heading--app">Other</h2></legend>
+	<label for="numberOfCols1">
+		<input type="radio" name="display-mode--option--columns" id="numberOfCols1" value="2">
+		<span class="label"><span class="tick"></span>2 columns</span>
+	</label>
 
-		<label for="display-mode--option--check-marks">
-			<input id="display-mode--option--check-marks" type="checkbox" value="true" checked tabindex="302">
-		    <span class="label"><span class="tick"></span>"Done" check marks</span>
-		</label>
+	<label for="numberOfCols2">
+		<input type="radio" name="display-mode--option--columns" id="numberOfCols2" value="3" checked>
+		<span class="label"><span class="tick"></span>3 columns</span>
+	</label>
 
-		<label for="display-mode--option--due-date">
-		    <input id="display-mode--option--due-date" type="checkbox" value="true" checked tabindex="303">
-		    <span class="label"><span class="tick"></span>Due dates</span>
-		</label>
+	<label for="numberOfCols3">
+		<input type="radio" name="display-mode--option--columns" id="numberOfCols3" value="4">
+		<span class="label"><span class="tick"></span>4 columns</span>
+	</label>
 
-		<label for="display-mode--option--labels">
-		    <input id="display-mode--option--labels" type="checkbox" value="true" checked tabindex="304">
-		    <span class="label"><span class="tick"></span>Labels</span>
-		</label>
+</fieldset>
 
-	</fieldset>
 
-</div>
-</div>
+<fieldset id="options-data">
 
-		<div id="boardList" class="col-xs-12 col-md-8 offset-md-1"></div>
+	<legend><h2>Other</h2></legend>
 
-		<div id="loggedIn-PrintScreen" class="col-8 offset-2" style="display: none;">
+	<label for="display-mode--option--check-marks">
+		<input id="display-mode--option--check-marks" type="checkbox" value="true" checked>
+	    <span class="label"><span class="tick"></span>"Done" check marks</span>
+	</label>
 
-			<div>
+	<label for="display-mode--option--due-date">
+	    <input id="display-mode--option--due-date" type="checkbox" value="true" checked>
+	    <span class="label"><span class="tick"></span>Due dates</span>
+	</label>
 
-				<img src="http://localhost:4000/dash-for-trello/assets/img/app/print.png" class="app-logo--print" alt="Dash for Trello logo (left), an arrow pointing rightward (middle) towards a representation of an A4 landscape piece of paper">
+	<label for="display-mode--option--labels">
+	    <input id="display-mode--option--labels" type="checkbox" value="true" checked>
+	    <span class="label"><span class="tick"></span>Labels</span>
+	</label>
 
-				<h1 class="text-center">Time to print</h1>
+</fieldset></div>
 
-				<p><strong>You might need to change your printer's settings in order for the Board to print correctly.</strong></p>
 
-				<p>Set <strong>margins</strong> to <strong>0mm</strong> and change the <strong>print backgrounds and images</strong> setting to <strong>on</strong>.</p>
-
-				<p><strong>Something still not right?</strong></p>
-
-				<p>This web app was tested in Google Chrome. If you're not using Chrome and things don't look right, change your browser to Chrome. If you're already using Chrome, and something's still not right, <a href="https://github.com/johnpeart/dash-for-trello/issues/new" title="Submit an issue report on Github">file a bug report</a>.</p>
-
-				<p class="text-center"><a id="print" class="btn btn-primary" role="button" title="Select to print the Trello Board (triggers system print dialog)">Print my board</a> <a id="restart" class="btn btn-primary" role="button" title="Pick another board">Pick a different board</a></p>
-
-			</div>
-
+		
 		</div>
 
-	</div>
+		<div id="printScreen">
+		
+			<picture class="loggedIn-PrintScreen-logo">
+	<source srcset="http://localhost:4000/dashello/assets/img/app/print.svg" type="image/svg+xml">
+	<img src="http://localhost:4000/dashello/assets/img/app/print.png">
+</picture>
+
+<div class="loggedIn-PrintScreen-message">
+		
+	<h1>Ready to print</h1>
+
+	<p><strong>You might need to change your printer's settings in order for the Board to print correctly.</strong></p>
+
+	<nav id="connect">
+		<a id="print" class="button" role="button" title="Select to print the Trello Board (triggers system print dialog)">Print my board</a><br>
+		<a id="restart" class="button" role="button" title="Pick another board">Pick a different board</a>
+	</nav>
+
 </div>
-
-<div id="loggedIn-Output" style="display: none;">
-
-	<div id="output">
-
-	</div>
-
-</div>
+			
+		</div>
+		
+		<div id="output" style="display: none;">
+		
+		</div>
+		
 	</div>
 
 </main>
 
 		
 
-		<script src="http://localhost:4000/dash-for-trello/assets/js/jquery.js"></script>
-<script src="http://localhost:4000/dash-for-trello/assets/js/browser-check.js"></script>
+		<script src="http://localhost:4000/dashello/assets/js/jquery.js"></script>
 
 <!-- Latest compiled and minified Bootstrap JavaScript -->
-<script src="http://localhost:4000/dash-for-trello/assets/js/tether.js"></script>
-<script src="http://localhost:4000/dash-for-trello/assets/js/bootstrap.js"></script>
+<script src="http://localhost:4000/dashello/assets/js/tether.js"></script>
+<script src="http://localhost:4000/dashello/assets/js/bootstrap.js"></script>
 
-<script src="http://localhost:4000/dash-for-trello/assets/js/marked.js"></script>
+<script src="http://localhost:4000/dashello/assets/js/marked.js"></script>
 <script src="https://api.trello.com/1/client.js?key=0c85c40d0209877de954697c8b7bcb7e"></script>
-<script src="http://localhost:4000/dash-for-trello/assets/js/trello.js"></script>
+<script src="http://localhost:4000/dashello/assets/js/trello.js"></script>
 
 	</body>
 
