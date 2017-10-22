@@ -57,7 +57,7 @@ $( document ).ready(function() {
 	
 			output += "<h1>" + board.name + "</h1>";
 			output += "<p>Created on " + printDate + "</p>";
-			output += "<p class='foot'>Made with Printello:<br>http://localhost:4000/dashello</p>"
+			output += "<p class='foot'>Made with Printello:<br>http://localhost:4000/printello</p>"
 	
 		output += "</div>"
 	
@@ -158,7 +158,7 @@ $( document ).ready(function() {
 
 		output += "<h1>" + board.name + "</h1>";
 		output += "<p>Created on " + printDate + "</p>";
-		output += "<p class='foot'>Made with Printello:<br>http://localhost:4000/dashello</p>"
+		output += "<p class='foot'>Made with Printello:<br>http://localhost:4000/printello</p>"
 
 	output += "</div>"
 
@@ -252,7 +252,7 @@ $( document ).ready(function() {
 	
 			output += "<h1>" + board.name + "</h1>";
 			output += "<p>Created on " + printDate + "</p>";
-			output += "<p class='foot'>Made with Printello:<br>http://localhost:4000/dashello</p>"
+			output += "<p class='foot'>Made with Printello:<br>http://localhost:4000/printello</p>"
 	
 		output += "</div>"
 		

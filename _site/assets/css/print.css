@@ -320,7 +320,8 @@ div#output div#lists {
     grid-template-areas: "list-1 list-2 list-3 list-4";
     grid-column-gap: 10mm; }
 div#output div.list {
-  display: block; }
+  display: block;
+  height: 200mm; }
 div#output div#swim-lanes div.swim-lane-page {
   page-break-after: always;
   grid-template-rows: auto;
