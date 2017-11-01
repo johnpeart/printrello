@@ -276,20 +276,29 @@ div#output {
 		
 		&.columns-2 {
 			grid-template-columns: 		1fr 1fr;
+			-ms-grid-template-columns: 		1fr 1fr;
 			grid-template-areas: 		"list-1 list-2";
+			-ms-grid-template-areas: 		"list-1 list-2";
 			grid-column-gap: 			30px;
+			-ms-grid-column-gap: 			30px;
 		}
 		
 		&.columns-3 {
 			grid-template-columns: 		1fr 1fr 1fr;
+			-ms-grid-template-columns: 		1fr 1fr 1fr;
 			grid-template-areas: 		"list-1 list-2 list-3";
+			-ms-grid-template-areas: 		"list-1 list-2 list-3";
 			grid-column-gap: 			30px;
+			-ms-grid-column-gap: 			30px;
 		}
 		
 		&.columns-4 {
 			grid-template-columns: 		1fr 1fr 1fr 1fr;
+			-ms-grid-template-columns: 		1fr 1fr 1fr 1fr;
 			grid-template-areas: 		"list-1 list-2 list-3 list-4";
+			-ms-grid-template-areas: 		"list-1 list-2 list-3 list-4";
 			grid-column-gap: 			30px;
+			-ms-grid-column-gap: 			30px;
 		}	
 		
 	}
