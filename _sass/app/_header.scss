@@ -13,11 +13,11 @@ header#global-header {
 		position: 			relative;
 		
 		grid-template-columns: 		25% auto;
-		-ms-grid-template-columns: 		25% auto;
+		-ms-grid-columns: 		25% auto;
 		grid-template-columns: 		25% auto;
-		-ms-grid-template-columns: 		25% auto;
+		-ms-grid-columns: 		25% auto;
 		grid-template-areas: 		"logo meta";
-		-ms-grid-template-areas: 		"logo meta";
+		-ms-grid-template: 		"logo meta";
 		
 		padding: 8px 0;
 		height: 53px;
@@ -41,11 +41,11 @@ header#global-header {
 				float: left;
 					
 				grid-template-columns: 		auto auto;
-				-ms-grid-template-columns: 		auto auto;
+				-ms-grid-columns: 		auto auto;
 				grid-template-rows:			auto;
-				-ms-grid-template-rows:			auto;
+				-ms-grid-rows:			auto;
 				grid-template-areas: 		"logo wordmark";
-				-ms-grid-template-areas: 		"logo wordmark";
+				-ms-grid-template: 		"logo wordmark";
 				
 				justify-content: flex-start;
 				
