@@ -1,14 +1,17 @@
 div#loggedOut {
 	
 	display: grid;
+	display: -ms-grid;
 	position: relative;
 	
-	grid-template-columns: 	30% auto;
+	grid-template-columns: 	30% 70%;
+	-ms-grid-columns: 		30% 70%;
 	grid-template-rows:		auto;
-	grid-template-areas: 	"logo content";
+	-ms-grid-rows:			auto;
+	grid-template-areas: 	"logo message";
 	
-	margin: 50px 0;
-		
+	margin: 		50px 0 auto 0;
+					
 	background: 	$blue;
 	color: 			$white;
 	
@@ -36,7 +39,7 @@ div#loggedOut {
 		display: block;
 		position: relative;
 		
-		grid-area: 		content;
+		grid-area: 		message;
 		
 		margin: 		40px 0;
 		padding: 0 60px 0 0;
