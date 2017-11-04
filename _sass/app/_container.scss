@@ -7,6 +7,10 @@ div.container {
 	margin-left: auto;
 	margin-right: auto;
 	
+	&.not-ms-grid {
+		display: block;
+	}
+	
 }
 
 @include sm {
