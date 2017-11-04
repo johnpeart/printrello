@@ -15,8 +15,10 @@ main#four-oh-four {
 			grid-template-rows:		auto;
 			-ms-grid-rows:			auto;
 			grid-template-areas: 	"logo message";
+			grid-column-gap: 		40px;
 			
 			margin: 		50px 0 auto 0;
+			padding: 		60px 20px 40px;
 							
 			background: 	$red;
 			color: 			$white;
@@ -25,19 +27,12 @@ main#four-oh-four {
 
 				grid-area: 			logo;
 				-ms-grid-column: 	1;
-								
-				max-width: 			200px;
-				max-height: 		200px;
-									
-				margin-top: 60px;
-				margin-left: auto;
-				margin-right: auto;
 										
 				img, source {
 					
 					width: 100%;
-					max-width: 100%;
-					max-height: 200px;
+					margin-right: 20px;
+					
 				}
 			}
 				
@@ -46,14 +41,13 @@ main#four-oh-four {
 				grid-area: 			message;
 				-ms-grid-column: 	2;
 				
-				margin: 		40px 0;
+				margin: 		0;
 				padding: 		0;
 				
 				h1 {
 					font-size: 50px;
 					line-height: 50px;
 					max-width: 600px;
-					margin-top: 20px;
 				}
 				
 				p:first-of-type {
