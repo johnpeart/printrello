@@ -6,7 +6,9 @@ main#four-oh-four {
 			
 			display: grid;
 			display: -ms-grid;
-			position: relative;
+			position: absolute;
+			
+			min-width: 100%;
 			
 			grid-template-columns: 	30% 70%;
 			-ms-grid-columns: 		30% 70%;
