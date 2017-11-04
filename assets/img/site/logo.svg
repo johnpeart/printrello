@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 50 50" width="50pt" height="50pt" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" viewBox="51 188 528 264" width="44pc" height="22pc" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <metadata> Produced by OmniGraffle 7.5 
-    <dc:date>2017-10-18 21:12:15 +0000</dc:date>
+    <dc:date>2017-10-18 21:28:33 +0000</dc:date>
   </metadata>
   <defs/>
   <g stroke="none" stroke-opacity="1" stroke-dasharray="none" fill="none" fill-opacity="1">
-    <title>logo-navbar</title>
+    <title>touch</title>
     <g>
       <title>Layer 1</title>
-      <path d="M 28.86497 .0022898336 L 7105427e-21 28.043042 L 21.13503 49.98798 L 50 21.947226 Z M 33.103257 6.950203 L 46.67779 21.044919 L 38.79113 28.488752 L 25.2166 14.394037 Z M 24.062625 15.581188 L 27.980654 19.821 L 20.093998 27.264835 L 16.175969 23.02502 Z M 29.412917 3.294031 L 31.5654 5.495463 L 5.714127 30.6578 L 3.5616443 28.45637 Z M 14.918031 24.42012 L 18.83606 28.659934 L 10.949404 36.103767 L 7.031375 31.863954 Z" fill="white"/>
+      <path d="M 354.5 191.5 L 59.5 330.06098 L 275.5 438.5 L 570.5 299.93902 Z M 397.8153 225.83252 L 536.547 295.48035 L 455.94537 332.2634 L 317.21366 262.6156 Z M 305.42003 268.4818 L 345.4623 289.43247 L 264.86066 326.21553 L 224.8184 305.26486 Z M 360.1 207.76586 L 382.0984 218.64404 L 117.89838 342.9816 L 95.9 332.1034 Z M 211.96228 312.15862 L 252.00454 333.1093 L 171.4029 369.89236 L 131.36066 348.9417 Z" fill="white"/>
     </g>
   </g>
 </svg>

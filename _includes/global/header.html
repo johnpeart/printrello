@@ -5,8 +5,8 @@
 		<div {% if page.layout == "app" %}id="disconnect"{% endif %} class="header-logo">
 	        <a href="{{ site.url | append: site.baseurl }}" title="Go to home page" id="logo" class="content">
 	            <picture>
-					<source srcset="{{ site.logo-svg | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}" type="image/svg+xml">
-					<img class="header-logo" src="{{ site.logo-png | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}">
+					<source srcset="{{ site.logo-header-svg | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}" type="image/svg+xml">
+					<img class="header-logo" src="{{ site.logo-header-png | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}">
 				</picture>
 				<h1>{{ site.title }}</h1>
 	        </a>
