@@ -16,18 +16,19 @@ div#loggedOut {
 	color: 			$white;
 	
 	picture.loggedout-logo {
+		
 		grid-area: 			logo;
-		
-		justify-self:		center;
-		align-self: 		flex-start;
-		
+		-ms-grid-column: 	1;
+						
 		max-width: 			120px;
 		max-height: 		120px;
-		
-		margin: 			60px 0 0;
-		padding: 			0px;
-				
-		picture, img, source {
+							
+		margin-top: 60px;
+		margin-left: auto;
+		margin-right: auto;
+								
+		img, source {
+			
 			width: 100%;
 			max-width: 120px;
 			max-height: 120px;
@@ -36,14 +37,12 @@ div#loggedOut {
 		
 	div.loggedout-message {
 		
-		display: block;
-		position: relative;
-		
-		grid-area: 		message;
+		grid-area: 			message;
+		-ms-grid-column: 	2;
 		
 		margin: 		40px 0;
-		padding: 0 60px 0 0;
-				
+		padding: 		0;
+		
 		h1 {
 			font-size: 50px;
 			line-height: 50px;
@@ -62,8 +61,6 @@ div#loggedOut {
 	}
 
 	nav {
-		
-		display: inline-block;
 			
 		padding: 20px 0;
 		
