@@ -102,20 +102,13 @@ $( document ).ready(function() {
 	};
 	
 	var restart = function() {
-		$('#boardSelect').show();
-		$('#loggedOut').hide();
-		$('#printScreen').hide();
-		$('#output').hide();
-		document.getElementById('board-name').innerHTML = "";
+		$("#displayBoards").remove();
+		$("#output").empty();
+		getBoards();
 	}
 	
 	var print = function() {
-		$("#output").show();
-		$("#boardSelect").hide();
-		$("#printScreen").hide();
 		window.print();
-		$("#printScreen").show();
-		$("#output").hide();
 	}
 	
 	Trello.authorize({
@@ -132,16 +125,8 @@ $( document ).ready(function() {
 	    })
 	});
 	
-	$("#showLink").click(function(){
-		console.log('show link clicked');
-		Trello.authorize({
-		    interactive:false,
-		    success: getBoards
-		});
-	});
-	
 	$("#disconnect").click(logout);
 	$("#print").click(print);
-	$("#restart").click(restart);
+	$(".restart").click(restart);
 
 });
