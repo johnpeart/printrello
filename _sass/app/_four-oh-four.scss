@@ -16,14 +16,13 @@ main#four-oh-four {
 			display: -ms-grid;
 			position: relative;
 			
-			grid-template-columns: 	30% auto;
-			-ms-grid-columns: 	30% auto;
+			grid-template-columns: 	30% 70%;
+			-ms-grid-columns: 	30% 70%;
 			grid-template-rows:		auto;
 			-ms-grid-rows:		auto;
 			grid-template-areas: 	"logo content";
 			
 			margin: 50px 0;
-			width: 100%;
 				
 			background: 	$red;
 			color: 			$white;
