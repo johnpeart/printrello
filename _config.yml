@@ -1,11 +1,11 @@
 # Site settings
 
-title: "Printello"
+title: "Printrello"
 
 description: "A web app that turns Trello Boards into dashboards you can print"
 keywords: "trello, dashboards, print"
 
-baseurl: "/printello" # the subpath of your site, e.g. /blog
+baseurl: "/printrello" # the subpath of your site, e.g. /blog
 url: "http://johnpe.art"
 author: "John Peart"
 
@@ -29,7 +29,7 @@ facebook-id: "1053585037989505" # For Facebook OpenGraph integration
 facebook-slug: "john.robert.peart" # Automatically pre-pends http://facebook.com/
 twitter-username: "johnpeart" # Twitter handle i.e. joebloggs
 github-username:  "johnpeart"
-github-repo: "https://github.com/johnpeart/printello"
+github-repo: "https://github.com/johnpeart/printrello"
 google-site-verification: "GMEFdAl3i-jN_Jkdb_jrS-LWZPUEQ7Bx4fPcyQ7YSCU" # GSV code; proves domain ownership
 
 #Analytics
