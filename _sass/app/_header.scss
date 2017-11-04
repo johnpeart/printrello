@@ -1,6 +1,7 @@
 header#global-header {
 
 	display: grid;
+	display: -ms-grid;
 	position: relative;
 		
 	background: 		$black;
@@ -14,9 +15,9 @@ header#global-header {
 		position: 			relative;
 		
 		grid-template-columns: 		25% auto;
-		-ms-grid-columns: 		25% auto;
+		-ms-grid-columns: 			25% auto;
 		grid-template-columns: 		25% auto;
-		-ms-grid-columns: 		25% auto;
+		-ms-grid-columns: 			25% auto;
 		grid-template-areas: 		"logo meta";
 		
 		padding: 8px 0;
@@ -80,6 +81,8 @@ header#global-header {
 		
 		div.header-options {
 			
+			display: 			block;
+			
 			grid-area: 			meta;
 			-ms-grid-column: 	2;
 			
@@ -87,7 +90,6 @@ header#global-header {
 			
 			ul {
 				
-				display: inline-block;
 				list-style: none;
 			
 				li {
