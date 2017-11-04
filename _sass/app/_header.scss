@@ -10,6 +10,7 @@ header#global-header {
 	div.container { 
 		
 		display: 			grid;
+		display: 			-ms-grid;
 		position: 			relative;
 		
 		grid-template-columns: 		25% auto;
@@ -37,6 +38,7 @@ header#global-header {
 			a {
 			
 				display: 		grid;
+				display: 		-ms-grid;
 				position: 		relative;
 				float: left;
 					
