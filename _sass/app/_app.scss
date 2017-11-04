@@ -64,8 +64,13 @@ div#loggedOut {
 
 div#boardSelect {
 
+	display: -ms-grid;
 	display: grid;
 	position: relative;
+	
+	/* IE 11 */
+	grid-columns: 	35% auto;
+	grid-rows:		auto;
 	
 	grid-template-columns: 	35% auto;
 	grid-template-rows:		auto;
@@ -87,6 +92,7 @@ div#boardSelect {
 	
 	div#options {
 		grid-area: options;	
+		-ms-grid-column: 1;
 		
 		h2 {
 			display: block;
@@ -116,8 +122,14 @@ div#boardSelect {
 	
 	div#boards {
 		grid-area: 		boards;
+		-ms-grid-column: 2;
 		
+		display: 		-ms-grid;
 		display:		grid;
+		
+		/* IE 11 */
+		grid-columns: 		auto auto;
+		grid-rows:			auto;
 		
 		grid-template-columns: 		auto auto;
 		grid-template-rows:			auto;
