@@ -32,6 +32,7 @@ header#global-header {
 		
 		div.header-logo {
 			grid-area: 		logo;
+			-ms-grid-column: 1;
 			
 			width: 100%;
 			
@@ -52,16 +53,18 @@ header#global-header {
 				justify-content: flex-start;
 				
 				picture {
-					grid-area:		logo;
-					margin-right: 10px;
+					grid-area:			logo;
+					-ms-grid-column: 	1;
+					margin-right: 		10px;
 					source,
 					img {
 						max-height: 37px;
 					}
 				}
 				h1 {
-					grid-area:		wordmark;
-					
+					grid-area:			wordmark;
+					-ms-grid-column: 	2;
+
 					margin: 0;
 					padding: 0;
 					
@@ -78,6 +81,7 @@ header#global-header {
 		}
 		
 		div.header-meta {
+						
 			h1 {
 				margin: 0;
 				padding: 0;
