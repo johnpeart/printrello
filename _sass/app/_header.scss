@@ -18,7 +18,6 @@ header#global-header {
 		grid-template-columns: 		25% auto;
 		-ms-grid-columns: 		25% auto;
 		grid-template-areas: 		"logo meta";
-		-ms-grid-template: 		"logo meta";
 		
 		padding: 8px 0;
 		height: 53px;
@@ -48,7 +47,6 @@ header#global-header {
 				grid-template-rows:			auto;
 				-ms-grid-rows:			auto;
 				grid-template-areas: 		"logo wordmark";
-				-ms-grid-template: 		"logo wordmark";
 				
 				justify-content: flex-start;
 				
@@ -81,6 +79,10 @@ header#global-header {
 		}
 		
 		div.header-meta {
+			
+			grid-area: 			meta;
+			-ms-grid-column: 	2;
+			
 						
 			h1 {
 				margin: 0;

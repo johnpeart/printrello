@@ -19,7 +19,6 @@ main#four-oh-four {
 			grid-template-rows:		auto;
 			-ms-grid-rows:		auto;
 			grid-template-areas: 	"logo content";
-			-ms-grid-template: 	"logo content";
 			
 			margin: 50px 0;
 				
@@ -28,6 +27,7 @@ main#four-oh-four {
 			
 			picture.error-image {
 				grid-area: 			logo;
+				-ms-grid-column: 	1;
 				
 				justify-self:		center;
 				align-self: 		flex-start;
@@ -50,7 +50,8 @@ main#four-oh-four {
 				display: block;
 				position: relative;
 				
-				grid-area: 		content;
+				grid-area: 			content;
+				-ms-grid-column: 	2;
 				
 				margin: 		40px 0;
 				padding: 		0;
