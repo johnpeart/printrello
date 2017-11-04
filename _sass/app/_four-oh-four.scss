@@ -12,6 +12,7 @@ main#four-oh-four {
 		div#error-message {
 			
 			display: grid;
+			display: -ms-grid;
 			position: relative;
 			
 			grid-template-columns: 	30% auto;
