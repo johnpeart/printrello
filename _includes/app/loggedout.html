@@ -1,6 +1,6 @@
 <picture class="loggedout-logo">
-	<source srcset="{{ '/app/Trello-logo-icon-white.svg' | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}" type="image/svg+xml">
-	<img src="{{ '/app/Trello-logo-icon-white.png' | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}">
+	<source srcset="{{ site.logo-svg | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}" type="image/svg+xml">
+	<img src="{{ site.logo-png | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}">
 </picture>
 
 <div class="loggedout-message">
