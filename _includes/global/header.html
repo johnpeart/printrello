@@ -2,7 +2,7 @@
 	
 	<div class="container">
 	
-		<div {% if page.layout == "app" %}id="disconnect"{% endif %} class="header-logo">
+		<div class="header-logo">
 	        <a href="{{ site.url | append: site.baseurl }}" title="Go to home page" id="logo" class="content">
 	            <picture>
 					<source srcset="{{ site.logo-header-svg | prepend: site.image-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}" type="image/svg+xml">
@@ -12,8 +12,11 @@
 	        </a>
 	    </div>
 	    
-	    <div class="header-meta">
-		    <h1 id="board-name"> </h1>
+	    <div class="header-options">
+		    <ul>
+			   <li id="restart" title="Show all Trello boards">Show boards</li>
+			   <li id="disconnect" title="Disconnect Trello from Printello and log out">Logout</li>
+		    </ul>
 	    </div>
     
 	</div>
