@@ -137,8 +137,6 @@ Trello.get("boards/" + board.id + "/labels", function(labels) {
 
 		$('#output').html(output);
 
-		document.getElementById('board-name').innerHTML = board.name;
-
 	});
 
 });

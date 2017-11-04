@@ -83,6 +83,4 @@ Trello.get("boards/" + board.id + "/cards", function(cards) {
 
 	$('#output').html(output);
 
-	document.getElementById('board-name').innerHTML = board.name;
-
 });
