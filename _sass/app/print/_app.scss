@@ -44,30 +44,32 @@ div#output {
 		width: 		100%;
 				
 		&.columns-2 {
+			/* IE 11 */
+			grid-columns: 		1fr 1fr;
+
 			grid-template-columns: 		1fr 1fr;
-			-ms-grid-template-columns: 		1fr 1fr;
 			grid-template-areas: 		"list-1 list-2";
-			-ms-grid-template-areas: 		"list-1 list-2";
 			grid-column-gap: 			10mm;
-			-ms-grid-column-gap: 			10mm;
 		}
 		
 		&.columns-3 {
+			/* IE 11 */
+			grid-columns: 		1fr 1fr;
+			grid-columns: 		1fr 1fr 1fr;
+
 			grid-template-columns: 		1fr 1fr 1fr;
-			-ms-grid-template-columns: 		1fr 1fr 1fr;
 			grid-template-areas: 		"list-1 list-2 list-3";
-			-ms-grid-template-areas: 		"list-1 list-2 list-3";
 			grid-column-gap: 			10mm;
-			-ms-grid-column-gap: 			10mm;
 		}
 		
 		&.columns-4 {
+			/* IE 11 */
+			grid-columns: 		1fr 1fr;
+			grid-columns: 		1fr 1fr 1fr 1fr;
+
 			grid-template-columns: 		1fr 1fr 1fr 1fr;
-			-ms-grid-template-columns: 		1fr 1fr 1fr 1fr;
 			grid-template-areas: 		"list-1 list-2 list-3 list-4";
-			-ms-grid-template-areas: 		"list-1 list-2 list-3 list-4";
 			grid-column-gap: 			10mm;
-			-ms-grid-column-gap: 			10mm;
 		}	
 		
 	}
@@ -119,10 +121,8 @@ div#output {
 					grid-template-areas: 		"lane 	list-1 	list-2";
 					grid-column-gap: 			10mm;
 					
-					
-					-ms-grid-template-columns: 		50mm 1fr 1fr;
-					-ms-grid-template-areas: 		"lane 	list-1 	list-2";
-					-ms-grid-column-gap: 			10mm;
+					/* IE 11 */
+					grid-columns: 		50mm 1fr 1fr;
 				}
 			}
 			
@@ -133,10 +133,8 @@ div#output {
 					grid-template-areas: 		"lane 	list-1 	list-2 list-3";
 					grid-column-gap: 			10mm;
 					
-					
-					-ms-grid-template-columns: 		40mm 1fr 1fr 1fr;
-					-ms-grid-template-areas: 		"lane 	list-1 	list-2 list-3";
-					-ms-grid-column-gap: 			10mm;
+					/* IE 11 */
+					grid-columns: 		40mm 1fr 1fr 1fr;
 				}
 			}
 			
@@ -147,9 +145,8 @@ div#output {
 					grid-template-areas: 		"heading 	list-1 	list-2 	list-3 	list-4";
 					grid-column-gap: 			10mm;
 					
-					-ms-grid-template-columns: 		30mm 1fr 1fr 1fr 1fr;
-					-ms-grid-template-areas: 		"heading 	list-1 	list-2 	list-3 	list-4";
-					-ms-grid-column-gap: 			10mm;
+					/* IE 11 */
+					grid-columns: 		30mm 1fr 1fr 1fr 1fr;
 				}
 			}
 			
@@ -169,7 +166,12 @@ div#output {
 			line-height: 	6mm;
 						
 			&.ticks-on {
+				display: -ms-grid;
 				display: grid;
+				
+				/* IE 11 */	
+				grid-rows:					auto;
+				grid-columns:				30px auto;
 				
 				grid-template-rows: 		auto;
 				grid-template-columns: 		30px auto;
@@ -177,6 +179,7 @@ div#output {
 				
 				span.no-tick {
 					grid-area:	tick;
+					-ms-grid-column: 1;
 
 					display: inline-block;
 					
@@ -195,6 +198,7 @@ div#output {
 				}
 				span.tick {
 					grid-area:	tick;
+					-ms-grid-column: 1;
 
 					display: inline-block;
 					
@@ -223,6 +227,7 @@ div#output {
 			
 			span.content {
 				grid-area: content;
+				-ms-grid-column: 2;
 				
 				span.date {
 					font-size: 14px;
