@@ -226,6 +226,7 @@ div#output {
 	div#cover-page {
 		
 		display: grid;
+		display: -ms-grid;
 		page-break-after: always;
 		
 		background: 		$blue;
@@ -240,7 +241,9 @@ div#output {
 	
 	div#lists {
 		display: grid;
-		
+		display: -ms-grid;
+
+		grid-rows: auto;
 		grid-template-rows: auto;
 		
 		@include sm {
@@ -264,30 +267,30 @@ div#output {
 		}
 		
 		&.columns-2 {
+			/* IE 11 */
+			grid-columns: 		1fr 1fr;
+
 			grid-template-columns: 		1fr 1fr;
-			-ms-grid-columns: 		1fr 1fr;
 			grid-template-areas: 		"list-1 list-2";
-			-ms-grid-template: 		"list-1 list-2";
 			grid-column-gap: 			30px;
-			-ms-grid-column-gap: 			30px;
 		}
 		
 		&.columns-3 {
+			/* IE 11 */
+			grid-columns: 				1fr 1fr 1fr;
+			
 			grid-template-columns: 		1fr 1fr 1fr;
-			-ms-grid-columns: 		1fr 1fr 1fr;
 			grid-template-areas: 		"list-1 list-2 list-3";
-			-ms-grid-template: 		"list-1 list-2 list-3";
 			grid-column-gap: 			30px;
-			-ms-grid-column-gap: 			30px;
 		}
 		
 		&.columns-4 {
+			/* IE 11 */
+			grid-columns: 				1fr 1fr 1fr 1fr;
+			
 			grid-template-columns: 		1fr 1fr 1fr 1fr;
-			-ms-grid-columns: 		1fr 1fr 1fr 1fr;
 			grid-template-areas: 		"list-1 list-2 list-3 list-4";
-			-ms-grid-template: 		"list-1 list-2 list-3 list-4";
 			grid-column-gap: 			30px;
-			-ms-grid-column-gap: 			30px;
 		}	
 		
 	}
@@ -351,6 +354,9 @@ div#output {
 			&.columns-2 {
 				div.headings,
 				div.swim-lane {
+					/* IE 11 */	
+					grid-columns:				100px 1fr 1fr;
+					
 					grid-template-columns: 		100px 1fr 1fr;
 					grid-template-areas: 		"lane 	list-1 	list-2";
 					grid-column-gap: 			30px;
@@ -360,6 +366,9 @@ div#output {
 			&.columns-3 {
 				div.headings,
 				div.swim-lane {
+					/* IE 11 */	
+					grid-columns:				100px 1fr 1fr 1fr;
+					
 					grid-template-columns: 		100px 1fr 1fr 1fr;
 					grid-template-areas: 		"lane 	list-1 	list-2 list-3";
 					grid-column-gap: 			20px;
@@ -369,6 +378,9 @@ div#output {
 			&.columns-4 {
 				div.headings,
 				div.swim-lane {
+					/* IE 11 */	
+					grid-columns:				100px 1fr 1fr 1fr;
+					
 					grid-template-columns: 		100px 1fr 1fr 1fr 1fr;
 					grid-template-areas: 		"heading 	list-1 	list-2 	list-3 	list-4";
 					grid-column-gap: 			10px;
@@ -391,7 +403,12 @@ div#output {
 			line-height: 	28px;
 			
 			&.ticks-on {
+				display: -ms-grid;
 				display: grid;
+				
+				/* IE 11 */	
+				grid-rows:					auto;
+				grid-columns:				30px auto;
 				
 				grid-template-rows: 		auto;
 				grid-template-columns: 		30px auto;
@@ -399,6 +416,7 @@ div#output {
 				
 				span.no-tick {
 					grid-area:	tick;
+					-ms-grid-column: 1;
 
 					display: inline-block;
 					
@@ -417,6 +435,7 @@ div#output {
 				}
 				span.tick {
 					grid-area:	tick;
+					-ms-grid-column: 1;
 
 					display: inline-block;
 					
@@ -445,6 +464,7 @@ div#output {
 			
 			span.content {
 				grid-area: content;
+				-ms-grid-column: 2;
 				
 				span.date {
 					font-size: 14px;
