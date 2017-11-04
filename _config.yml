@@ -15,6 +15,7 @@ css-path: "/css"
 js-path: "/js"
 
 logo: "/site/logo.png"
+logo-png: "/site/logo-header.png"
 logo-svg: "/site/logo.svg"
 logo-four-oh-four: "/site/404.svg"
 social-media: "/site/social-media.png"
