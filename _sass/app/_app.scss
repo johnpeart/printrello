@@ -154,53 +154,50 @@ div#boardSelect {
 }
 
 div#printScreen {
-	
+
 	display: grid;
-	position: relative;
+	display: -ms-grid;
+	position: absolute;
 	
-	grid-template-columns: 	30% auto;
+	min-width: 100%;
+	
+	grid-template-columns: 	30% 70%;
+	-ms-grid-columns: 		30% 70%;
 	grid-template-rows:		auto;
-	grid-template-areas: 	"logo content";
+	-ms-grid-rows:			auto;
+	grid-template-areas: 	"logo message";
 	
-	margin: 50px 0;
-		
+	margin: 		50px 0 auto 0;
+	padding: 		60px 0 40px 0;
+					
 	background: 	$blue;
 	color: 			$white;
 	
 	picture.loggedIn-PrintScreen-logo {
+		
 		grid-area: 			logo;
-		
-		justify-self:		center;
-		align-self: 		flex-start;
-		
-		max-width: 			120px;
-		max-height: 		120px;
-		
-		margin: 			60px 0 0;
-		padding: 			0px;
-				
-		picture, img, source {
+		-ms-grid-column: 	1;
+								
+		img, source {
+			
 			width: 100%;
-			max-width: 120px;
-			max-height: 120px;
+			
 		}
+		
 	}
 		
 	div.loggedIn-PrintScreen-message {
 		
-		display: block;
-		position: relative;
+		grid-area: 			message;
+		-ms-grid-column: 	2;
 		
-		grid-area: 		content;
-		
-		margin: 		40px 0;
-		padding: 		0px 60px 0px 0px;
+		margin: 		0;
+		padding: 		0;
 		
 		h1 {
 			font-size: 50px;
 			line-height: 50px;
 			max-width: 600px;
-			margin-top: 20px;
 		}
 		
 		p:first-of-type {
@@ -211,12 +208,11 @@ div#printScreen {
 		p {
 			font-size: 18px;
 		}
+
 	}
 
 	nav {
-		
-		display: inline-block;
-			
+				
 		padding: 20px 0;
 		
 	}
