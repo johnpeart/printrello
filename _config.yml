@@ -33,8 +33,7 @@ github-repo: "https://github.com/printrello/printrello"
 google-site-verification: "GMEFdAl3i-jN_Jkdb_jrS-LWZPUEQ7Bx4fPcyQ7YSCU" # GSV code; proves domain ownership
 
 #Analytics
-disable-analytics: true # Switch to "false" to start GA logging
-google-analytics: "UA-27553664-1" # GA ID code
+disable-analytics: false # Switch to "false" to start GA logging
 
 # Plugins and build settings
 
