@@ -55,6 +55,18 @@ main#home {
 
 	section.content {
 		max-width: 600px;
+		
+		div.footnotes {
+			margin-top: 50px;
+			font-size: 10px;
+			color: $gray-400;
+			
+			ol,ul {
+				margin: 0;
+				padding: 0;
+			}
+		}
+		
 	}	
 	
 }
