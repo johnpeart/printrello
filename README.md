@@ -1,4 +1,4 @@
-# Printrelllo
+# Printrello
 
 ***Turn Trello boards into easily printable dashboards in a few clicks.***
 
