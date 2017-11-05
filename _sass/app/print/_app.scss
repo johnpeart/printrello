@@ -12,6 +12,8 @@ div#output {
 	div#cover-page {
 		
 		display: grid;
+		display: -ms-grid;
+		
 		page-break-after: always;
 		
 		background: 		$blue;
@@ -36,6 +38,7 @@ div#output {
 	}
 	
 	div#lists {
+		display: -ms-grid;
 		display: grid;
 		
 		grid-template-rows: auto;
@@ -122,7 +125,7 @@ div#output {
 					grid-column-gap: 			10mm;
 					
 					/* IE 11 */
-					grid-columns: 		50mm 1fr 1fr;
+					grid-columns: 				50mm 1fr 1fr;
 				}
 			}
 			
@@ -134,7 +137,7 @@ div#output {
 					grid-column-gap: 			10mm;
 					
 					/* IE 11 */
-					grid-columns: 		40mm 1fr 1fr 1fr;
+					grid-columns: 				40mm 1fr 1fr 1fr;
 				}
 			}
 			
@@ -146,7 +149,7 @@ div#output {
 					grid-column-gap: 			10mm;
 					
 					/* IE 11 */
-					grid-columns: 		30mm 1fr 1fr 1fr 1fr;
+					grid-columns: 				30mm 1fr 1fr 1fr 1fr;
 				}
 			}
 			
