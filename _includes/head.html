@@ -56,8 +56,15 @@
 	<!-- Google site verification -->
 	<meta name="google-site-verification" content="{{ site.google-site-verification }}">
 
-	<!-- Google Analytics -->
-	<script src="{{ '/js/analytics.js' | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-27553664-6"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'UA-27553664-6');
+	</script>
 
 	<!-- CSS -->
 	<link rel="stylesheet" media="screen" 	href="{{ '/styles.css' | prepend: site.css-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}">
