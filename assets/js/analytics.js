@@ -1,10 +1,6 @@
 ---
 ---
 
-{% if site.disable-analytics == true %}
-
-{% else %}
-
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-27553664-6"></script>
 <script>
@@ -14,5 +10,3 @@
 
   gtag('config', 'UA-27553664-6');
 </script>
-
-{% endif %}

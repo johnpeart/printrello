@@ -56,6 +56,9 @@
 	<!-- Google site verification -->
 	<meta name="google-site-verification" content="{{ site.google-site-verification }}">
 
+	<!-- Google Analytics -->
+	<script src="{{ '/js/analytics.js' | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}"></script>
+
 	<!-- CSS -->
 	<link rel="stylesheet" media="screen" 	href="{{ '/styles.css' | prepend: site.css-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}">
 	<link rel="stylesheet" media="print" 	href="{{ '/print.css' | prepend: site.css-path | prepend: site.asset-path | prepend: site.baseurl | prepend: site.url }}">
