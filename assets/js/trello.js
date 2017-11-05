@@ -3,6 +3,19 @@
 
 $( document ).ready(function() {
 
+	var showNavigationLinks = function () {
+		var isLoggedIn = Trello.authorized();
+	    if (isLoggedIn){
+	    	console.log('logged in');
+	    	$(".header-options").show();
+	    } else {
+	    	console.log('not logged in');
+	    	$(".header-options").hide();
+	    }
+	}
+
+		showNavigationLinks();
+
 	$('#boardSelect').hide();
 	$('#printScreen').hide();
 	$('#output').hide();
@@ -75,12 +88,14 @@ $( document ).ready(function() {
 	    var isLoggedIn = Trello.authorized();
 	    if (isLoggedIn){
 	    	console.log('logged in');
+	    	$(".header-options").show();
 	    	$("#boardSelect").show();
 	    	$("#loggedOut").hide();
 	    	$("#printScreen").hide();
 	    	$("#output").hide();
 	    } else {
 	    	console.log('not logged in');
+	    	$(".header-options").hide();
 	    	$("#loggedOut").show();
 	    	$("#boardSelect").hide();
 	    	$("#printScreen").hide();
