@@ -22,7 +22,7 @@ logo-four-oh-four: "/app/404.svg"
 social-media: "/site/social-media.png"
 touch: "/site/touch.png"
 pinned: "/site/pinned.svg"
-pinned-colour: "#d53880"
+pinned-colour: "#0079BF"
 
 # Social settings
 facebook-id: "1053585037989505" # For Facebook OpenGraph integration
