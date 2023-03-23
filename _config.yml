@@ -6,7 +6,7 @@ description: "A web app that turns Trello Boards into dashboards you can print"
 keywords: "trello, dashboards, print"
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://printrello.github.io"
+url: "https://johnpe.art/printrello"
 author: "John Peart"
 
 asset-path: "/assets"
